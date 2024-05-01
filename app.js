@@ -10,11 +10,11 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
     console.log(`Connected to mongo DB`)
 })
 
-const Plants = mongoose.model('Plants', {title: String, price: Number})
+const Plants = mongoose.model('Plants', {title: String, price: Number, image: String, rating: Number})
 app.post('/add-plants', async (req, res) => {
     try {
-        const { title, price } = req.body;
-        const plants = new Plants({ title, price });
+        const { title, price, image, rating } = req.body;
+        const plants = new Plants({ title, price, image, rating });
         await plants.save();
         console.log(`Plants created`);
         res.status(201).json(plants);
