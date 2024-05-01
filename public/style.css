@@ -10,12 +10,14 @@
   min-height: 100vh;
 }
 .wrap .page {
-  padding: 40px;
+  padding: 120px;
 }
 .wrap .mainPage {
   width: 100%;
   height: 100vh;
   position: relative;
+  color: #fff;
+  padding-top: 55px;
 }
 .wrap .mainPage .mainPage_background {
   position: absolute;
@@ -23,6 +25,17 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+}
+.wrap .mainPage .mainPage_logo {
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 700;
+}
+.wrap .mainPage .mainPage_logo #logo {
+  width: 38px;
 }
 .wrap .plantsContainer {
   width: 100%;
