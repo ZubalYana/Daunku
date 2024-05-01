@@ -12,6 +12,9 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
 app.get('/', (req, res)=>{
     res.sendFile('public', 'index.html')
 })
+app.get('/admin', (req, res)=>{
+    res.sendFile('public', 'admin', 'index.html')
+})
 app.listen(PORT, ()=>{
     console.log(`Server work on PORT: ${PORT}`)
 })
