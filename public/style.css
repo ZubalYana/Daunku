@@ -31,6 +31,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .wrap .mainPage .mainPage_header .mainPage_logo {
   width: 165px;
