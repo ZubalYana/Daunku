@@ -147,6 +147,39 @@
   bottom: 0;
   left: 0;
 }
+.wrap .plants {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+.wrap .plants .plants_abilities {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .plants .plants_abilities .plants_ability {
+  display: flex;
+}
+.wrap .plants .plants_abilities .plants_ability .plants_abilityImg {
+  width: 63px;
+}
+.wrap .plants .plants_abilities .plants_ability .plants_abilityText {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrap .plants .plants_abilities .plants_ability .plants_abilityText .plants_abilityTitile {
+  font-size: 24px;
+  font-weight: 500;
+  color: #081323;
+}
+.wrap .plants .plants_abilities .plants_ability .plants_abilityText .plants_abilityDescription {
+  font-size: 18px;
+  font-weight: 500;
+  color: #828282;
+  margin-top: 8px;
+}
 .wrap .plantsContainer {
   width: 100%;
   display: flex;

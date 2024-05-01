@@ -142,6 +142,39 @@
         }
 
     }
+    .plants{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 50px;
+        .plants_abilities{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .plants_ability{
+                display: flex;
+                .plants_abilityImg{
+                    width: 63px;
+                }
+                .plants_abilityText{
+                    margin-left: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .plants_abilityTitile{
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: #081323;
+                    }
+                    .plants_abilityDescription{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #828282;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
     .plantsContainer{
         width: 100%;
         display: flex;
