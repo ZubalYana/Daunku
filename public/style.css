@@ -180,12 +180,24 @@
   color: #828282;
   margin-top: 8px;
 }
-.wrap .plantsContainer {
+.wrap .plants .plants_basicContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.wrap .plants .plants_basicContent .plantsContainer_title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #081323;
+  margin-bottom: 20px;
+}
+.wrap .plants .plants_basicContent .plantsContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.wrap .plantsContainer .plant {
+.wrap .plants .plants_basicContent .plantsContainer .plant {
   width: 250px;
   height: 200px;
   border: 2px solid #333;
@@ -194,11 +206,11 @@
   padding: 20px;
   color: #333;
 }
-.wrap .plantsContainer .plant .plant_title {
+.wrap .plants .plants_basicContent .plantsContainer .plant .plant_title {
   font-size: 32px;
   font-weight: 700;
 }
-.wrap .plantsContainer .plant .plant_price {
+.wrap .plants .plants_basicContent .plantsContainer .plant .plant_price {
   font-size: 24px;
   font-weight: 300;
   margin-top: 5px;
