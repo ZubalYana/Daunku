@@ -49,6 +49,29 @@
                     color: #fff;
                 }
             }
+            .mainPage_cart{
+                width: 39px;
+                height: 37px;
+                position: relative;
+                #cart{
+                    width: 32px;
+                }
+                .mainPage_cartCounter{
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: 700;
+                    position: absolute;
+                    right: 0;
+                    top: 2px;
+                    background: linear-gradient(to right, #2AF598, #009EFD);
+                    color: #2D3949;
+                }
+            }
         }
 
     }
