@@ -15,7 +15,7 @@
         height: 100vh;
         position: relative;
         color: #fff;
-        padding-top: 55px;
+        padding-top: 40px;
         .mainPage_background{
             position: absolute;
             top: 0;
@@ -43,7 +43,7 @@
                 width: 534px;
                 display: flex;
                 justify-content: space-between;
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 400;
                 .mainPage_navEl{
                     text-decoration: none;
@@ -76,14 +76,60 @@
         }
         .mainPage_content{
             width: 100%;
-            margin-top: 92px;
+            margin-top: 35px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             .mainPage_title{
-                font-size: 82px;
+                font-size: 48px;
                 font-weight: 700;
+            }
+            .mainPage_subtitle{
+                font-size: 14px;
+                font-weight: 300;
+                margin-top: 10px;
+            }
+        }
+        .mainPage_inputContainer{
+            margin-top: 30px;
+            width: 350px;
+            height: 55px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .mainPage_searchInput{
+                width: 350px;
+                height: 55px;
+                background-color: #ffffff20;
+                border: 1px #fff solid;
+                outline: none;
+                border-radius: 50px;
+                padding: 15px;
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+            }
+            .mainPage_searchInput::placeholder{
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+            }
+            .mainPage_searchBtn{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: linear-gradient(to right, #2AF598, #009EFD);
+                cursor: pointer;
+                right: 10px;
+
+                .mainPage_searchBtn_icon{
+                    width: 24px;
+                }
             }
         }
 
