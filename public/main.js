@@ -5,7 +5,7 @@ axios.get('http://localhost:3000/plants')
         $('.plantsContainer').append(
             `<div class="plant">
             <div class="plant_title">${el.title}<div>
-            <div class="plant_price">${el.price}<div>
+            <div class="plant_price">$${el.price}<div>
             <div>`
         )
     }
