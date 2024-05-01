@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Inter;
 }
 .wrap{
     width: 100%;
@@ -24,16 +24,33 @@
             height: 100%;
             z-index: -1;
         }
-        .mainPage_logo{
-            width: 175px;
+        .mainPage_header{
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            font-size: 32px;
-            font-weight: 700;
-            #logo{
-                width: 38px;
+            .mainPage_logo{
+                width: 165px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+                font-weight: 700;
+                #logo{
+                    width: 38px;
+                }
+            }
+            .mainPage_nav{
+                width: 534px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 24px;
+                font-weight: 400;
+                .mainPage_navEl{
+                    text-decoration: none;
+                    color: #fff;
+                }
             }
         }
+
     }
     .plantsContainer{
         width: 100%;

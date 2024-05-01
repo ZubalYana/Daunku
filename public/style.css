@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat;
+  font-family: Inter;
 }
 
 .wrap {
@@ -27,15 +27,31 @@
   height: 100%;
   z-index: -1;
 }
-.wrap .mainPage .mainPage_logo {
-  width: 175px;
+.wrap .mainPage .mainPage_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .mainPage .mainPage_header .mainPage_logo {
+  width: 165px;
   display: flex;
   justify-content: space-between;
   font-size: 32px;
   font-weight: 700;
 }
-.wrap .mainPage .mainPage_logo #logo {
+.wrap .mainPage .mainPage_header .mainPage_logo #logo {
   width: 38px;
+}
+.wrap .mainPage .mainPage_header .mainPage_nav {
+  width: 534px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 400;
+}
+.wrap .mainPage .mainPage_header .mainPage_nav .mainPage_navEl {
+  text-decoration: none;
+  color: #fff;
 }
 .wrap .plantsContainer {
   width: 100%;
