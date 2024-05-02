@@ -238,4 +238,8 @@
   font-size: 24px;
   font-weight: 300;
   margin-top: 5px;
+}
+.wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_rating i {
+  font-size: 20px;
+  color: #F2C94C;
 }/*# sourceMappingURL=style.css.map */
