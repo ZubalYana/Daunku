@@ -214,7 +214,7 @@
                     }
                     .plant_textCon{
                         width: 329px;
-                        height: 230px;
+                        height: 215px;
                         background-color: #fff;
                         border-radius: 50px;
                         box-shadow: #DDDADA 1px 2px 3px;
@@ -225,6 +225,11 @@
                             font-weight: 500;
                         }
                         .plant_PriceAddCon{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 40px;
                             .plant_price{
                                 font-size: 24px;
                                 font-weight: 500;
@@ -241,11 +246,12 @@
                                 justify-content: center;
                                 align-items: center;
                                 border-radius: 50%;
+                                cursor: pointer;
                             }
                         }
 
                         .plant_rating{
-                            margin-top: 6px;
+                            margin-top: 10px;
                             i{
                                 font-size: 20px;
                                 color: #F2C94C;

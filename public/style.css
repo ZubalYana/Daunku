@@ -223,7 +223,7 @@
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon {
   width: 329px;
-  height: 230px;
+  height: 215px;
   background-color: #fff;
   border-radius: 50px;
   box-shadow: #DDDADA 1px 2px 3px;
@@ -233,6 +233,13 @@
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_title {
   font-size: 32px;
   font-weight: 500;
+}
+.wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_PriceAddCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_PriceAddCon .plant_price {
   font-size: 24px;
@@ -250,9 +257,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_rating {
-  margin-top: 6px;
+  margin-top: 10px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_rating i {
   font-size: 20px;
