@@ -1,7 +1,9 @@
+let db = [];
 axios.get('http://localhost:3000/plants')
 .then((res)=>{
     console.log(res.data)
     for(let el of res.data){
+        db.push(el)
         $('.plantsContainer').append(
             `
             <div class="plant">
@@ -26,6 +28,38 @@ axios.get('http://localhost:3000/plants')
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>`
+            )
+        }else if(el.rating == 4){
+            $('.plant_rating').append(
+                `<i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>`
+            )
+        }else if(el.rating == 3){
+            $('.plant_rating').append(
+                `<i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>`
+            )
+        }else if(el.rating == 2){
+            $('.plant_rating').append(
+                `<i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>`
+            )
+        }else if(el.rating == 1){
+            $('.plant_rating').append(
+                `<i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>`
             )
         }
     }
