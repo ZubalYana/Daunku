@@ -199,7 +199,7 @@
                     margin-bottom: 20px;
                     .plant_imgCon{
                         width: 300px;
-                        height: 400px;
+                        height: 380px;
                         background-color: #C1D0E4;
                         border-radius: 50px;
                         position: relative;
@@ -209,12 +209,12 @@
                         .plant_img{
                             height: 300px;
                             position: absolute;
-                            bottom: 280px;
+                            bottom: 250px;
                         }
                     }
                     .plant_textCon{
                         width: 329px;
-                        height: 261px;
+                        height: 230px;
                         background-color: #fff;
                         border-radius: 50px;
                         box-shadow: #DDDADA 1px 2px 3px;
@@ -224,12 +224,28 @@
                             font-size: 32px;
                             font-weight: 500;
                         }
-                        .plant_price{
-                            font-size: 24px;
-                            font-weight: 300;
-                            margin-top: 5px;
+                        .plant_PriceAddCon{
+                            .plant_price{
+                                font-size: 24px;
+                                font-weight: 500;
+                                color: #081323;
+                            }
+                            .plant_addBtn{
+                                width: 50px;
+                                height: 50px;
+                                color: #fff;
+                                background: linear-gradient(to right, #2AF598, #009EFD);
+                                font-size: 42px;
+                                font-weight: 500;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                            }
                         }
+
                         .plant_rating{
+                            margin-top: 6px;
                             i{
                                 font-size: 20px;
                                 color: #F2C94C;

@@ -10,7 +10,10 @@ axios.get('http://localhost:3000/plants')
                 <div class="plant_textCon">
                     <div class="plant_title">${el.title}</div>
                     <div class="plant_rating"></div>
-                    <div class="plant_price">$${el.price}.00</div>
+                    <div class="plant_PriceAddCon">
+                        <div class="plant_price">$${el.price}.00</div>
+                        <div class="plant_addBtn">+</div>
+                    </div>
                 </div>
             </div>
         </div>
