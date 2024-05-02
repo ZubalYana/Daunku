@@ -258,6 +258,9 @@
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_rating {
   margin-top: 10px;

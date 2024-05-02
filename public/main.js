@@ -14,7 +14,7 @@ axios.get('http://localhost:3000/plants')
                     <div class="plant_rating"></div>
                     <div class="plant_PriceAddCon">
                         <div class="plant_price">$${el.price}.00</div>
-                        <div class="plant_addBtn">+</div>
+                        <div class="plant_addBtn" id="${el.id}">+</div>
                     </div>
                 </div>
             </div>
@@ -22,6 +22,7 @@ axios.get('http://localhost:3000/plants')
             `
         )
         if(el.rating == 5){
+            $('.plant_rating').empty();
             $('.plant_rating').append(
                 `<i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -30,6 +31,7 @@ axios.get('http://localhost:3000/plants')
                 <i class="fa-solid fa-star"></i>`
             )
         }else if(el.rating == 4){
+            $('.plant_rating').empty();
             $('.plant_rating').append(
                 `<i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -38,6 +40,7 @@ axios.get('http://localhost:3000/plants')
                 <i class="fa-regular fa-star"></i>`
             )
         }else if(el.rating == 3){
+            $('.plant_rating').empty();
             $('.plant_rating').append(
                 `<i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -46,6 +49,7 @@ axios.get('http://localhost:3000/plants')
                 <i class="fa-regular fa-star"></i>`
             )
         }else if(el.rating == 2){
+            $('.plant_rating').empty();
             $('.plant_rating').append(
                 `<i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -54,6 +58,7 @@ axios.get('http://localhost:3000/plants')
                 <i class="fa-regular fa-star"></i>`
             )
         }else if(el.rating == 1){
+            $('.plant_rating').empty();
             $('.plant_rating').append(
                 `<i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
@@ -63,4 +68,16 @@ axios.get('http://localhost:3000/plants')
             )
         }
     }
+    
+    console.log(db)
+    let cartlist = [];
+    $('.plant_addBtn').click((e)=>{
+        for(let el of db){
+            console.log(el)
+            if(el.id == e.target.id){
+                cartlist.push(el)
+                console.log(cartlist)
+            }
+        }
+    })
 })
