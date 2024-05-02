@@ -195,16 +195,14 @@
 .wrap .plants .plants_basicContent .plantsContainer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   padding-top: 150px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant {
   width: 250px;
   border-radius: 20px;
-  margin-left: 20px;
-  padding: 20px;
   color: #333;
   margin-bottom: 20px;
+  margin-right: 240px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_imgCon {
   width: 300px;
