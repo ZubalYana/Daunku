@@ -14,7 +14,7 @@ axios.get('http://localhost:3000/plants')
                     <div class="plant_rating"></div>
                     <div class="plant_PriceAddCon">
                         <div class="plant_price">$${el.price}.00</div>
-                        <div class="plant_addBtn" id="${el.id}">+</div>
+                        <div class="plant_addBtn" id="${el._id}">+</div>
                     </div>
                 </div>
             </div>
@@ -73,8 +73,7 @@ axios.get('http://localhost:3000/plants')
     let cartlist = [];
     $('.plant_addBtn').click((e)=>{
         for(let el of db){
-            console.log(el)
-            if(el.id == e.target.id){
+            if(el._id == e.target.id){
                 cartlist.push(el)
                 console.log(cartlist)
             }
