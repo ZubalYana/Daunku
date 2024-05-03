@@ -323,6 +323,10 @@
   height: 100vh;
   display: flex;
 }
+.wrap .care .care_leftPart {
+  height: 500px;
+  width: 50%;
+}
 .wrap .care .care_leftPart .care_title {
   color: #081323;
   font-size: 48px;
@@ -360,4 +364,15 @@
   font-size: 16px;
   color: #4F4F4F;
   font-weight: 400;
+}
+.wrap .care .care_rightPart {
+  height: 500px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .care .care_rightPart .care_img {
+  height: 450px;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */

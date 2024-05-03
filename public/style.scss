@@ -319,6 +319,8 @@
         height: 100vh;
         display: flex;
         .care_leftPart{
+            height: 500px;
+            width: 50%;
             .care_title{
                 color: #081323;
                 font-size: 48px;
@@ -356,6 +358,17 @@
                         }
                     }
                 }
+            }
+        }
+        .care_rightPart{
+            height: 500px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .care_img{
+                height: 450px;
+                border-radius: 50px;
             }
         }
 
