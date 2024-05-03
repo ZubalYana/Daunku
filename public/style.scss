@@ -263,5 +263,55 @@
         }
 
     }
+    .interior{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .interior_title{
+            color: #081323;
+            font-size: 64px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .interior_subtitle{
+            color: #4F4F4F;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .interior_Con{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 995px;
+            .interior_leftPart{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                #room1{
+                    width: 735px;
+                    height: 549px;
+                    border-radius: 50px;
+                }
+                #room2{
+                    width: 735px;
+                    height: 404px;
+                    border-radius: 50px;
+                }
+            }
+            .interior_rightPart{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                #room3{
+                    width: 717px;
+                    height: 100%;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
 
 }

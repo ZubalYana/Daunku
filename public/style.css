@@ -266,4 +266,54 @@
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_textCon .plant_rating i {
   font-size: 20px;
   color: #F2C94C;
+}
+.wrap .interior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .interior .interior_title {
+  color: #081323;
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.wrap .interior .interior_subtitle {
+  color: #4F4F4F;
+  font-size: 24px;
+  font-weight: 400;
+}
+.wrap .interior .interior_Con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 995px;
+}
+.wrap .interior .interior_Con .interior_leftPart {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrap .interior .interior_Con .interior_leftPart #room1 {
+  width: 735px;
+  height: 549px;
+  border-radius: 50px;
+}
+.wrap .interior .interior_Con .interior_leftPart #room2 {
+  width: 735px;
+  height: 404px;
+  border-radius: 50px;
+}
+.wrap .interior .interior_Con .interior_rightPart {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrap .interior .interior_Con .interior_rightPart #room3 {
+  width: 717px;
+  height: 100%;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
