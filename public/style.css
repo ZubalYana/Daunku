@@ -432,4 +432,21 @@
   background: linear-gradient(to right, #2AF598, #009EFD);
   cursor: pointer;
   right: 10px;
+}
+.wrap .futer .futer_content .futer_nav {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .futer .futer_content .futer_nav .futer_navEl {
+  width: 170px;
+}
+.wrap .futer .futer_content .futer_nav .futer_navEl .futer_navEl_title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.wrap .futer .futer_content .futer_nav .futer_navEl .futer_navEl_option {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

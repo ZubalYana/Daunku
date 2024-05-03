@@ -425,6 +425,23 @@
                     }
                 }
             }
+            .futer_nav{
+                width: 700px;
+                display: flex;
+                justify-content: space-between;
+                .futer_navEl{
+                    width: 170px;
+                    .futer_navEl_title{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .futer_navEl_option{
+                        font-size: 16px;
+                        font-weight: 300;
+                        margin-top: 10px;
+                    }
+                }
+            }
         }
     }
 
