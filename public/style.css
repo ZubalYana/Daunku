@@ -317,4 +317,46 @@
   width: 600px;
   height: 100%;
   border-radius: 50px;
+}
+.wrap .care {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.wrap .care .care_leftPart .care_title {
+  color: #081323;
+  font-size: 48px;
+  font-weight: 500;
+}
+.wrap .care .care_leftPart .care_subtitle {
+  color: #4F4F4F;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.wrap .care .care_leftPart .care_tips {
+  margin-top: 20px;
+}
+.wrap .care .care_leftPart .care_tips .care_tip {
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+.wrap .care .care_leftPart .care_tips .care_tip .care_tipIcon {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+.wrap .care .care_leftPart .care_tips .care_tip .care_tipText {
+  width: 470px;
+}
+.wrap .care .care_leftPart .care_tips .care_tip .care_tipText .care_tipTitle {
+  font-size: 28px;
+  color: #000;
+  font-weight: 500;
+}
+.wrap .care .care_leftPart .care_tips .care_tip .care_tipText .care_tipDescription {
+  font-size: 16px;
+  color: #4F4F4F;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
