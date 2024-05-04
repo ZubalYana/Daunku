@@ -79,6 +79,17 @@ axios.get('http://localhost:3000/plants')
             }
         }
         $('.mainPage_cartCounter').html(cartlist.length)
+        for(let el of cartlist){
+            $('.chosenPlantsContainer').append(
+                `<div class="chosenPlant">
+                <img class="chosenPlant_img" src="./imgs/${el.image}" alt="">
+                <div class="chosenPlant_namePriceCon">
+                    <div class="chosenPlant_name">${el.title}</div>
+                    <div class="chosenPlant_price">${el.price}</div>
+                </div>
+            </div>`
+            )
+        }
     })
 
     $('.mainPage_cart').click(()=>{
