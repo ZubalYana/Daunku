@@ -78,5 +78,8 @@ axios.get('http://localhost:3000/plants')
                 console.log(cartlist)
             }
         }
+        $('.mainPage_cartCounter').html(cartlist.length)
     })
+
+    $('.mainPage_cart')
 })

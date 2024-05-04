@@ -467,13 +467,13 @@
     height: 100vh;
     position: fixed;
     background-color: #28344485;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 9999;
     .cartPopup{
-        width: 700px;
-        height: 500px;
+        width: 850px;
+        height: 550px;
         background-color: #fff;
         border-radius: 50px;
         position: relative;
@@ -482,6 +482,8 @@
             position: absolute;
             top: 30px;
             right: 30px;
+            font-size: 28px;
+            cursor: pointer;
         }
     }
 }
