@@ -79,6 +79,7 @@ axios.get('http://localhost:3000/plants')
             }
         }
         $('.mainPage_cartCounter').html(cartlist.length)
+        $('.chosenPlantsContainer').empty();
         for(let el of cartlist){
             $('.chosenPlantsContainer').append(
                 `<div class="chosenPlant">
