@@ -59,6 +59,7 @@
   width: 39px;
   height: 37px;
   position: relative;
+  cursor: pointer;
 }
 .wrap .mainPage .mainPage_header .mainPage_cart #cart {
   width: 32px;
@@ -482,6 +483,7 @@
   border-radius: 50px;
   position: relative;
   padding: 30px;
+  display: flex;
 }
 .cartPopupContainer .cartPopup .xmark {
   position: absolute;
@@ -489,4 +491,10 @@
   right: 30px;
   font-size: 28px;
   cursor: pointer;
+}
+.cartPopupContainer .cartPopup .cartPopup_infoPart {
+  width: 50%;
+}
+.cartPopupContainer .cartPopup .cartPopup_pictureContainer {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

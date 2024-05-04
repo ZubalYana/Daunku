@@ -55,6 +55,7 @@
                 width: 39px;
                 height: 37px;
                 position: relative;
+                cursor: pointer;
                 #cart{
                     width: 32px;
                 }
@@ -478,12 +479,19 @@
         border-radius: 50px;
         position: relative;
         padding: 30px;
+        display: flex;
         .xmark{
             position: absolute;
             top: 30px;
             right: 30px;
             font-size: 28px;
             cursor: pointer;
+        }
+        .cartPopup_infoPart{
+            width: 50%;
+        }
+        .cartPopup_pictureContainer{
+            width: 50%;
         }
     }
 }
