@@ -380,6 +380,9 @@
   width: 100%;
   height: 390px;
   background: linear-gradient(to right bottom, #566270, #283444);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .wrap .futer .futer_content {
   width: 100%;
@@ -439,7 +442,7 @@
   justify-content: space-between;
 }
 .wrap .futer .futer_content .futer_nav .futer_navEl {
-  width: 170px;
+  width: 190px;
 }
 .wrap .futer .futer_content .futer_nav .futer_navEl .futer_navEl_title {
   font-size: 20px;
@@ -449,4 +452,13 @@
   font-size: 16px;
   font-weight: 300;
   margin-top: 10px;
+}
+.wrap .futer .futer_hr {
+  margin: 40px 0 40px;
+  width: 100%;
+}
+.wrap .futer .futer_privacyPolicy {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

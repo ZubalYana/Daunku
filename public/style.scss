@@ -377,6 +377,9 @@
         width: 100%;
         height: 390px;
         background: linear-gradient( to right bottom, #566270, #283444 );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .futer_content{
             width: 100%;
             display: flex;
@@ -430,7 +433,7 @@
                 display: flex;
                 justify-content: space-between;
                 .futer_navEl{
-                    width: 170px;
+                    width: 190px;
                     .futer_navEl_title{
                         font-size: 20px;
                         font-weight: 600;
@@ -442,6 +445,15 @@
                     }
                 }
             }
+        }
+        .futer_hr{
+            margin: 40px 0 40px;
+            width: 100%;
+        }
+        .futer_privacyPolicy{
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
         }
     }
 
