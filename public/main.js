@@ -81,5 +81,10 @@ axios.get('http://localhost:3000/plants')
         $('.mainPage_cartCounter').html(cartlist.length)
     })
 
-    $('.mainPage_cart')
+    $('.mainPage_cart').click(()=>{
+        $('.cartPopupContainer').css('display', 'flex')
+    })
+    $('#cartPopup_xmark').click(()=>{
+        $('.cartPopupContainer').css('display', 'none')
+    })
 })
