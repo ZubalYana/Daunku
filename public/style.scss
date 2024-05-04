@@ -498,7 +498,7 @@
             .chosenPlantsContainer{
                 width: 100%;
                 height: 430px;
-                overflow-y: scroll;
+                overflow-y: auto;
 
                 .chosenPlant{
                     width: 100%;

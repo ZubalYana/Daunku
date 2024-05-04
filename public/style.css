@@ -504,7 +504,7 @@
 .cartPopupContainer .cartPopup .cartPopup_infoPart .chosenPlantsContainer {
   width: 100%;
   height: 430px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .cartPopupContainer .cartPopup .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {
   width: 100%;
