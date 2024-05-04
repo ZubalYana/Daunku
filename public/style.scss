@@ -8,11 +8,12 @@
     width: 10px;
  }
  ::-webkit-scrollbar-track {
-     background: #566270;
+     background: #828282;
+     border-radius: 8px;
 
  }
  ::-webkit-scrollbar-thumb {
-     background: #081323;
+     background: #566270;
      border-radius: 8px;
 
  }
