@@ -150,7 +150,7 @@
 .wrap .plants {
   width: 100%;
   min-height: 100vh;
-  padding-top: 50px;
+  padding: 120px 120px 0 120px;
 }
 .wrap .plants .plants_abilities {
   width: 100%;
