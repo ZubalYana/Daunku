@@ -88,7 +88,7 @@ axios.get('http://localhost:3000/plants')
                     <div class="chosenPlant_name">${el.title}</div>
                     <div class="chosenPlant_price">$${el.price}.00</div>
                 </div>
-                <div class="chosenPlant_delete"><div class="minus"></div></div>
+                <div class="chosenPlant_delete" id="deleteFromCart${el._id}"><div class="minus"></div></div>
             </div>`
             )
         }
@@ -107,7 +107,15 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
 }).on('mouseleave', '.chosenPlant_delete', function() {
     $(this).css('background-color', '#fff');
     $(this).find('.minus').css('background-color', '#081323');
-});
+
+}); 
+$('.chosenPlantsContainer').click(function(e){
+    let ID = e.target.id;
+    if(ID.substring(0, 14) == 'deleteFromCart'){
+        ID = ID.substring(14);
+        console.log(ID)
+    }
+})
 
 })
 
