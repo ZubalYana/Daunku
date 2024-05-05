@@ -520,12 +520,12 @@
   margin-bottom: 20px;
 }
 .cartPopupContainer .cartPopup .cartPopup_infoPart .chosenPlantsContainer {
-  width: 100%;
+  width: 90%;
   height: 430px;
   overflow-y: auto;
 }
 .cartPopupContainer .cartPopup .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {
-  width: 85%;
+  width: 95%;
   height: 70px;
   border-radius: 20px;
   border: #283444 1px solid;
