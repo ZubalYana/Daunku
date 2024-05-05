@@ -110,15 +110,12 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
 
 }); 
 $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
-    e.stopPropagation(); // Stop the event from propagating to parent elements
+    e.stopPropagation();
     let ID = e.target.id;
     if (ID.substring(0, 14) === 'deleteFromCart') {
         let plantID = ID.substring(14);
-        // Remove the plant with the matching ID from the cartlist array
         cartlist = cartlist.filter(el => el._id !== plantID);
-        // Update the counter
         $('.mainPage_cartCounter').html(cartlist.length);
-        // Re-render the chosen plants
         renderChosenPlants();
     }
 });
@@ -138,8 +135,6 @@ function renderChosenPlants() {
         );
     }
 }
-
-
 })
 
 
