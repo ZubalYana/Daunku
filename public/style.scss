@@ -569,3 +569,89 @@
         }
     }
 }
+.cookiesPopupContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: #0000005c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    .cookiePopup{
+        width: 800px;
+        height: 380px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+    }
+    .cookiePopup_textCon{
+        width: 60%;
+        .cookiePopup_title{
+            font-size: 36px;
+            font-weight: 600;
+            color: #081323;
+        }
+        .cookiePopup_text{
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 20px;
+            color: #283444;
+        }
+        .cookiePopup_btn{
+            width: 200px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            color: #081323;
+            border: 1px #081323 solid;
+            font-size: 24px;
+            font-weight: 500;
+            background-color: #fff;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+    }
+    .cookiePopup_picContainer{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // .cookiePopup_picContainer_cookie{
+        //     position: relative;
+        //     width: 250px;
+        //     height: 250px;
+        //     cursor: pointer;
+        //     .cookiePart{
+        //         position: absolute;
+        //         transition: 0.7s ease;
+
+        //     }
+        //     .cookie{
+        //         width: 250px;
+        //     }
+        //     .cookieCrumb1{
+        //         width: 43px;
+        //         left: 165px;
+        //         top: 2px;
+        //     }
+        //     .cookieCrumb2{
+        //         width: 46px;
+        //         left: 192px;
+        //         top: 50px;
+        //     }
+        //     .cookieCrumb3{
+        //         width: 33px;
+        //         left: 220px;
+        //         top: 5px;
+        //     }
+        // }
+    }
+
+}
