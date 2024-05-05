@@ -562,6 +562,8 @@
   align-items: center;
   border-radius: 5px;
   border: 1px #081323 solid;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 .cartPopupContainer .cartPopup .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_delete .minus {
   width: 16px;

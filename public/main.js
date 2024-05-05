@@ -100,4 +100,15 @@ axios.get('http://localhost:3000/plants')
     $('#cartPopup_xmark').click(()=>{
         $('.cartPopupContainer').css('display', 'none')
     })
+    //hover effects 
+$('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
+    $(this).css('background-color', '#081323');
+    $(this).find('.minus').css('background-color', '#fff');
+}).on('mouseleave', '.chosenPlant_delete', function() {
+    $(this).css('background-color', '#fff');
+    $(this).find('.minus').css('background-color', '#081323');
+});
+
 })
+
+

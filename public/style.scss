@@ -553,6 +553,8 @@
                         align-items: center;
                         border-radius: 5px;
                         border: 1px #081323 solid;
+                        transition: 0.5s ease;
+                        cursor: pointer;
                         .minus{
                             width: 16px;
                             height: 3px;
