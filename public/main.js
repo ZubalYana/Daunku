@@ -139,19 +139,3 @@ function renderChosenPlants() {
 })
 
 //cookies
-$('.cookiePopup_btn').hover(
-    () => {
-        $('.cookiePopup_btn').css({
-            'background': 'linear-gradient(to right, #2AF598, #009EFD)',
-            'color': '#081323',
-            'border': '#081323 1px solid',
-        });
-    },
-    () => {
-        $('.cookiePopup_btn').css({
-            'color': '#081323',
-            'border': '#081323 1px solid',
-            'background': '#fff'
-        });
-    }
-);

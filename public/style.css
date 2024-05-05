@@ -623,6 +623,11 @@
   cursor: pointer;
   transition: 0.5s ease;
 }
+.cookiesPopupContainer .cookiePopup_textCon .cookiePopup_btn:hover {
+  background: linear-gradient(to right, #2AF598, #009EFD);
+  color: #081323;
+  border-color: #081323;
+}
 .cookiesPopupContainer .cookiePopup_picContainer {
   width: 40%;
   height: 100%;
