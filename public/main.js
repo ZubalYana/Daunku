@@ -149,10 +149,9 @@ $('.cookiePopup_btn').hover(
     },
     () => {
         $('.cookiePopup_btn').css({
-            'background-color': '#fff',
             'color': '#081323',
             'border': '#081323 1px solid',
-            'background': 'none'
+            'background': '#fff'
         });
     }
 );
