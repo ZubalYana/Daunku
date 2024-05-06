@@ -169,3 +169,50 @@ $('.cookiesJar_con').hover(
         $('#cookie6').css('left', '-5px')
     }
 )
+
+//cookies functionality 
+$(document).ready(function() {
+    checkPopupCookie();
+});
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkPopupCookie() {
+    const popupClosed = getCookie("popupClosed");
+    if (popupClosed === "true") {
+        console.log("Popup cookie detected. Closing popup.");
+        $(".cookiesPopupContainer").css('display', 'none');
+    } else {
+        console.log("No popup cookie detected. Showing popup.");
+        $(".cookiesPopupContainer").css('display', 'flex');
+        
+        $("#acceptCookiesBtn").click(function() {
+            console.log("Accept cookies button clicked.");
+            closePopup();
+        });
+    }
+}
+function closePopup() {
+    console.log("Closing popup and setting cookie.");
+    $(".cookiesPopupContainer").css('display', 'none');
+    setCookie("popupClosed", "true", 365);
+}
+
