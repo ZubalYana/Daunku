@@ -571,6 +571,28 @@
             }
             .cartPopup_paymentContainer{
                 width: 50%;
+                h3{
+                    color: #081323;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                h2{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #283444;
+                    margin-top: 15px;
+                }
+                .paymentMethods{
+                    width: 40%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 5px;
+                    .paymentMethod{
+                        width: 60px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
 

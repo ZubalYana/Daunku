@@ -579,6 +579,28 @@
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer {
   width: 50%;
 }
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer h3 {
+  color: #081323;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #283444;
+  margin-top: 15px;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .paymentMethods {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .paymentMethods .paymentMethod {
+  width: 60px;
+  cursor: pointer;
+}
 
 .cookiesPopupContainer {
   width: 100%;
