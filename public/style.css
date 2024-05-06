@@ -618,14 +618,14 @@
   border: 1px #081323 solid;
   font-size: 24px;
   font-weight: 500;
-  background: #fff;
+  background-color: #fff;
   margin-top: 25px;
   cursor: pointer;
   transition: 0.5s ease;
 }
 .cookiesPopupContainer .cookiePopup_textCon .cookiePopup_btn:hover {
-  background: linear-gradient(to right, #2AF598, #009EFD);
-  color: #081323;
+  background-color: #283444;
+  color: #fff;
   border-color: #081323;
 }
 .cookiesPopupContainer .cookiePopup_picContainer {
