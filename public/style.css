@@ -634,4 +634,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cookiesPopupContainer .cookiePopup_picContainer .cookiesJar_con {
+  width: 160px;
+  height: 238px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.cookiesPopupContainer .cookiePopup_picContainer .cookiesJar_con .cookie {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+}
+.cookiesPopupContainer .cookiePopup_picContainer .cookiesJar_con #cookie1 {
+  top: 190px;
+  left: 100px;
+}
+.cookiesPopupContainer .cookiePopup_picContainer .cookiesJar_con #cookiesJar {
+  width: 160px;
 }/*# sourceMappingURL=style.css.map */
