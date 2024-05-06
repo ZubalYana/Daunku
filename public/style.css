@@ -649,6 +649,7 @@
   width: 60px;
   height: 60px;
   position: absolute;
+  transition: 1s ease;
 }
 .cookiesPopupContainer .cookiePopup_picContainer .cookiesJar_con #cookie1 {
   top: 190px;

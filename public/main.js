@@ -138,4 +138,34 @@ function renderChosenPlants() {
 }
 })
 
-//cookies
+//cookies animation
+$('.cookiesJar_con').hover(
+    ()=>{
+        $('#cookie1').css('top', '80px')
+        $('#cookie1').css('left', '0px')
+        $('#cookie2').css('top', '50px')
+        $('#cookie2').css('left', '100px')
+        $('#cookie3').css('top', '55px')
+        $('#cookie3').css('left', '40px')
+        $('#cookie4').css('top', '110px')
+        $('#cookie4').css('left', '20px')
+        $('#cookie5').css('top', '100px')
+        $('#cookie5').css('left', '60px')
+        $('#cookie6').css('top', '120px')
+        $('#cookie6').css('left', '100px')
+    },
+    ()=>{
+        $('#cookie1').css('top', '190px')
+        $('#cookie1').css('left', '100px')
+        $('#cookie2').css('top', '180px')
+        $('#cookie2').css('left', '-3px')
+        $('#cookie3').css('top', '184px')
+        $('#cookie3').css('left', '50px')
+        $('#cookie4').css('top', '150px')
+        $('#cookie4').css('left', '93px')
+        $('#cookie5').css('top', '140px')
+        $('#cookie5').css('left', '45px')
+        $('#cookie6').css('top', '145px')
+        $('#cookie6').css('left', '-5px')
+    }
+)
