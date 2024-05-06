@@ -110,6 +110,8 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
     $(this).find('.minus').css('background-color', '#081323');
 
 }); 
+
+//plant deleting from the cartList
 $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
     e.stopPropagation();
     let ID = e.target.id;
