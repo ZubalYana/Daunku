@@ -595,7 +595,7 @@
   width: 40%;
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin: 10px 0 15px 0;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .paymentMethods .paymentMethod {
   width: 60px;
@@ -605,7 +605,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 10px 0;
+  margin: 15px 0 15px 0;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .inputsContainer input {
   width: 48%;
@@ -620,6 +620,25 @@
   border-radius: 10px;
   border: 1px #081323 solid;
   padding: 7px;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer #buyBtn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #081323;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px #081323 solid;
+  margin-top: 20px;
+  transition: 0.5s ease;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer #buyBtn:hover {
+  background-color: #081323;
+  color: #fff;
 }
 
 .cookiesPopupContainer {
