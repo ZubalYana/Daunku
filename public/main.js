@@ -69,9 +69,10 @@ axios.get('http://localhost:3000/plants')
             )
         }
     }
-    
     console.log(db)
     let cartlist = [];
+    let totalAmount = 0;
+
     $('.plant_addBtn').click((e)=>{
         for(let el of db){
             if(el._id == e.target.id){
@@ -81,6 +82,7 @@ axios.get('http://localhost:3000/plants')
         }
         $('.mainPage_cartCounter').html(cartlist.length)
         $('.chosenPlantsContainer').empty();
+        
         for(let el of cartlist){
             $('.chosenPlantsContainer').append(
                 `<div class="chosenPlant">
@@ -92,9 +94,14 @@ axios.get('http://localhost:3000/plants')
                 <div class="chosenPlant_delete" id="deleteFromCart${el._id}"><div class="minus"></div></div>
             </div>`
             )
+            totalAmount += el.price; 
+            console.log(totalAmount)
         }
+        
+        $('#totalAmount').html(`Total amount: $${totalAmount}.00`); 
+        $('#chosenPlantCount').html(`Plants chosen: ${cartlist.length}`)
     })
-
+    
     $('.mainPage_cart').click(()=>{
         $('.cartPopupContainer').css('display', 'flex')
     })
@@ -102,17 +109,17 @@ axios.get('http://localhost:3000/plants')
         $('.cartPopupContainer').css('display', 'none')
     })
     //hover effects 
-$('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
+    $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
     $(this).css('background-color', '#081323');
     $(this).find('.minus').css('background-color', '#fff');
-}).on('mouseleave', '.chosenPlant_delete', function() {
+    }).on('mouseleave', '.chosenPlant_delete', function() {
     $(this).css('background-color', '#fff');
     $(this).find('.minus').css('background-color', '#081323');
 
-}); 
+    }); 
 
-//plant deleting from the cartList
-$('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
+    //plant deleting from the cartList
+    $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
     e.stopPropagation();
     let ID = e.target.id;
     if (ID.substring(0, 14) === 'deleteFromCart') {
@@ -121,9 +128,8 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
         $('.mainPage_cartCounter').html(cartlist.length);
         renderChosenPlants();
     }
-});
-
-function renderChosenPlants() {
+    });
+    function renderChosenPlants() {
     $('.chosenPlantsContainer').empty();
     for (let el of cartlist) {
         $('.chosenPlantsContainer').append(
@@ -137,7 +143,10 @@ function renderChosenPlants() {
             </div>`
         );
     }
-}
+    }
+
+
+
 })
 
 //cookies animation
@@ -217,4 +226,3 @@ function closePopup() {
     $(".cookiesPopupContainer").css('display', 'none');
     setCookie("popupClosed", "true", 365);
 }
-

@@ -495,7 +495,6 @@
         border-radius: 50px;
         position: relative;
         padding: 30px;
-        display: flex;
         .xmark{
             position: absolute;
             top: 30px;
@@ -503,70 +502,78 @@
             font-size: 28px;
             cursor: pointer;
         }
-        .cartPopup_infoPart{
-            width: 50%;
-            h1{
-                color: #081323;
-                font-size: 32px;
-                font-weight: 600;
-                margin-bottom: 20px;
-            }
-            .chosenPlantsContainer{
-                width: 90%;
-                height: 430px;
-                overflow-y: auto;
-
-                .chosenPlant{
-                    width: 95%;
-                    height: 70px;
-                    border-radius: 20px;
-                    border: #283444 1px solid;
-                    display: flex;
-                    padding: 10px;
-                    margin-bottom: 12px;
-                    align-items: center;
-                    .chosenPlant_img{
-                        width: 50px;
-                        height: 45px;
-                    }
-                    .chosenPlant_namePriceCon{
-                        height: 100%;
-                        width: 180px;
-                        margin-left: 7px;
-                        .chosenPlant_name{
-                            color: #081323;
-                            font-size: 20px;
-                            font-weight: 400;
-                        }
-                        .chosenPlant_price{
-                            color: #081323;
-                            font-size: 18px;
-                            font-weight: 600;
-                            margin-top: 5px;
-                        }
-                    }
-                    .chosenPlant_delete{
-                        width: 60px;
-                        height: 30px;
+        .cartPopup_parts{
+            display: flex;
+            width: 100%;
+            height: 450px;
+            margin-top: 10px;
+            justify-content: space-between;
+            .cartPopup_infoPart{
+                width: 50%;
+                h1{
+                    color: #081323;
+                    font-size: 32px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+                .chosenPlantsContainer{
+                    width: 90%;
+                    height: 430px;
+                    overflow-y: auto;
+    
+                    .chosenPlant{
+                        width: 95%;
+                        height: 70px;
+                        border-radius: 20px;
+                        border: #283444 1px solid;
                         display: flex;
-                        justify-content: center;
+                        padding: 10px;
+                        margin-bottom: 12px;
                         align-items: center;
-                        border-radius: 5px;
-                        border: 1px #081323 solid;
-                        transition: 0.5s ease;
-                        cursor: pointer;
-                        .minus{
-                            width: 16px;
-                            height: 3px;
-                            background-color: #081323;
+                        .chosenPlant_img{
+                            width: 50px;
+                            height: 45px;
+                        }
+                        .chosenPlant_namePriceCon{
+                            height: 100%;
+                            width: 180px;
+                            margin-left: 7px;
+                            .chosenPlant_name{
+                                color: #081323;
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+                            .chosenPlant_price{
+                                color: #081323;
+                                font-size: 18px;
+                                font-weight: 600;
+                                margin-top: 5px;
+                            }
+                        }
+                        .chosenPlant_delete{
+                            width: 60px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 5px;
+                            border: 1px #081323 solid;
+                            transition: 0.5s ease;
+                            cursor: pointer;
+                            .minus{
+                                width: 16px;
+                                height: 3px;
+                                background-color: #081323;
+                            }
                         }
                     }
                 }
             }
+            .cartPopup_paymentContainer{
+                width: 50%;
+            }
         }
-        .cartPopup_pictureContainer{
-            width: 50%;
-        }
+
     }
 }
 .cookiesPopupContainer{
@@ -702,5 +709,4 @@
         }
 
     }
-
 }
