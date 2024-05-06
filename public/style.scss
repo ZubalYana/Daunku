@@ -593,6 +593,26 @@
                         cursor: pointer;
                     }
                 }
+                .inputsContainer{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0 10px 0;
+                    input{
+                        width: 48%;
+                        height: 40px;
+                        border-radius: 10px;
+                        border: 1px #081323 solid;
+                        padding: 7px;
+                    }
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 1px #081323 solid;
+                    padding: 7px;
+                }
             }
         }
 
