@@ -39,6 +39,10 @@ $('.content').append(
 )
 $('#plants').click(()=>{
     $('.content').empty();
+    $('#plants').css('font-weight', '600')
+    $('#contacts').css('font-weight', '400')
+    $('#newslatter').css('font-weight', '400')
+    $('#unknownPage').css('font-weight', '400')
     $('.content').append(
         `
         <div class="addNewPlantsBtn">+</div>
@@ -48,6 +52,10 @@ $('#plants').click(()=>{
 })
 $('#contacts').click(()=>{
     $('.content').empty();
+    $('#plants').css('font-weight', '400')
+    $('#contacts').css('font-weight', '600')
+    $('#newslatter').css('font-weight', '400')
+    $('#unknownPage').css('font-weight', '400')
     $('.content').append(
         `
         <div>contacts here</div>
@@ -56,6 +64,10 @@ $('#contacts').click(()=>{
 })
 $('#newslatter').click(()=>{
     $('.content').empty();
+    $('#plants').css('font-weight', '400')
+    $('#contacts').css('font-weight', '400')
+    $('#newslatter').css('font-weight', '600')
+    $('#unknownPage').css('font-weight', '400')
     $('.content').append(
         `
         <div>newslatter here</div>
@@ -64,6 +76,10 @@ $('#newslatter').click(()=>{
 })
 $('#unknownPage').click(()=>{
     $('.content').empty();
+    $('#plants').css('font-weight', '400')
+    $('#contacts').css('font-weight', '400')
+    $('#newslatter').css('font-weight', '400')
+    $('#unknownPage').css('font-weight', '600')
     $('.content').append(
         `
         <div>unknown page here</div>

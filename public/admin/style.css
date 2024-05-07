@@ -51,12 +51,16 @@
   justify-content: space-between;
   font-size: 20px;
   font-weight: 400;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .wrap .header .nav .navEl {
-  text-decoration: none;
   color: #566270;
+  cursor: pointer;
+  text-decoration: none;
 }
-.wrap .header .nav .active {
+.wrap .header .nav #plants {
   font-weight: 600;
 }
 .wrap .header .theme {
