@@ -226,3 +226,35 @@ function closePopup() {
     $(".cookiesPopupContainer").css('display', 'none');
     setCookie("popupClosed", "true", 365);
 }
+
+//theme changing
+let theme = localStorage.getItem('theme') || 'light';
+$('.mainPage_theme').click(function(){
+    if(theme == 'light'){
+        theme = 'dark';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+
+    }else{
+        theme = 'light';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }
+})
+function changeTheme(theme){
+    if(theme == 'light'){
+        $('.mainPage_theme').css('justify-content', 'flex-start')
+        $('.mainPage_theme').css('background-color', '#fff')
+        $('.mainPage_theme_circle').css('background-color', '#283444')
+        $('.mainPage_theme_circle').css('border', '2px #fff solid')
+
+    }else{
+        $('.mainPage_theme').css('justify-content', 'flex-end')
+        $('.mainPage_theme').css('background-color', '#081323')
+        $('.mainPage_theme_circle').css('background-color', '#fff')
+        $('.mainPage_theme_circle').css('border', '2px #081323 solid')
+
+
+    }
+}
+changeTheme(theme);
