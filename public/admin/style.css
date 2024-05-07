@@ -56,7 +56,7 @@
   text-decoration: none;
   color: #566270;
 }
-.wrap .header .mainPage_theme {
+.wrap .header .theme {
   width: 60px;
   height: 30px;
   border-radius: 20px;
@@ -65,7 +65,7 @@
   justify-content: flex-start;
   cursor: pointer;
 }
-.wrap .header .mainPage_theme .mainPage_theme_circle {
+.wrap .header .theme .theme_circle {
   width: 30px;
   height: 30px;
   background-color: #fff;
