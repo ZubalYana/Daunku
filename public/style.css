@@ -73,16 +73,22 @@
   text-decoration: none;
   color: #fff;
 }
-.wrap .mainPage .mainPage_header .mainPage_cart {
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon .mainPage_cart {
   width: 39px;
   height: 37px;
   position: relative;
   cursor: pointer;
 }
-.wrap .mainPage .mainPage_header .mainPage_cart #cart {
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon .mainPage_cart #cart {
   width: 32px;
 }
-.wrap .mainPage .mainPage_header .mainPage_cart .mainPage_cartCounter {
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon .mainPage_cart .mainPage_cartCounter {
   width: 21px;
   height: 21px;
   border-radius: 50%;
@@ -96,6 +102,22 @@
   top: 2px;
   background: linear-gradient(to right, #2AF598, #009EFD);
   color: #2D3949;
+}
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon .mainPage_theme {
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.wrap .mainPage .mainPage_header .mainPage_cartThemeCon .mainPage_theme .mainPage_theme_circle {
+  width: 30px;
+  height: 30px;
+  background-color: #283444;
+  border-radius: 50%;
+  border: 2px #fff solid;
 }
 .wrap .mainPage .mainPage_content {
   width: 100%;
