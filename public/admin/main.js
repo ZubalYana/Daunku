@@ -42,7 +42,7 @@ $('#plants').click(()=>{
     $('#plants').css('font-weight', '600')
     $('#contacts').css('font-weight', '400')
     $('#newslatter').css('font-weight', '400')
-    $('#unknownPage').css('font-weight', '400')
+    $('#orders').css('font-weight', '400')
     $('.content').append(
         `
         <div class="addNewPlantsBtn">+</div>
@@ -55,7 +55,7 @@ $('#contacts').click(()=>{
     $('#plants').css('font-weight', '400')
     $('#contacts').css('font-weight', '600')
     $('#newslatter').css('font-weight', '400')
-    $('#unknownPage').css('font-weight', '400')
+    $('#orders').css('font-weight', '400')
     $('.content').append(
         `
         <div>contacts here</div>
@@ -67,22 +67,22 @@ $('#newslatter').click(()=>{
     $('#plants').css('font-weight', '400')
     $('#contacts').css('font-weight', '400')
     $('#newslatter').css('font-weight', '600')
-    $('#unknownPage').css('font-weight', '400')
+    $('#orders').css('font-weight', '400')
     $('.content').append(
         `
         <div>newslatter here</div>
         `
     )
 })
-$('#unknownPage').click(()=>{
+$('#orders').click(()=>{
     $('.content').empty();
     $('#plants').css('font-weight', '400')
     $('#contacts').css('font-weight', '400')
     $('#newslatter').css('font-weight', '400')
-    $('#unknownPage').css('font-weight', '600')
+    $('#orders').css('font-weight', '600')
     $('.content').append(
         `
-        <div>unknown page here</div>
+        <div>orders here</div>
         `
     )
 })
