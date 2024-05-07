@@ -29,3 +29,44 @@ function changeTheme(theme){
     }
 }
 changeTheme(theme);
+
+//pages changing
+$('.content').append(
+    `
+    <div class="addNewPlantsBtn">+</div>
+    <div class="plantslist"></div>
+    `
+)
+$('#plants').click(()=>{
+    $('.content').empty();
+    $('.content').append(
+        `
+        <div class="addNewPlantsBtn">+</div>
+        <div class="plantslist"></div>
+        `
+    )
+})
+$('#contacts').click(()=>{
+    $('.content').empty();
+    $('.content').append(
+        `
+        <div>contacts here</div>
+        `
+    )
+})
+$('#newslatter').click(()=>{
+    $('.content').empty();
+    $('.content').append(
+        `
+        <div>newslatter here</div>
+        `
+    )
+})
+$('#unknownPage').click(()=>{
+    $('.content').empty();
+    $('.content').append(
+        `
+        <div>unknown page here</div>
+        `
+    )
+})
