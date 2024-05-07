@@ -78,4 +78,29 @@
   background-color: #fff;
   border-radius: 50%;
   border: 2px #566270 solid;
+}
+.wrap .content {
+  margin-top: 40px;
+}
+.wrap .content .addNewPlantsBtn {
+  width: 230px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 84px;
+  font-weight: 600;
+  color: #283444;
+  border: 2px #283444 solid;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.3s ease;
+}
+.wrap .content .addNewPlantsBtn:hover {
+  background-color: #283444;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
