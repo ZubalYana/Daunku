@@ -45,16 +45,19 @@
 .wrap .header .logo .logo_img {
   width: 38px;
 }
-.wrap .header .mainPage_nav {
+.wrap .header .nav {
   width: 534px;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
   font-weight: 400;
 }
-.wrap .header .mainPage_nav .mainPage_navEl {
+.wrap .header .nav .navEl {
   text-decoration: none;
   color: #566270;
+}
+.wrap .header .nav .active {
+  font-weight: 600;
 }
 .wrap .header .theme {
   width: 60px;

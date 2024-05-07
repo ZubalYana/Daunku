@@ -40,15 +40,18 @@
                 width: 38px;
             }
         }
-        .mainPage_nav{
+        .nav{
             width: 534px;
             display: flex;
             justify-content: space-between;
             font-size: 20px;
             font-weight: 400;
-            .mainPage_navEl{
+            .navEl{
                 text-decoration: none;
                 color: #566270;
+            }
+            .active{
+                font-weight: 600;
             }
         }
         .theme{
