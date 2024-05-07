@@ -74,6 +74,10 @@ axios.get('http://localhost:3000/plants')
     let totalAmount = 0;
 
     $('.plant_addBtn').click((e)=>{
+        $('.addingMessage').css('display', 'flex')
+        setTimeout(() => {
+            $('.addingMessage').css('display', 'none')
+        }, 2000);
         for(let el of db){
             if(el._id == e.target.id){
                 cartlist.push(el)

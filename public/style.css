@@ -328,6 +328,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  transition: 0.3s ease;
 }
 .wrap .interior {
   display: flex;
