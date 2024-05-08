@@ -112,6 +112,7 @@
                     border: #283444 2px solid;
                     border-radius: 20px;
                     margin-bottom: 20px;
+                    color: #283444;
                     .plantImg{
                         width: 60px;
                     }
@@ -119,6 +120,11 @@
                         width: 200px;
                         display: flex;
                         justify-content: flex-start;
+                        font-weight: 600;
+                    }
+                    .plantPrice{
+                        font-size: 16px;
+                        font-weight: 700;
                     }
                 }
             }
