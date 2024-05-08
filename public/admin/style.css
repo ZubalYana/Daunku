@@ -136,4 +136,33 @@
 .wrap .content .plantsWrapper .plantslist .plant .plantPrice {
   font-size: 16px;
   font-weight: 700;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_edit {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_edit img {
+  width: 100%;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete .plant_delete_top {
+  width: 100%;
+}
+.wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete .plant_delete_bottom {
+  width: 80%;
 }/*# sourceMappingURL=style.css.map */

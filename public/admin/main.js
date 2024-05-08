@@ -71,6 +71,15 @@ axios.get('http://localhost:3000/plants')
             <h3 class="plantName">${el.title}</h3>
             <div class="plantRating">${el.rating}</div>
             <div class="plantPrice">$${el.price}.00</div>
+            <div class="plant_actions">
+    <div class="plant_edit">
+        <img class="plant_edit_pen" src="./imgs/pen.png" alt="">
+    </div>
+    <div class="plant_delete">
+        <img class="plant_delete_top" src="./imgs/bin top.png" alt="">
+        <img class="plant_delete_bottom" src="./imgs/bin bottom.png" alt="">
+    </div>
+</div>
         </div>
             `
         )
