@@ -1,8 +1,10 @@
 //pages changing
 $('.content').append(
     `
+    <div class="plantsWrapper">
     <div class="addNewPlantsBtn">+</div>
     <div class="plantslist"></div>
+    </div>
     `
 )
 $('#plants').click(()=>{
@@ -13,8 +15,10 @@ $('#plants').click(()=>{
     $('#orders').css('font-weight', '400')
     $('.content').append(
         `
+        <div class="plantsWrapper">
         <div class="addNewPlantsBtn">+</div>
         <div class="plantslist"></div>
+        </div>
         `
     )
 })

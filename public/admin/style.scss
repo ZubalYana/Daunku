@@ -76,40 +76,45 @@
     }
     .content{
         margin-top: 40px;
-        .addNewPlantsBtn{
-            width: 230px;
-            height: 230px;
+        .plantsWrapper{
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 84px;
-            font-weight: 600;
-            color: #283444;
-            border: 2px #283444 solid;
-            border-radius: 20px;
-            background-color: #fff;
-            cursor: pointer;
-            user-select: none;
-            transition: 0.3s ease;
-        }
-        .addNewPlantsBtn:hover{
-            background-color: #283444;
-            color: #fff;
-        }
-        .plantslist{
-            .plant{
-                width: 100%;
-                height: 70px;
+            .addNewPlantsBtn{
+                width: 230px;
+                height: 230px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                padding: 6px;
-                border: #283444 2px solid;
+                font-size: 84px;
+                font-weight: 600;
+                color: #283444;
+                border: 2px #283444 solid;
                 border-radius: 20px;
-                .plantImg{
-                    width: 50px;
+                background-color: #fff;
+                cursor: pointer;
+                user-select: none;
+                transition: 0.3s ease;
+            }
+            .addNewPlantsBtn:hover{
+                background-color: #283444;
+                color: #fff;
+            }
+            .plantslist{
+                .plant{
+                    width: 100%;
+                    height: 70px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 6px;
+                    border: #283444 2px solid;
+                    border-radius: 20px;
+                    .plantImg{
+                        width: 50px;
+                    }
                 }
             }
         }
+
     }
 }

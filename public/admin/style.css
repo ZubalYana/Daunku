@@ -82,7 +82,11 @@
 .wrap .content {
   margin-top: 40px;
 }
-.wrap .content .addNewPlantsBtn {
+.wrap .content .plantsWrapper {
+  width: 100%;
+  display: flex;
+}
+.wrap .content .plantsWrapper .addNewPlantsBtn {
   width: 230px;
   height: 230px;
   display: flex;
@@ -100,11 +104,11 @@
           user-select: none;
   transition: 0.3s ease;
 }
-.wrap .content .addNewPlantsBtn:hover {
+.wrap .content .plantsWrapper .addNewPlantsBtn:hover {
   background-color: #283444;
   color: #fff;
 }
-.wrap .content .plantslist .plant {
+.wrap .content .plantsWrapper .plantslist .plant {
   width: 100%;
   height: 70px;
   display: flex;
@@ -114,6 +118,6 @@
   border: #283444 2px solid;
   border-radius: 20px;
 }
-.wrap .content .plantslist .plant .plantImg {
+.wrap .content .plantsWrapper .plantslist .plant .plantImg {
   width: 50px;
 }/*# sourceMappingURL=style.css.map */
