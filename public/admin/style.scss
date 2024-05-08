@@ -96,5 +96,20 @@
             background-color: #283444;
             color: #fff;
         }
+        .plantslist{
+            .plant{
+                width: 100%;
+                height: 70px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6px;
+                border: #283444 2px solid;
+                border-radius: 20px;
+                .plantImg{
+                    width: 50px;
+                }
+            }
+        }
     }
 }
