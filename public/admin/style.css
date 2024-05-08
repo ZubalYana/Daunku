@@ -57,7 +57,37 @@
   font-weight: 600;
 }
 .addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer {
-  width: 50%;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px #081323 solid;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer .addNewPlant_btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #081323;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px #081323 solid;
+  margin-top: 15px;
+  transition: 0.5s ease;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer .addNewPlant_btn:hover {
+  background-color: #081323;
+  color: #fff;
 }
 .addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_rightPart {
   width: 50%;
