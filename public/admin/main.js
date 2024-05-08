@@ -118,3 +118,10 @@ function changeTheme(theme){
 }
 changeTheme(theme);
 
+//adding new plants
+$('.addNewPlantsBtn').click(()=>{
+    $('.addNewPlantPopup_container').css('display', 'flex')
+})
+$('#addNewPlantXmark').click(()=>{
+    $('.addNewPlantPopup_container').css('display', 'none')
+})
