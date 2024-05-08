@@ -70,7 +70,7 @@ axios.get('http://localhost:3000/plants')
             <img class="plantImg" src="./imgs/${el.image}" alt="">
             <h3 class="plantName">${el.title}</h3>
             <div class="plantRating">${el.rating}</div>
-            <div class="plantPrice">${el.price}</div>
+            <div class="plantPrice">$${el.price}.00</div>
         </div>
             `
         )
