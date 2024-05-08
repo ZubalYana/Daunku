@@ -40,6 +40,7 @@
   border-radius: 50px;
   position: relative;
   padding: 30px;
+  display: flex;
 }
 .addNewPlantPopup_container .addNewPlantPopup #addNewPlantXmark {
   position: absolute;
@@ -47,6 +48,19 @@
   right: 30px;
   font-size: 28px;
   cursor: pointer;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart {
+  width: 50%;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer {
+  width: 50%;
+}
+.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_rightPart {
+  width: 50%;
 }
 
 .wrap {

@@ -36,6 +36,7 @@
         border-radius: 50px;
         position: relative;
         padding: 30px;
+        display: flex;
         #addNewPlantXmark{
             position: absolute;
             top: 30px;
@@ -43,7 +44,22 @@
             font-size: 28px;
             cursor: pointer;
         }
+        .addNewPlantPopup_leftPart{
+            width: 50%;
+            h3{
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .addNewPlantPopup_inputsContainer{
+                width: 50%;
+            }
+        }
+        .addNewPlantPopup_rightPart{
+            width: 50%;
+        }
+
     }
+
 }
 .wrap{
     width: 100%;
