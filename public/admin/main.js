@@ -139,4 +139,5 @@ $('.addNewPlant_btn').click(()=>{
         rating: $('#plant_rating').val()
     }
     axios.post('http://localhost:3000/add-plants', data)
+    location.reload();
 })
