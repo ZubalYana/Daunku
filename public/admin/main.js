@@ -130,6 +130,8 @@ $('#addNewPlantXmark').click(()=>{
 
 
 $('.addNewPlant_btn').click(()=>{
+    $('.addNewPlantPopup_container').css('display', 'none')
+
     let data = {
         title: $('#plant_name').val(),
         price: $('#plant_price').val(),
