@@ -237,6 +237,7 @@
 .wrap .plants .plants_basicContent .plantsContainer {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   padding-top: 150px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant {

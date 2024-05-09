@@ -88,7 +88,6 @@ axios.get('http://localhost:3000/plants')
 
     //deleting plants from the catalog
 $('.plant_delete_bottom').click((e)=>{
-    alert('sdsfdfsdsf')
     console.log(e.target)
     let id = e.target.id;
     console.log(id)

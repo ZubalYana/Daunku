@@ -228,6 +228,7 @@
             .plantsContainer{
                 width: 100%;
                 display: flex;
+                justify-content: space-between;
                 padding-top: 150px;
                 .plant{
                     width: 250px;
