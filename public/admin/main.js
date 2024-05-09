@@ -128,12 +128,13 @@ $('#addNewPlantXmark').click(()=>{
 
 
 
-let data = {
-    title: $('#plant_name').val(),
-    price: $('#plant_price').val(),
-    image: $('#plant_image').val(),
-    rating: $('#plant_rating').val()
-}
+
 $('.addNewPlant_btn').click(()=>{
+    let data = {
+        title: $('#plant_name').val(),
+        price: $('#plant_price').val(),
+        image: $('#plant_image').val(),
+        rating: $('#plant_rating').val()
+    }
     axios.post('http://localhost:3000/add-plants', data)
 })
