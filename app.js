@@ -31,6 +31,17 @@ app.get('/plants', async (req, res)=>{
         res.status(500).json({ message: err })
     }
 })
+app.delete('/plant/:id', async ( req, res )=>{
+    try {
+        const id = req.params.id;
+        console.log(id);
+        await Plants.findByIdAndDelete(id);
+        res.status(204).end();
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
 app.get('/', (req, res)=>{
     res.sendFile('public', 'index.html')
 })

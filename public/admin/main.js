@@ -77,13 +77,27 @@ axios.get('http://localhost:3000/plants')
     </div>
     <div class="plant_delete">
         <img class="plant_delete_top" src="./imgs/bin top.png" alt="">
-        <img class="plant_delete_bottom" src="./imgs/bin bottom.png" alt="">
+        <img class="plant_delete_bottom" id="${el._id}" src="./imgs/bin bottom.png" alt="">
     </div>
 </div>
         </div>
             `
         )
     }
+
+
+    //deleting plants from the catalog
+$('.plant_delete_bottom').click((e)=>{
+    alert('sdsfdfsdsf')
+    console.log(e.target)
+    let id = e.target.id;
+    console.log(id)
+    axios.delete(`http://localhost:3000/plant/${id}`)
+    .then(res => {
+        location.reload()
+    })
+})
+
 })
 
 //theme changing
@@ -125,10 +139,6 @@ $('.addNewPlantsBtn').click(()=>{
 $('#addNewPlantXmark').click(()=>{
     $('.addNewPlantPopup_container').css('display', 'none')
 })
-
-
-
-
 $('.addNewPlant_btn').click(()=>{
     $('.addNewPlantPopup_container').css('display', 'none')
 
@@ -141,3 +151,4 @@ $('.addNewPlant_btn').click(()=>{
     axios.post('http://localhost:3000/add-plants', data)
     location.reload();
 })
+
