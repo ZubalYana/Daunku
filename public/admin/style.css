@@ -93,6 +93,70 @@
   width: 50%;
 }
 
+.editPlantPopup_container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(40, 52, 68, 0.5215686275);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.editPlantPopup_container .editPlantPopup {
+  width: 550px;
+  height: 410px;
+  background-color: #fff;
+  border-radius: 50px;
+  position: relative;
+  padding: 30px;
+}
+.editPlantPopup_container .editPlantPopup #editPlantPopupXmark {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.editPlantPopup_container .editPlantPopup h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.editPlantPopup_container .editPlantPopup .editPlantPopup_inputsContainer {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.editPlantPopup_container .editPlantPopup .editPlantPopup_inputsContainer input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px #081323 solid;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+.editPlantPopup_container .editPlantPopup .editPlantPopup_inputsContainer .editPlant_btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #081323;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px #081323 solid;
+  margin-top: 15px;
+  transition: 0.5s ease;
+}
+.editPlantPopup_container .editPlantPopup .editPlantPopup_inputsContainer .editPlant_btn:hover {
+  background-color: #081323;
+  color: #fff;
+}
+
 .wrap {
   width: 100%;
   height: 100vh;

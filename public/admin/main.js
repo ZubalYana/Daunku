@@ -72,7 +72,7 @@ axios.get('http://localhost:3000/plants')
             <div class="plantRating">${el.rating}</div>
             <div class="plantPrice">$${el.price}.00</div>
             <div class="plant_actions">
-    <div class="plant_edit">
+    <div class="plant_edit" id="edit${el._id}">
         <img class="plant_edit_pen" src="./imgs/pen.png" alt="">
     </div>
     <div class="plant_delete">
@@ -104,10 +104,12 @@ axios.get('http://localhost:3000/plants')
             $(this).find('.plant_edit_pen').css('transform', 'rotate(0deg)');
         }
     ); 
-    
+
+    //edtiting the platns
+    $('.plant_edit').click((e)=>{})
     
     //deleting plants from the catalog
-$('.plant_delete_bottom').click((e)=>{
+    $('.plant_delete_bottom').click((e)=>{
     console.log(e.target)
     let id = e.target.id;
     console.log(id)
@@ -115,7 +117,7 @@ $('.plant_delete_bottom').click((e)=>{
     .then(res => {
         location.reload()
     })
-})
+    })
 
 })
 
