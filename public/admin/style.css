@@ -223,6 +223,7 @@
 }
 .wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_edit img {
   width: 100%;
+  transition: 0.4s ease;
 }
 .wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete {
   cursor: pointer;
