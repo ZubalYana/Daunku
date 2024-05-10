@@ -9,6 +9,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css' integrity='sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' integrity='sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==' crossorigin='anonymous'/>
 </head>
 <body>
     <div class="cartPopupContainer">
@@ -99,7 +100,7 @@
             </div>
             <div class="mainPage_blur"></div>
         </div>
-        <div class="plants page">
+        <div class="plants page" data-aos="fade-right" data-aos-duration="1000">
             <div class="plants_abilities">
                 <div class="plants_ability">
                     <img class="plants_abilityImg" src="./imgs/box.png" alt="">
@@ -128,10 +129,10 @@
                 <div class="plantsContainer"></div>
             </div>
         </div>
-        <div class="addingMessage">
+        <div class="addingMessage" data-aos="fade-right" data-aos-duration="1000">
             Added to the cart!
         </div>
-        <div class="interior page">
+        <div class="interior page" data-aos="fade-right" data-aos-duration="1000">
             <div class="interior_title">Interior Plant Reference</div>
             <div class="interior_subtitle">make your home so comfortable with refreshing plants</div>
             <div class="interior_Con">
@@ -148,12 +149,12 @@
                 <div class="interior_rightPart">
                     <div class="room3Con">
                         <img id="room3" src="./imgs/room 3.png" alt="">
-                        <div class="room3_cover">office</div>
+                        <div class="room3_cover">bedroom</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="care page">
+        <div class="care page" data-aos="fade-right" data-aos-duration="1000">
             <div class="care_leftPart">
                 <div class="care_title">How to care for plants</div>
                 <div class="care_subtitle">Take care of plants with all your heart</div>
@@ -192,7 +193,7 @@
                 <img class="care_img" src="./imgs/plants.png" alt="">
             </div>
         </div>
-        <div class="futer page">
+        <div class="futer page" data-aos="fade-right" data-aos-duration="1000">
             <div class="futer_content">
                 <div class="futer_newslatter">
                     <div class="futer_newslatter_title">Newslatter</div>
@@ -234,7 +235,10 @@
     </div>
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./main.js"></script>
 </body>
 </html>
