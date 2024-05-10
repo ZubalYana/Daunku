@@ -72,8 +72,8 @@ axios.get('http://localhost:3000/plants')
             <div class="plantRating">${el.rating}</div>
             <div class="plantPrice">$${el.price}.00</div>
             <div class="plant_actions">
-    <div class="plant_edit" id="edit${el._id}">
-        <img class="plant_edit_pen" src="./imgs/pen.png" alt="">
+    <div class="plant_edit">
+        <img class="plant_edit_pen" src="./imgs/pen.png" alt="" id="edit${el._id}">
     </div>
     <div class="plant_delete">
         <img class="plant_delete_top" src="./imgs/bin top.png" alt="">
@@ -106,13 +106,32 @@ axios.get('http://localhost:3000/plants')
     ); 
 
     //edtiting the platns
-    $('.plant_edit').click((e)=>{
+    $('.plant_edit_pen').click((e)=>{
         $('.editPlantPopup_container').css('display', 'flex')
         $('#editPlantPopupXmark').click(()=>{
             $('.editPlantPopup_container').css('display', 'none')
         })
-    })
+        let ID = e.target.id;
+        if (ID.substring(0, 4) == 'edit') {
+            ID = ID.substring(4);
+            console.log(ID);
     
+            $('.editPlant_btn').click(()=>{
+                let data = {
+                    image: $('#newPlant_image').val(),
+                    title: $('#newPlant_name').val(),
+                    rating: $('#newPlant_rating').val(),
+                    price: $('#newPlant_price').val(),
+                };
+                axios.put(`http://localhost:3000/edit-plant/${ID}`, data)
+                    .then(res => {
+                        $('.editTaskPopup_container').css('display', 'none')
+                        location.reload();
+                    })
+            })
+        }
+    })
+
     //deleting plants from the catalog
     $('.plant_delete_bottom').click((e)=>{
     console.log(e.target)

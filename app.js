@@ -42,6 +42,16 @@ app.delete('/plant/:id', async ( req, res )=>{
         res.status(500).json({ message: err })
     }
 })
+app.put('/edit-plant/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const plant = await Plants.findByIdAndUpdate(id, req.body, { new: true });
+        res.status(201).json(plant);
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
 app.get('/', (req, res)=>{
     res.sendFile('public', 'index.html')
 })
