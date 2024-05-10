@@ -353,15 +353,73 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                #room1{
+                .room1Con {
+                    position: relative;
                     width: 640px;
                     height: 441px;
                     border-radius: 50px;
+                    #room1 {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+                        display: flex;
+                    }
+                    .room1_cover {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba($color: #000000, $alpha: 0.33);
+                        font-size: 40px;
+                        font-weight: 600;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: 0.5s ease;
+                    }
                 }
-                #room2{
+                .room1Con:hover .room1_cover {
+                    opacity: 1;
+                }
+                .room2Con {
+                    position: relative;
                     width: 640px;
                     height: 325px;
                     border-radius: 50px;
+                    #room2 {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+                        display: flex;
+                    }
+                    .room2_cover {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba($color: #000000, $alpha: 0.33);
+                        font-size: 40px;
+                        font-weight: 600;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        user-select: none;
+                        transition: 0.5s ease;
+                    }
+                }
+                .room2Con:hover .room2_cover {
+                    opacity: 1;
                 }
             }
             .interior_rightPart{
