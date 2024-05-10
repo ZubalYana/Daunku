@@ -106,7 +106,12 @@ axios.get('http://localhost:3000/plants')
     ); 
 
     //edtiting the platns
-    $('.plant_edit').click((e)=>{})
+    $('.plant_edit').click((e)=>{
+        $('.editPlantPopup_container').css('display', 'flex')
+        $('#editPlantPopupXmark').click(()=>{
+            $('.editPlantPopup_container').css('display', 'none')
+        })
+    })
     
     //deleting plants from the catalog
     $('.plant_delete_bottom').click((e)=>{
