@@ -85,7 +85,19 @@ axios.get('http://localhost:3000/plants')
         )
     }
 
-
+    //actions animations
+    $('.plant_delete').hover(
+        function () {
+            $(this).find('.plant_delete_top').css('top', '-6px');
+            $(this).find('.plant_delete_top').css('transform', 'rotate(-15deg)');
+        },
+        function () {
+            $(this).find('.plant_delete_top').css('top', '0px');
+            $(this).find('.plant_delete_top').css('transform', 'rotate(0deg)');
+        }
+    ); 
+    
+    
     //deleting plants from the catalog
 $('.plant_delete_bottom').click((e)=>{
     console.log(e.target)

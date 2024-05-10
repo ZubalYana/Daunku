@@ -232,10 +232,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete .plant_delete_top {
-  width: 100%;
+  width: 90%;
+  position: absolute;
+  top: 0px;
+  transition: 0.4s ease;
 }
 .wrap .content .plantsWrapper .plantslist .plant .plant_actions .plant_delete .plant_delete_bottom {
-  width: 80%;
+  width: 78%;
+  position: absolute;
+  bottom: 0px;
 }/*# sourceMappingURL=style.css.map */
