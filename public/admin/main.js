@@ -47,8 +47,10 @@ $('#contacts').click(()=>{
         }
         axios.post('/contacts', data)
         .then((res)=>{
-            alert('Contacts were changed successfully')
             console.log(res.data)
+            $('#address').val('')
+            $('#phone').val('')
+            $('#email').val('')
         })
     })
 })
