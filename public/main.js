@@ -264,7 +264,16 @@ function changeTheme(theme){
 changeTheme(theme);
 
 //contacts changing
-axios.get('http://localhost:3000/contacts')
-.then(()=>{
-    
+axios.get('http://localhost:3000/getContacts')
+.then((res)=>{
+    console.log(res.data);
+    const contacts = res.data;
+    contacts.forEach(contact => {
+        $('#contacts_address').html(contact.address);
+        $('#contacts_email').html(contact.email);
+        $('#contacts_phone').html(contact.phone);
+    });
 })
+.catch((err) => {
+    console.error(err);
+});
