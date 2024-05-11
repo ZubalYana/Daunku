@@ -5,6 +5,16 @@
   font-family: Work Sans;
 }
 
+::-moz-selection {
+  background-color: #566270;
+  color: #fff;
+}
+
+::selection {
+  background-color: #566270;
+  color: #fff;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

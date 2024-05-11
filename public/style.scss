@@ -4,22 +4,27 @@
     box-sizing: border-box;
     font-family: Work Sans;
 }
+::selection{
+    background-color: #566270;
+    color: #fff;
+}
 ::-webkit-scrollbar {
     width: 10px;
- }
- ::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-track {
      background: #828282;
      border-radius: 8px;
 
- }
- ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb {
      background: #566270;
      border-radius: 8px;
 
- }
- ::-webkit-scrollbar-thumb:hover {
+}
+::-webkit-scrollbar-thumb:hover {
      background: #283444;
- }
+}
+
 .wrap{
     width: 100%;
     min-height: 100vh;
