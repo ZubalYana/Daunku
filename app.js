@@ -11,6 +11,8 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
 })
 
 const Plants = mongoose.model('Plants', {title: String, price: Number, image: String, rating: Number})
+const Contacts = mongoose.model('Contacts', { address: String, phone: String, email: String });
+
 app.post('/add-plants', async (req, res) => {
     console.log(req.body)
     try {
@@ -19,6 +21,28 @@ app.post('/add-plants', async (req, res) => {
         await plants.save();
         console.log(`Plants created`);
         res.status(201).json(plants);
+    } catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+app.post('/contacts', async (req, res)=>{
+    console.log(req.body)
+    try {
+        const { phone } = req.body;
+        const { address } = req.body;
+        const { email } = req.body;
+        const contacts = new Contacts({address, phone, email})
+        await contacts.save();
+        console.log('Contacts were changed');
+        res.status(201).json(contacts);
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+app.get('/getContacts', async (req, res)=>{
+    try {
+        const contacts = await Contacts.find();
+        res.json(contacts)
     } catch (err) {
         res.status(500).json({ message: err })
     }

@@ -32,9 +32,25 @@ $('#contacts').click(()=>{
     $('#orders').css('font-weight', '400')
     $('.content').append(
         `
-        <div>contacts here</div>
+        <h2>Contacts:</h2>
+        <input type="text" class="contacts_input" id="address" placeholder="Address">
+        <input type="text" class="contacts_input" id="phone" placeholder="Phone">
+        <input type="text" class="contacts_input" id="email" placeholder="Email">
+        <button id="changeContacts">Change contacts</button>
         `
     )
+    $('#changeContacts').click(()=>{
+        const data = {
+            address: $('#address').val(),
+            phone: $('#phone').val(),
+            email: $('#email').val(),
+        }
+        axios.post('/contacts', data)
+        .then((res)=>{
+            alert('Contacts were changed successfully')
+            console.log(res.data)
+        })
+    })
 })
 $('#newslatter').click(()=>{
     $('.content').empty();
