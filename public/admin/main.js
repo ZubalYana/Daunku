@@ -21,6 +21,8 @@ $('#plants').click(()=>{
         </div>
         `
     )
+    getPlants();
+
 })
 $('#contacts').click(()=>{
     $('.content').empty();
@@ -60,91 +62,94 @@ $('#orders').click(()=>{
 })
 
 //existing plants displaying
-axios.get('http://localhost:3000/plants')
-.then((res)=>{
-    console.log(res.data)
-    for(let el of res.data){
-        $('.plantslist').append(
-            `
-            <div class="plant">
-            <img class="plantImg" src="./imgs/${el.image}" alt="">
-            <h3 class="plantName">${el.title}</h3>
-            <div class="plantRating">${el.rating}</div>
-            <div class="plantPrice">$${el.price}.00</div>
-            <div class="plant_actions">
-    <div class="plant_edit">
-        <img class="plant_edit_pen" src="./imgs/pen.png" alt="" id="edit${el._id}">
-    </div>
-    <div class="plant_delete">
-        <img class="plant_delete_top" src="./imgs/bin top.png" alt="">
-        <img class="plant_delete_bottom" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-    </div>
-</div>
+function getPlants(){
+    axios.get('http://localhost:3000/plants')
+    .then((res)=>{
+        console.log(res.data)
+        for(let el of res.data){
+            $('.plantslist').append(
+                `
+                <div class="plant">
+                <img class="plantImg" src="./imgs/${el.image}" alt="">
+                <h3 class="plantName">${el.title}</h3>
+                <div class="plantRating">${el.rating}</div>
+                <div class="plantPrice">$${el.price}.00</div>
+                <div class="plant_actions">
+        <div class="plant_edit">
+            <img class="plant_edit_pen" src="./imgs/pen.png" alt="" id="edit${el._id}">
         </div>
-            `
-        )
-    }
-
-    //actions animations
-    $('.plant_delete').hover(
-        function () {
-            $(this).find('.plant_delete_top').css('top', '-6px');
-            $(this).find('.plant_delete_top').css('transform', 'rotate(-15deg)');
-        },
-        function () {
-            $(this).find('.plant_delete_top').css('top', '0px');
-            $(this).find('.plant_delete_top').css('transform', 'rotate(0deg)');
+        <div class="plant_delete">
+            <img class="plant_delete_top" src="./imgs/bin top.png" alt="">
+            <img class="plant_delete_bottom" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+        </div>
+    </div>
+            </div>
+                `
+            )
         }
-    ); 
-    $('.plant_edit').hover(
-        function () {
-            $(this).find('.plant_edit_pen').css('transform', 'rotate(-17deg)');
-        },
-        function () {
-            $(this).find('.plant_edit_pen').css('transform', 'rotate(0deg)');
-        }
-    ); 
-
-    //edtiting the platns
-    $('.plant_edit_pen').click((e)=>{
-        $('.editPlantPopup_container').css('display', 'flex')
-        $('#editPlantPopupXmark').click(()=>{
-            $('.editPlantPopup_container').css('display', 'none')
-        })
-        let ID = e.target.id;
-        if (ID.substring(0, 4) == 'edit') {
-            ID = ID.substring(4);
-            console.log(ID);
     
-            $('.editPlant_btn').click(()=>{
-                let data = {
-                    image: $('#newPlant_image').val(),
-                    title: $('#newPlant_name').val(),
-                    rating: $('#newPlant_rating').val(),
-                    price: $('#newPlant_price').val(),
-                };
-                axios.put(`http://localhost:3000/edit-plant/${ID}`, data)
-                    .then(res => {
-                        $('.editTaskPopup_container').css('display', 'none')
-                        location.reload();
-                    })
+        //actions animations
+        $('.plant_delete').hover(
+            function () {
+                $(this).find('.plant_delete_top').css('top', '-6px');
+                $(this).find('.plant_delete_top').css('transform', 'rotate(-15deg)');
+            },
+            function () {
+                $(this).find('.plant_delete_top').css('top', '0px');
+                $(this).find('.plant_delete_top').css('transform', 'rotate(0deg)');
+            }
+        ); 
+        $('.plant_edit').hover(
+            function () {
+                $(this).find('.plant_edit_pen').css('transform', 'rotate(-17deg)');
+            },
+            function () {
+                $(this).find('.plant_edit_pen').css('transform', 'rotate(0deg)');
+            }
+        ); 
+    
+        //edtiting the platns
+        $('.plant_edit_pen').click((e)=>{
+            $('.editPlantPopup_container').css('display', 'flex')
+            $('#editPlantPopupXmark').click(()=>{
+                $('.editPlantPopup_container').css('display', 'none')
             })
-        }
+            let ID = e.target.id;
+            if (ID.substring(0, 4) == 'edit') {
+                ID = ID.substring(4);
+                console.log(ID);
+        
+                $('.editPlant_btn').click(()=>{
+                    let data = {
+                        image: $('#newPlant_image').val(),
+                        title: $('#newPlant_name').val(),
+                        rating: $('#newPlant_rating').val(),
+                        price: $('#newPlant_price').val(),
+                    };
+                    axios.put(`http://localhost:3000/edit-plant/${ID}`, data)
+                        .then(res => {
+                            $('.editTaskPopup_container').css('display', 'none')
+                            location.reload();
+                        })
+                })
+            }
+        })
+    
+        //deleting plants from the catalog
+        $('.plant_delete_bottom').click((e)=>{
+        console.log(e.target)
+        let id = e.target.id;
+        console.log(id)
+        axios.delete(`http://localhost:3000/plant/${id}`)
+        .then(res => {
+            location.reload()
+        })
+        })
+    
     })
-
-    //deleting plants from the catalog
-    $('.plant_delete_bottom').click((e)=>{
-    console.log(e.target)
-    let id = e.target.id;
-    console.log(id)
-    axios.delete(`http://localhost:3000/plant/${id}`)
-    .then(res => {
-        location.reload()
-    })
-    })
-
-})
-
+    
+};
+getPlants();
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
 $('.theme').click(function(){
