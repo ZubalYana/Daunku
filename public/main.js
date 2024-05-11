@@ -262,3 +262,9 @@ function changeTheme(theme){
     }
 }
 changeTheme(theme);
+
+//contacts changing
+axios.get('http://localhost:3000/contacts')
+.then(()=>{
+    
+})
