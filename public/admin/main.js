@@ -31,12 +31,16 @@ $('#contacts').click(()=>{
     $('#newslatter').css('font-weight', '400')
     $('#orders').css('font-weight', '400')
     $('.content').append(
-        `
+        `<div class="contactsWrapper">
+        <div class="contacts_leftPart">
         <h2>Contacts:</h2>
-        <input type="text" class="contacts_input" id="address" placeholder="Address">
-        <input type="text" class="contacts_input" id="phone" placeholder="Phone">
-        <input type="text" class="contacts_input" id="email" placeholder="Email">
-        <button id="changeContacts">Change contacts</button>
+            <input type="text" class="contacts_input" id="address" placeholder="Address">
+            <input type="text" class="contacts_input" id="phone" placeholder="Phone">
+            <input type="text" class="contacts_input" id="email" placeholder="Email">
+            <button id="changeContacts">Change contacts</button>
+        </div>
+        <div class="contacts_rightPart"></div>
+        </div>
         `
     )
     $('#changeContacts').click(()=>{

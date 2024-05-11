@@ -305,6 +305,48 @@
                 }
             }
         }
+        .contactsWrapper{
+            color: #566270;
+            display: flex;
+            .contacts_leftPart{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                h2{
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+                input{
+                    width: 500px;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: 2px #566270 solid;
+                    padding: 10px;
+                    margin: 15px 0 0 0;
+                }
+                button{
+                    width: 220px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 21px;
+                    font-weight: 600;
+                    border-radius: 20px;
+                    border: #566270 2px solid;
+                    color: #566270;
+                    background-color: #fff;
+                    cursor: pointer;
+                    margin-top: 20px;
+                    transition: 0.5s ease;
+                }
+                button:hover{
+                    background-color: #566270;
+                    color: #fff;
+                }
+            }
+
+        }
 
     }
 }
