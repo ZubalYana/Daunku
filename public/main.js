@@ -104,10 +104,14 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
     let ID = e.target.id;
     if (ID.substring(0, 14) === 'deleteFromCart') {
         let plantID = ID.substring(14);
-        cartlist = cartlist.filter(plant => plant._id !== plantID);
-        renderCart();
+        let index = cartlist.findIndex(plant => plant._id === plantID);
+        if (index !== -1) {
+            cartlist.splice(index, 1);
+            renderCart();
+        }
     }
 });
+
 
 
 //cookies animation
