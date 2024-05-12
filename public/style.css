@@ -247,15 +247,17 @@
 .wrap .plants .plants_basicContent .plantsContainer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   padding-top: 150px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant {
   width: 250px;
   border-radius: 20px;
   color: #333;
-  margin-bottom: 20px;
-  margin-right: 240px;
+  margin-bottom: 220px;
+  margin-right: 100px;
 }
 .wrap .plants .plants_basicContent .plantsContainer .plant .plant_imgCon {
   width: 300px;
