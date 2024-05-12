@@ -95,6 +95,7 @@ axios.get('http://localhost:3000/plants')
                     <div class="chosenPlant_name">${el.title}</div>
                     <div class="chosenPlant_price">$${el.price}.00</div>
                 </div>
+                <div class="chosenPlant_amount">x2</div>
                 <div class="chosenPlant_delete" id="deleteFromCart${el._id}"><div class="minus"></div></div>
             </div>`
             )

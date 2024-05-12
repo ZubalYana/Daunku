@@ -172,6 +172,7 @@ function getPlants(){
     
 };
 getPlants();
+
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
 $('.theme').click(function(){
