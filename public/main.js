@@ -25,13 +25,15 @@ axios.get('http://localhost:3000/plants')
             </div>
             `
         )
-        $('.plant_rating').empty();
-        for (let i = 0; i < 5; i++) {
-            if (i < el.rating) {
-                $('.plant_rating').append(`<i class="fa-solid fa-star"></i>`);
-            } else {
-                $('.plant_rating').append(`<i class="fa-regular fa-star"></i>`);
-            }
+
+        //Plants rating displaying
+        let $ratingContainer = $('.plant_rating').last();
+        $ratingContainer.empty();
+        for (let i = 0; i < el.rating; i++) {
+            $ratingContainer.append(`<i class="fa-solid fa-star"></i>`);
+        }
+        for (let i = el.rating; i < 5; i++) {
+            $ratingContainer.append(`<i class="fa-regular fa-star"></i>`);
         }
     }
     console.log(db)
