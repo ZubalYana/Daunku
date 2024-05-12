@@ -58,7 +58,6 @@ axios.get('http://localhost:3000/plants')
         renderCart();
     });
 });
-
 function renderCart() {
     $('.mainPage_cartCounter').html(cartlist.length);
     $('.chosenPlantsContainer').empty();
@@ -82,11 +81,9 @@ function renderCart() {
     $('#totalAmount').html(`Total amount: $${totalAmount}.00`);
     $('#chosenPlantCount').html(`Plants chosen: ${cartlist.length}`);
 }
-
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
 });
-
 $('#cartPopup_xmark').click(() => {
     $('.cartPopupContainer').css('display', 'none');
 });
@@ -113,7 +110,6 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
         }
     }
 });
-
 
 
 //cookies animation
