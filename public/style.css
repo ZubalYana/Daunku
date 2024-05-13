@@ -646,7 +646,7 @@
 }
 .cartPopupContainer .cartPopup {
   width: 850px;
-  height: 550px;
+  height: 600px;
   background-color: #fff;
   border-radius: 50px;
   position: relative;
@@ -659,6 +659,12 @@
   font-size: 28px;
   cursor: pointer;
 }
+.cartPopupContainer .cartPopup h1 {
+  color: #081323;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 .cartPopupContainer .cartPopup .cartPopup_parts {
   display: flex;
   width: 100%;
@@ -669,15 +675,9 @@
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart {
   width: 50%;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart h1 {
-  color: #081323;
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer {
   width: 90%;
-  height: 430px;
+  height: 480px;
   overflow-y: auto;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {

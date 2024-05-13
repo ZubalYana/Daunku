@@ -629,7 +629,7 @@
     z-index: 9999;
     .cartPopup{
         width: 850px;
-        height: 550px;
+        height: 600px;
         background-color: #fff;
         border-radius: 50px;
         position: relative;
@@ -641,6 +641,12 @@
             font-size: 28px;
             cursor: pointer;
         }
+        h1{
+            color: #081323;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
         .cartPopup_parts{
             display: flex;
             width: 100%;
@@ -649,15 +655,10 @@
             justify-content: space-between;
             .cartPopup_infoPart{
                 width: 50%;
-                h1{
-                    color: #081323;
-                    font-size: 32px;
-                    font-weight: 600;
-                    margin-bottom: 20px;
-                }
+
                 .chosenPlantsContainer{
                     width: 90%;
-                    height: 430px;
+                    height: 480px;
                     overflow-y: auto;
     
                     .chosenPlant{

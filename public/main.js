@@ -2,7 +2,6 @@
 let db = [];
 let cartlist = [];
 let totalAmount = 0;
-
 axios.get('http://localhost:3000/plants')
 .then((res)=>{
     console.log(res.data)
@@ -236,3 +235,14 @@ axios.get('http://localhost:3000/getContacts')
 .catch((err) => {
     console.error(err);
 });
+
+
+//plants ordering
+// $('#buyBtn').click(()=>{
+//     let data = {
+//         userName: $('#userName').val(),
+//         userPhone: $('#userPhone').val(),
+//         userOrder: cartlist,
+//         userName: $('#userName').val(),
+//     }
+// })
