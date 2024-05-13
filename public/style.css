@@ -777,6 +777,14 @@
   border: 1px #081323 solid;
   padding: 7px;
 }
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px #081323 solid;
+  padding: 7px;
+  resize: none;
+}
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer #buyBtn {
   width: 200px;
   height: 50px;
