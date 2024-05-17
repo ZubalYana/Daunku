@@ -6,6 +6,7 @@
         }
         .mainPage{
             width: 100%;
+            height: 64vh;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -52,8 +53,13 @@
                 margin-top: 15px;
                 width: 300px;
             }
+            .mainPage_blur{}
 
 
+        }
+        .plants{
+            display: flex;
+            flex-direction: column;
         }
     }
 }
