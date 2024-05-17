@@ -60,6 +60,10 @@
         .plants{
             display: flex;
             flex-direction: column;
+            .plants_abilities{
+                flex-direction: column;
+                height: 300px;
+            }
         }
     }
 }

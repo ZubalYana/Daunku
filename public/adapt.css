@@ -55,4 +55,8 @@
     display: flex;
     flex-direction: column;
   }
+  .wrap .plants .plants_abilities {
+    flex-direction: column;
+    height: 300px;
+  }
 }/*# sourceMappingURL=adapt.css.map */
