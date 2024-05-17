@@ -59,4 +59,17 @@
     flex-direction: column;
     height: 300px;
   }
+  .wrap .plants .plants_basicContent .plantsContainer_title {
+    font-size: 35px;
+    width: 100%;
+  }
+  .wrap .plants .plants_basicContent .plantsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap .plants .plants_basicContent .plantsContainer .plant {
+    margin-bottom: 230px;
+  }
 }/*# sourceMappingURL=adapt.css.map */
