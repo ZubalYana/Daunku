@@ -92,6 +92,7 @@
                 font-size: 12px;
             }
             .interior_Con{
+                height: 300px;
                 .interior_leftPart{
                     .room1Con{
                         width: 200px;
@@ -115,6 +116,18 @@
                             font-size: 20px;
                             border-radius: 6px;
 
+                        }
+                    }
+                }
+                .interior_rightPart{
+                    .room3Con{
+                        width: 80%;
+                        #room3{
+                            border-radius: 6px;
+                        }
+                        .room3_cover{
+                            font-size: 20px;
+                            border-radius: 6px;
                         }
                     }
                 }

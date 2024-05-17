@@ -83,6 +83,9 @@
   .wrap .interior .interior_subtitle {
     font-size: 12px;
   }
+  .wrap .interior .interior_Con {
+    height: 300px;
+  }
   .wrap .interior .interior_Con .interior_leftPart .room1Con {
     width: 200px;
     height: 138px;
@@ -102,6 +105,16 @@
     border-radius: 6px;
   }
   .wrap .interior .interior_Con .interior_leftPart .room2Con .room2_cover {
+    font-size: 20px;
+    border-radius: 6px;
+  }
+  .wrap .interior .interior_Con .interior_rightPart .room3Con {
+    width: 80%;
+  }
+  .wrap .interior .interior_Con .interior_rightPart .room3Con #room3 {
+    border-radius: 6px;
+  }
+  .wrap .interior .interior_Con .interior_rightPart .room3Con .room3_cover {
     font-size: 20px;
     border-radius: 6px;
   }
