@@ -9,6 +9,10 @@
             position: relative;
             display: flex;
             flex-direction: column;
+            .mainPage_background{
+                width: 200%;
+                height: auto;
+            }
             .mainPage_header{
                 align-items: center;
                 .mainPage_nav{
@@ -31,6 +35,24 @@
                     }
                 }
             }
+            .mainPage_content{
+                align-items: flex-start;
+
+                .mainPage_title{
+                    font-size: 24px;
+                    text-align: start;
+                }
+                .mainPage_subtitle{
+                    font-size: 14px;
+                    text-align: start;
+
+                }
+            }
+            .mainPage_inputContainer{
+                margin-top: 15px;
+                width: 300px;
+            }
+
 
         }
     }
