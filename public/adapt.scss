@@ -2,6 +2,22 @@
     .wrap{
         .page{
             padding: 30px;
+            display: none;
+        }
+        .mainPage{
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .mainPage_header{
+                .mainPage_nav{
+                    display: none;
+                }
+                .mainPage_cartThemeCon{
+                    display: none;
+                }
+            }
+
         }
     }
 }

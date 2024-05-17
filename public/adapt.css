@@ -1,5 +1,18 @@
 @media screen and (max-device-width: 430px) {
   .wrap .page {
     padding: 30px;
+    display: none;
+  }
+  .wrap .mainPage {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap .mainPage .mainPage_header .mainPage_nav {
+    display: none;
+  }
+  .wrap .mainPage .mainPage_header .mainPage_cartThemeCon {
+    display: none;
   }
 }/*# sourceMappingURL=adapt.css.map */
