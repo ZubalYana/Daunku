@@ -72,6 +72,9 @@
 .wrap .mainPage .mainPage_header .mainPage_logo #logo {
   width: 38px;
 }
+.wrap .mainPage .mainPage_header .mainPage_burger {
+  display: none;
+}
 .wrap .mainPage .mainPage_header .mainPage_nav {
   width: 534px;
   display: flex;

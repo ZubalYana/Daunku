@@ -9,10 +9,26 @@
     display: flex;
     flex-direction: column;
   }
+  .wrap .mainPage .mainPage_header {
+    align-items: center;
+  }
   .wrap .mainPage .mainPage_header .mainPage_nav {
     display: none;
   }
   .wrap .mainPage .mainPage_header .mainPage_cartThemeCon {
     display: none;
+  }
+  .wrap .mainPage .mainPage_header .mainPage_burger {
+    display: flex;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .mainPage .mainPage_header .mainPage_burger .mainPage_burgerRow {
+    width: 100%;
+    height: 3px;
+    border-radius: 6px;
+    background-color: #fff;
   }
 }/*# sourceMappingURL=adapt.css.map */
