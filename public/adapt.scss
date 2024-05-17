@@ -81,5 +81,44 @@
 
             }
         }
+        .interior{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .interior_title{
+                font-size: 35px;
+            }
+            .interior_subtitle{
+                font-size: 12px;
+            }
+            .interior_Con{
+                .interior_leftPart{
+                    .room1Con{
+                        width: 200px;
+                        height: 138px;
+                        #room1{
+                            border-radius: 6px;
+                        }
+                        .room1_cover{
+                            font-size: 20px;
+                            border-radius: 6px;
+
+                        }
+                    }
+                    .room2Con{
+                        width: 200px;
+                        height: 138px;
+                        #room2{
+                            border-radius: 6px;
+                        }
+                        .room2_cover{
+                            font-size: 20px;
+                            border-radius: 6px;
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }

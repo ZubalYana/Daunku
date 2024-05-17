@@ -72,4 +72,37 @@
   .wrap .plants .plants_basicContent .plantsContainer .plant {
     margin-bottom: 230px;
   }
+  .wrap .interior {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrap .interior .interior_title {
+    font-size: 35px;
+  }
+  .wrap .interior .interior_subtitle {
+    font-size: 12px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room1Con {
+    width: 200px;
+    height: 138px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room1Con #room1 {
+    border-radius: 6px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room1Con .room1_cover {
+    font-size: 20px;
+    border-radius: 6px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room2Con {
+    width: 200px;
+    height: 138px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room2Con #room2 {
+    border-radius: 6px;
+  }
+  .wrap .interior .interior_Con .interior_leftPart .room2Con .room2_cover {
+    font-size: 20px;
+    border-radius: 6px;
+  }
 }/*# sourceMappingURL=adapt.css.map */
