@@ -693,27 +693,27 @@
   margin-bottom: 12px;
   align-items: center;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_img {
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_img {
   width: 50px;
   height: 45px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon {
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_namePriceCon {
   height: 100%;
   width: 180px;
   margin-left: 7px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_name {
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_namePriceCon .chosenPlant_name {
   color: #081323;
   font-size: 20px;
   font-weight: 400;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_price {
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_namePriceCon .chosenPlant_price {
   color: #081323;
   font-size: 18px;
   font-weight: 600;
   margin-top: 5px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amount {
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_amount {
   color: #566270;
   font-size: 20px;
   font-weight: 600;

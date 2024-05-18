@@ -65,14 +65,17 @@ function renderCart() {
     cartlist.forEach(plant => {
         $('.chosenPlantsContainer').append(
             `<div class="chosenPlant">
+            <div class="chosenPlant_InfoAndCount">
                 <img class="chosenPlant_img" src="./imgs/${plant.image}" alt="">
                 <div class="chosenPlant_namePriceCon">
                     <div class="chosenPlant_name">${plant.title}</div>
                     <div class="chosenPlant_price">$${plant.price}.00</div>
                 </div>
                 <div class="chosenPlant_amount">x${plant.amount}</div>
-                <div class="chosenPlant_delete" id="deleteFromCart${plant._id}"><div class="minus"></div></div>
-            </div>`
+            </div>
+        
+            <i class="fa-solid fa-trash-can chosenPlant_delete" id="deleteFromCart${plant._id}"></i>
+        </div>`
         );
         totalAmount += plant.price * plant.amount;
     });
