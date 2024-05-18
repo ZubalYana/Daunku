@@ -708,20 +708,25 @@
                             }
                         }
 
-                        .chosenPlant_delete{
-                            width: 60px;
-                            height: 30px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            border-radius: 5px;
-                            border: 1px #081323 solid;
-                            transition: 0.5s ease;
+                        .chosenPlant_bin{
                             cursor: pointer;
-                            .minus{
-                                width: 16px;
-                                height: 3px;
-                                background-color: #081323;
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: relative;
+                            .chosenPlant_top{
+                                width: 90%;
+                                position: absolute;
+                                top: 0px;
+                                transition: 0.4s ease;
+                            }
+                            .chosenPlant_bottom{
+                                width: 78%;
+                                position: absolute;
+                                bottom: 0px;
                             }
                         }
                     }

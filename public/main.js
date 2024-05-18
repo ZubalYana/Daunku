@@ -76,7 +76,10 @@ function renderCart() {
                 <div class="chosenPlant_amount">x${plant.amount}</div>
             </div>
         
-            <i class="fa-solid fa-trash-can chosenPlant_delete" id="deleteFromCart${plant._id}"></i>
+            <div class="chosenPlant_bin">
+            <img class="chosenPlant_top" src="./imgs/bin top.png" alt="">
+            <img class="chosenPlant_bottom" id="deleteFromCart${plant._id}" src="./imgs/bin bottom.png" alt="">
+        </div>
         </div>`
         );
         totalAmount += plant.price * plant.amount;
@@ -84,6 +87,16 @@ function renderCart() {
 
     $('#totalAmount').html(`Total amount: $${totalAmount}.00`);
     $('#chosenPlantCount').html(`Plants chosen: ${cartlist.length}`);
+    $('.chosenPlant_bin').hover(
+        function () {
+            $(this).find('.chosenPlant_top').css('top', '-6px');
+            $(this).find('.chosenPlant_top').css('transform', 'rotate(-15deg)');
+        },
+        function () {
+            $(this).find('.chosenPlant_top').css('top', '0px');
+            $(this).find('.chosenPlant_top').css('transform', 'rotate(0deg)');
+        }
+    );
 }
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
