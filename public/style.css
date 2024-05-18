@@ -685,7 +685,7 @@
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {
   width: 95%;
-  height: 70px;
+  height: 100px;
   border-radius: 20px;
   border: #283444 1px solid;
   display: flex;
@@ -693,8 +693,15 @@
   margin-bottom: 12px;
   align-items: center;
 }
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_Info {
+  display: flex;
+}
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_img {
-  width: 50px;
   height: 45px;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_InfoAndCount .chosenPlant_namePriceCon {

@@ -66,10 +66,12 @@ function renderCart() {
         $('.chosenPlantsContainer').append(
             `<div class="chosenPlant">
             <div class="chosenPlant_InfoAndCount">
-                <img class="chosenPlant_img" src="./imgs/${plant.image}" alt="">
-                <div class="chosenPlant_namePriceCon">
-                    <div class="chosenPlant_name">${plant.title}</div>
-                    <div class="chosenPlant_price">$${plant.price}.00</div>
+                <div class="chosenPlant_Info">
+                    <img class="chosenPlant_img" src="./imgs/${plant.image}" alt="">
+                    <div class="chosenPlant_namePriceCon">
+                        <div class="chosenPlant_name">${plant.title}</div>
+                        <div class="chosenPlant_price">$${plant.price}.00</div>
+                    </div>
                 </div>
                 <div class="chosenPlant_amount">x${plant.amount}</div>
             </div>
