@@ -73,7 +73,12 @@ function renderCart() {
                         <div class="chosenPlant_price">$${plant.price}.00</div>
                     </div>
                 </div>
-                <div class="chosenPlant_amount">x${plant.amount}</div>
+                <div class="chosenPlant_amountContaner">
+                <div class="reducePlant_amount">-</div>
+                <div class="chosenPlant_amount">${plant.amount}</div>
+                <div class="increasePlant_amount">+</div>
+                </div>
+
             </div>
         
             <div class="chosenPlant_bin">

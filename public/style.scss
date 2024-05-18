@@ -682,7 +682,7 @@
 
                             }
                             .chosenPlant_img{
-                                height: 45px;
+                                height: 50px;
                             }
                             .chosenPlant_namePriceCon{
                                 height: 100%;
@@ -700,12 +700,16 @@
                                     margin-top: 5px;
                                 }
                             }
-                            .chosenPlant_amount{
-                                color: #566270;
-                                font-size: 20px;
-                                font-weight: 600;
-                                margin-right: 12px;
+                            .chosenPlant_amountContaner{
+                                display: flex;
+                                .chosenPlant_amount{
+                                    color: #566270;
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    margin: 0 12px;
+                                }
                             }
+
                         }
 
                         .chosenPlant_bin{
