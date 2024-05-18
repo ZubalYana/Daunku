@@ -115,7 +115,7 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
 });
 
 // Plant deleting from the cartList
-$('.chosenPlantsContainer').on('click', '.chosenPlant_delete', function(e) {
+$('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
     e.stopPropagation();
     let ID = e.target.id;
     if (ID.substring(0, 14) === 'deleteFromCart') {
