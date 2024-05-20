@@ -401,4 +401,24 @@
   width: 400px;
   font-size: 16px;
   font-weight: 300;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .editBtn {
+  width: 170px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #283444 1px solid;
+  color: #283444;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .editBtn:hover {
+  background-color: #283444;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
