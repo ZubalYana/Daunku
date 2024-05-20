@@ -360,4 +360,12 @@
 .wrap .content .contactsWrapper .contacts_leftPart button:hover {
   background-color: #566270;
   color: #fff;
+}
+.wrap .content .ordersWrapper {
+  color: #566270;
+  display: flex;
+}
+.wrap .content .ordersWrapper h2 {
+  font-size: 32px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
