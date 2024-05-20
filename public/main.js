@@ -65,7 +65,9 @@ function renderCart() {
     cartlist.forEach(plant => {
         $('.chosenPlantsContainer').append(
             `<div class="chosenPlant">
+                    <div class="chosenPlant_imgContainer">
                     <img class="chosenPlant_img" src="./imgs/${plant.image}" alt="">
+                    </div>
                     <div class="chosenPlant_namePriceCon">
                         <div class="chosenPlant_name">${plant.title}</div>
                         <div class="chosenPlant_price">$${plant.price}.00</div>
@@ -74,10 +76,7 @@ function renderCart() {
                 <div class="reducePlant_amount plantAmountchanger">-</div>
                 <div class="chosenPlant_amount">${plant.amount}</div>
                 <div class="increasePlant_amount plantAmountchanger">+</div>
-
-
             </div>
-        
             <div class="chosenPlant_bin">
             <img class="chosenPlant_top" src="./imgs/bin top.png" alt="">
             <img class="chosenPlant_bottom" id="deleteFromCart${plant._id}" src="./imgs/bin bottom.png" alt="">

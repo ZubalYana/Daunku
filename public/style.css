@@ -696,6 +696,9 @@
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_img {
   height: 50px;
 }
+.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_imgContainer {
+  width: 60px;
+}
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon {
   width: 180px;
   margin-left: 7px;

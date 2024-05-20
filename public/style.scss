@@ -676,6 +676,9 @@
                             .chosenPlant_img{
                                 height: 50px;
                             }
+                            .chosenPlant_imgContainer{
+                                width: 60px;
+                            }
                             .chosenPlant_namePriceCon{
                                 width: 180px;
                                 margin-left: 7px;
@@ -690,9 +693,6 @@
                                     font-weight: 600;
                                     margin-top: 5px;
                                 }
-                            
-
-
                         }
                         .chosenPlant_amountContaner{
                             display: flex;
