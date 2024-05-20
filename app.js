@@ -3,8 +3,13 @@ const app = express();
 const path = require('path')
 const PORT = 3000;
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
+const TelegramBot = require('node-telegram-bot-api');
+const TOKEN = '7001481150:AAFzGDhvR5Ks1jbS_bhe3WwORZl4_Vrheoo';
+const bot = new TelegramBot(TOKEN, { polling: false });
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
+
 mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 .then(()=>{
     console.log(`Connected to mongo DB`)
@@ -13,6 +18,9 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
 const Plants = mongoose.model('Plants', {title: String, price: Number, image: String, rating: Number})
 const Contacts = mongoose.model('Contacts', { address: String, phone: String, email: String });
 const Orders = mongoose.model('Orders', { list: Array, name: String, phone: String, status: Boolean, message: String})
+
+
+
 
 app.post('/add-plants', async (req, res) => {
     console.log(req.body)
@@ -92,6 +100,11 @@ app.post('/new-order', async (req, res) => {
         console.log('New order saved');
         res.status(201).json(order);
         //telegram bot 
+        app.post('/send', (req, res)=>{
+            bot.sendMessage(1132590035, `You have a new order! Come and see.`);
+            res.sendStatus(200);
+        })
+
     } catch (err) {
         res.status(500).json({ message: err });
     }
