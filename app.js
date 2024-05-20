@@ -86,11 +86,11 @@ app.get('/admin', (req, res)=>{
 
 app.post('/new-order', async (req, res) => {
     try {
-        let { list, name, phone } = req.body;
-        const order = new Orders({ list, name, phone, status: false });
+        let { list, name, phone, message } = req.body;
+        const order = new Orders({ list, name, phone, status: false, message });
         await order.save();
         console.log('New order saved');
-        res.status(201).json(goods);
+        res.status(201).json(order);
         //telegram bot 
     } catch (err) {
         res.status(500).json({ message: err });

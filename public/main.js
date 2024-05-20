@@ -98,6 +98,7 @@ function renderCart() {
             $(this).find('.chosenPlant_top').css('transform', 'rotate(0deg)');
         }
     );
+    
 }
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
@@ -106,58 +107,20 @@ $('#cartPopup_xmark').click(() => {
     $('.cartPopupContainer').css('display', 'none');
 });
 
-//orders
-function getOrders(){
-    axios.get('http://localhost:3000/orders')
-    .then(res=>{
-        
-        for(let el of res.data){
-            let orderList = ''
-            for(let list of el.list){
-                orderList += list.title + ' '
-            }
-            $('.ordersContainer').append(
-                `<div class='order'>
-                    <p class="list">${orderList}</p>
-                    <div>${el.name}</div>
-                    <div>${el.phone}</div>
-                    <button class="editBtn" id="edit${el._id}">Change status</button>
-                    <i class="fa-regular fa-trash-can transhcan" id="${el._id}"></i>
-                </div>`
-            )
-        }
-
-        $('.transhcan').click((e)=>{
-            let id = e.target.id;
-            console.log(id)
-            axios.delete(`http://localhost:3000/orders/${id}`)
-            .then(res => {
-                location.reload()
-            })
+//ordering
+$('#buyBtn').click(() => {
+    let data = {
+        list: cartlist,
+        name: $('#userName').val(),
+        phone: $('#userPhone').val(),
+        message: $('#userMessage').val(),
+    };
+    console.log(data);
+    axios.post('/new-order', data)
+        .then(res => {
+            console.log(`Order data was sended`);
         })
-        $('.editBtn').click(e => {
-            let ID = e.target.id;
-            if (ID.substring(0, 4) == 'edit') {
-                ID = ID.substring(4);
-                console.log(ID);
-                axios.get(`http://localhost:3000/getOrders/${ID}`)
-                    .then(res => {
-                        console.log(res.data)
-                        // location.reload();
-                        axios.get(`http://localhost:3000/edit-orderStatus/${ID}`)
-                        .then(res => {
-
-                        })
-                    })
-                    // axios.put(`http://localhost:3000/edit-orderStatus/${ID}`)
-                    //     .then(res => {
-                    //         location.reload();
-                    //     })
-            }
-        });
-    })
-}
-getOrders();
+})
 
 // Hover effects 
 $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
@@ -307,6 +270,8 @@ axios.get('http://localhost:3000/getContacts')
 .catch((err) => {
     console.error(err);
 });
+
+
 
 
 //plants ordering

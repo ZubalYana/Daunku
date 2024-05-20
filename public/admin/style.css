@@ -368,4 +368,15 @@
 .wrap .content .ordersWrapper h2 {
   font-size: 32px;
   font-weight: 600;
+}
+.wrap .content .ordersWrapper .ordersContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .content .ordersWrapper .ordersContainer .order {
+  width: 100%;
+  border: #283444 2px solid;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

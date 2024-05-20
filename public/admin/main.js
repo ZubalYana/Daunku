@@ -83,6 +83,59 @@ $('#orders').click(()=>{
         </div>
         `
     )
+    //orders
+function getOrders(){
+    axios.get('http://localhost:3000/orders')
+    .then(res=>{
+        
+        for(let el of res.data){
+            let orderList = ''
+            for(let list of el.list){
+                orderList += list.title + ' '
+            }
+            $('.ordersContainer').append(
+                `<div class='order'>
+                    <p class="list">${orderList}</p>
+                    <div>${el.name}</div>
+                    <div>${el.phone}</div>
+                    <div>${el.message}</div>
+                    <button class="editBtn" id="edit${el._id}">Change status</button>
+                    <i class="fa-regular fa-trash-can transhcan" id="${el._id}"></i>
+                </div>`
+            )
+        }
+
+        $('.transhcan').click((e)=>{
+            let id = e.target.id;
+            console.log(id)
+            axios.delete(`http://localhost:3000/orders/${id}`)
+            .then(res => {
+                location.reload()
+            })
+        })
+        $('.editBtn').click(e => {
+            let ID = e.target.id;
+            if (ID.substring(0, 4) == 'edit') {
+                ID = ID.substring(4);
+                console.log(ID);
+                axios.get(`http://localhost:3000/getOrders/${ID}`)
+                    .then(res => {
+                        console.log(res.data)
+                        // location.reload();
+                        axios.get(`http://localhost:3000/edit-orderStatus/${ID}`)
+                        .then(res => {
+
+                        })
+                    })
+                    // axios.put(`http://localhost:3000/edit-orderStatus/${ID}`)
+                    //     .then(res => {
+                    //         location.reload();
+                    //     })
+            }
+        });
+    })
+}
+getOrders();
 })
 
 //existing plants displaying
@@ -174,6 +227,8 @@ function getPlants(){
     
 };
 getPlants();
+
+
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
