@@ -219,22 +219,28 @@
         .plantsWrapper{
             width: 100%;
             display: flex;
-            .addNewPlantsBtn{
-                width: 230px;
-                height: 230px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 84px;
-                font-weight: 600;
-                color: #566270;
-                border: 2px #566270 solid;
-                border-radius: 20px;
-                background-color: #fff;
-                cursor: pointer;
-                user-select: none;
-                transition: 0.3s ease;
+            .newPlantsAndStatisticsCon{
+                .addNewPlantsBtn{
+                    width: 230px;
+                    height: 230px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 84px;
+                    font-weight: 600;
+                    color: #566270;
+                    border: 2px #566270 solid;
+                    border-radius: 20px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: 0.3s ease;
+                }
+                .statistics{
+                    margin-top: 20px;
+                }
             }
+
             .addNewPlantsBtn:hover{
                 background-color: #566270;
                 color: #fff;

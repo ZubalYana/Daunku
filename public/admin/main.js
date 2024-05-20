@@ -16,7 +16,10 @@ $('#plants').click(()=>{
     $('.content').append(
         `
         <div class="plantsWrapper">
+        <div class="newPlantsAndStatisticsCon">
         <div class="addNewPlantsBtn">+</div>
+        <div class="statistics">32512352235</div>
+        </div>
         <div class="plantslist"></div>
         </div>
         `
@@ -239,8 +242,6 @@ function getPlants(){
     
 };
 getPlants();
-
-
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';

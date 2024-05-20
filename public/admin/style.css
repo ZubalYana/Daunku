@@ -231,7 +231,7 @@
   width: 100%;
   display: flex;
 }
-.wrap .content .plantsWrapper .addNewPlantsBtn {
+.wrap .content .plantsWrapper .newPlantsAndStatisticsCon .addNewPlantsBtn {
   width: 230px;
   height: 230px;
   display: flex;
@@ -248,6 +248,9 @@
      -moz-user-select: none;
           user-select: none;
   transition: 0.3s ease;
+}
+.wrap .content .plantsWrapper .newPlantsAndStatisticsCon .statistics {
+  margin-top: 20px;
 }
 .wrap .content .plantsWrapper .addNewPlantsBtn:hover {
   background-color: #566270;
