@@ -100,10 +100,8 @@ app.post('/new-order', async (req, res) => {
         console.log('New order saved');
         res.status(201).json(order);
         //telegram bot 
-        app.post('/send', (req, res)=>{
-            bot.sendMessage(1132590035, `You have a new order! Come and see.`);
-            res.sendStatus(200);
-        })
+        await bot.sendMessage(1132590035, `You have a new order! Come and see: https://daunku.onrender.com/admin/`);
+        console.log('Telegram message sent');
 
     } catch (err) {
         res.status(500).json({ message: err });
