@@ -354,9 +354,11 @@
         .ordersWrapper{
             color: #566270;
             display: flex;
+            flex-direction: column;
             h2{
                 font-size: 32px;
                 font-weight: 600;
+                margin-bottom: 18px;
             }
             .ordersContainer{
                 width: 100%;
@@ -364,9 +366,18 @@
                 flex-direction: column;
                 .order{
                     width: 100%;
+                    // height: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px;
                     border: #283444 2px solid;
                     border-radius: 20px;
                     margin-bottom: 20px;
+                    align-items: center;
+                    p{
+                        width: 280px;
+                        height: 100%;
+                    }
                 }
             }
         }

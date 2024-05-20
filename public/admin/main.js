@@ -91,7 +91,7 @@ function getOrders(){
         for(let el of res.data){
             let orderList = ''
             for(let list of el.list){
-                orderList += list.title + ' '
+                orderList += list.title + ' | '
             }
             $('.ordersContainer').append(
                 `<div class='order'>
