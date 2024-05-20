@@ -396,4 +396,9 @@
   font-weight: 700;
   font-size: 16px;
   width: 200px;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .order_message {
+  width: 400px;
+  font-size: 16px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

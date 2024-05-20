@@ -97,7 +97,7 @@ function getOrders(){
                 `<div class='order'>
                     <p class="list">${orderList}</p>
                     <div class="order_contacts">${el.name}: ${el.phone}</div>
-                    <div>${el.message}</div>
+                    <div class="order_message">${el.message}</div>
                     <button class="editBtn" id="edit${el._id}">Change status</button>
                     <i class="fa-regular fa-trash-can transhcan" id="${el._id}"></i>
                 </div>`
