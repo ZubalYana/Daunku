@@ -99,7 +99,10 @@ function getOrders(){
                     <div class="order_contacts">${el.name}: ${el.phone}</div>
                     <div class="order_message">${el.message}</div>
                     <button class="editBtn" id="edit${el._id}">Change status</button>
-                    <i class="fa-regular fa-trash-can transhcan" id="${el._id}"></i>
+                    <div class="order_delete">
+                    <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                    <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                </div>
                 </div>`
             )
         }
@@ -112,6 +115,16 @@ function getOrders(){
                 location.reload()
             })
         })
+        $('.order_delete').hover(
+            function () {
+                $(this).find('.order_delete_top').css('top', '-6px');
+                $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
+            },
+            function () {
+                $(this).find('.order_delete_top').css('top', '0px');
+                $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
+            }
+        ); 
         $('.editBtn').click(e => {
             let ID = e.target.id;
             if (ID.substring(0, 4) == 'edit') {

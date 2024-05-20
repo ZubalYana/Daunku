@@ -421,4 +421,25 @@
 .wrap .content .ordersWrapper .ordersContainer .order .editBtn:hover {
   background-color: #283444;
   color: #fff;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .order_delete {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .order_delete .order_delete_top {
+  width: 90%;
+  position: absolute;
+  top: 0px;
+  transition: 0.4s ease;
+}
+.wrap .content .ordersWrapper .ordersContainer .order .order_delete .order_delete_bottom {
+  width: 78%;
+  position: absolute;
+  bottom: 0px;
 }/*# sourceMappingURL=style.css.map */
