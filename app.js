@@ -12,6 +12,7 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
 
 const Plants = mongoose.model('Plants', {title: String, price: Number, image: String, rating: Number})
 const Contacts = mongoose.model('Contacts', { address: String, phone: String, email: String });
+const Orders = mongoose.model('Orders', { list: Array, name: String, phone: String, status: Boolean, message: String})
 
 app.post('/add-plants', async (req, res) => {
     console.log(req.body)
@@ -81,6 +82,62 @@ app.get('/', (req, res)=>{
 })
 app.get('/admin', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public'))
+})
+
+app.post('/new-order', async (req, res) => {
+    try {
+        let { list, name, phone } = req.body;
+        const order = new Orders({ list, name, phone, status: false });
+        await order.save();
+        console.log('New order saved');
+        res.status(201).json(goods);
+        //telegram bot 
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+app.get('/orders', async (req, res) => {
+    try {
+        const orders = await Orders.find();
+        res.json(orders);
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+
+app.delete('/orders/:id', async ( req, res )=>{
+    try {
+        const id = req.params.id;
+        console.log(id);
+        await Orders.findByIdAndDelete(id);
+        res.status(204).end();
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+app.get('/getOrders/:id', async ( req, res )=>{
+    try {
+        const id = req.params.id;
+        let order = await Orders.findById(id);
+        console.log(id);
+        res.json(order);
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+
+app.put('/edit-orderStatus/:id', async (req, res) => {
+    try {
+        const status = req.params.status;
+        console.log(status)
+        // const order = await Orders.findByIdAndUpdate(id, req.body, { new: true });
+        // res.status(201).json(order);
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
 })
 app.listen(PORT, ()=>{
     console.log(`Server work on PORT: ${PORT}`)
