@@ -375,9 +375,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  height: 470px;
+  overflow-y: auto;
 }
 .wrap .content .ordersWrapper .ordersContainer .order {
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
