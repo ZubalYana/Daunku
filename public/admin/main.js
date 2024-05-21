@@ -244,15 +244,19 @@ function getPlants(){
         //statistics
         let allPlantsSum = 0;
         let averagePrice = 0;
+        let ratingSum = 0;
+        let averageRating = 0;
         for(let el of res.data){
             allPlantsSum += el.price;
             averagePrice = allPlantsSum/res.data.length
+            ratingSum += el.rating;
+            averageRating = ratingSum/res.data.length
         }
         $('.statistics').append(
             `
             <div class="statisticsEl">Plants amount:<div class="statisticsInfo">${res.data.length}</div></div>
             <div class="statisticsEl">Average plant price:<div class="statisticsInfo">$${Math.round(averagePrice * 100) / 100}</div></div>
-            
+            <div class="statisticsEl">Average plant rating:<div class="statisticsInfo">${Math.round(averageRating * 100) / 100}</div></div>
             `
         )
     
