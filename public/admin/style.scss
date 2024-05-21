@@ -238,6 +238,21 @@
                 }
                 .statistics{
                     margin-top: 20px;
+                    color: #566270;
+                    h3{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .statisticsEl{
+                        display: flex;
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 10px;
+                        .statisticsInfo{
+                            font-weight: 700;
+                            margin-left: 5px;
+                        }
+                    }
                 }
             }
 
