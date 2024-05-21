@@ -251,7 +251,8 @@ function getPlants(){
         $('.statistics').append(
             `
             <div class="statisticsEl">Plants amount:<div class="statisticsInfo">${res.data.length}</div></div>
-            <div class="statisticsEl">Average plant price:<div class="statisticsInfo">${averagePrice}</div></div>
+            <div class="statisticsEl">Average plant price:<div class="statisticsInfo">$${Math.round(averagePrice * 100) / 100}</div></div>
+            
             `
         )
     
