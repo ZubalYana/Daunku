@@ -1,11 +1,12 @@
-//plants functionality
+// plants functionality
 let db = [];
 let cartlist = [];
 let totalAmount = 0;
+
 axios.get('http://localhost:3000/plants')
-.then((res)=>{
+.then((res) => {
     console.log(res.data)
-    for(let el of res.data){
+    for (let el of res.data) {
         db.push(el)
         $('.plantsContainer').append(
             `
@@ -25,7 +26,7 @@ axios.get('http://localhost:3000/plants')
             `
         )
 
-        //Plants rating displaying
+        // Plants rating displaying
         let $ratingContainer = $('.plant_rating').last();
         $ratingContainer.empty();
         for (let i = 0; i < el.rating; i++) {
@@ -37,7 +38,7 @@ axios.get('http://localhost:3000/plants')
     }
     console.log(db)
 
-    $('.plant_addBtn').click((e)=>{
+    $('.plant_addBtn').click((e) => {
         $('.addingMessage').css('display', 'flex')
         setTimeout(() => {
             $('.addingMessage').css('display', 'none')
@@ -57,6 +58,7 @@ axios.get('http://localhost:3000/plants')
         renderCart();
     });
 });
+
 function renderCart() {
     $('.mainPage_cartCounter').html(cartlist.length);
     $('.chosenPlantsContainer').empty();
@@ -65,29 +67,50 @@ function renderCart() {
     cartlist.forEach(plant => {
         $('.chosenPlantsContainer').append(
             `<div class="chosenPlant">
-                    <div class="chosenPlant_imgContainer">
+                <div class="chosenPlant_imgContainer">
                     <img class="chosenPlant_img" src="./imgs/${plant.image}" alt="">
-                    </div>
-                    <div class="chosenPlant_namePriceCon">
-                        <div class="chosenPlant_name">${plant.title}</div>
-                        <div class="chosenPlant_price">$${plant.price}.00</div>
-                    </div>
+                </div>
+                <div class="chosenPlant_namePriceCon">
+                    <div class="chosenPlant_name">${plant.title}</div>
+                    <div class="chosenPlant_price">$${plant.price}.00</div>
+                </div>
                 <div class="chosenPlant_amountContaner">
-                <div class="reducePlant_amount plantAmountchanger">-</div>
-                <div class="chosenPlant_amount">${plant.amount}</div>
-                <div class="increasePlant_amount plantAmountchanger">+</div>
-            </div>
-            <div class="chosenPlant_bin">
-            <img class="chosenPlant_top" src="./imgs/bin top.png" alt="">
-            <img class="chosenPlant_bottom" id="deleteFromCart${plant._id}" src="./imgs/bin bottom.png" alt="">
-        </div>
-        </div>`
+                    <div class="reducePlant_amount plantAmountchanger" data-id="${plant._id}">-</div>
+                    <div class="chosenPlant_amount">${plant.amount}</div>
+                    <div class="increasePlant_amount plantAmountchanger" data-id="${plant._id}">+</div>
+                </div>
+                <div class="chosenPlant_bin">
+                    <img class="chosenPlant_top" src="./imgs/bin top.png" alt="">
+                    <img class="chosenPlant_bottom" id="deleteFromCart${plant._id}" src="./imgs/bin bottom.png" alt="">
+                </div>
+            </div>`
         );
         totalAmount += plant.price * plant.amount;
     });
 
     $('#totalAmount').html(`Total amount: $${totalAmount}.00`);
     $('#chosenPlantCount').html(`Plants chosen: ${cartlist.length}`);
+
+    // Event delegation for reduce/increase buttons
+    $('.chosenPlantsContainer').off('click').on('click', '.reducePlant_amount', function() {
+        let plantID = $(this).data('id');
+        let plant = cartlist.find(p => p._id === plantID);
+        if (plant) {
+            plant.amount = Math.max(1, plant.amount - 1);  // Ensure amount does not go below 1
+            renderCart();
+        }
+    });
+
+    $('.chosenPlantsContainer').on('click', '.increasePlant_amount', function() {
+        let plantID = $(this).data('id');
+        let plant = cartlist.find(p => p._id === plantID);
+        if (plant) {
+            plant.amount++;
+            renderCart();
+        }
+    });
+
+    // Bin hover effect
     $('.chosenPlant_bin').hover(
         function () {
             $(this).find('.chosenPlant_top').css('top', '-6px');
@@ -98,8 +121,8 @@ function renderCart() {
             $(this).find('.chosenPlant_top').css('transform', 'rotate(0deg)');
         }
     );
-    
 }
+
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
 });

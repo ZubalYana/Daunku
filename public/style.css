@@ -692,6 +692,9 @@
   padding: 10px 20px 10px 10px;
   margin-bottom: 12px;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_img {
   height: 50px;
