@@ -4,7 +4,7 @@ $('.content').append(
     <div class="plantsWrapper">
     <div class="newPlantsAndStatisticsCon">
     <div class="addNewPlantsBtn">+</div>
-    <div class="statistics">32512352235</div>
+    <div class="statistics"></div>
     </div>
     <div class="plantslist"></div>
     </div>
@@ -21,7 +21,7 @@ $('#plants').click(()=>{
         <div class="plantsWrapper">
         <div class="newPlantsAndStatisticsCon">
         <div class="addNewPlantsBtn">+</div>
-        <div class="statistics">32512352235</div>
+        <div class="statistics"></div>
         </div>
         <div class="plantslist"></div>
         </div>
@@ -240,6 +240,20 @@ function getPlants(){
             location.reload()
         })
         })
+
+        //statistics
+        let allPlantsSum = 0;
+        let avaragePrice = 0;
+        for(let el of res.data){
+            allPlantsSum += el.price;
+            avaragePrice = allPlantsSum/res.data.length
+        }
+        $('.statistics').append(
+            `
+            <div class="statisticsEl">Plants amount:<div class="statisticsInfo">${res.data.length}</div></div>
+            <div class="statisticsEl"><div class="statisticsInfo"></div></div>
+            `
+        )
     
     })
     
