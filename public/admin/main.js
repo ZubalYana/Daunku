@@ -243,15 +243,15 @@ function getPlants(){
 
         //statistics
         let allPlantsSum = 0;
-        let avaragePrice = 0;
+        let averagePrice = 0;
         for(let el of res.data){
             allPlantsSum += el.price;
-            avaragePrice = allPlantsSum/res.data.length
+            averagePrice = allPlantsSum/res.data.length
         }
         $('.statistics').append(
             `
             <div class="statisticsEl">Plants amount:<div class="statisticsInfo">${res.data.length}</div></div>
-            <div class="statisticsEl"><div class="statisticsInfo"></div></div>
+            <div class="statisticsEl">Average plant price:<div class="statisticsInfo">${averagePrice}</div></div>
             `
         )
     
