@@ -699,6 +699,7 @@
                         .chosenPlant_amountContaner{
                             display: flex;
                             margin: 7px 30px 0 0;
+                            width: 100px;
                             .chosenPlant_amount{
                                 color: #566270;
                                 font-size: 20px;
@@ -712,27 +713,29 @@
                                 cursor: pointer;
                             }
                         }
-                        .chosenPlant_bin{
-                            cursor: pointer;
-                            width: 30px;
-                            height: 25px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: space-between;
-                            position: relative;
-                            .chosenPlant_top{
-                                width: 90%;
-                                position: absolute;
-                                top: 0px;
-                                transition: 0.4s ease;
+                            .chosenPlant_bin{
+                                cursor: pointer;
+                                width: 30px;
+                                height: 22px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-between;
+                                position: relative;
+                                .chosenPlant_top{
+                                    width: 90%;
+                                    position: absolute;
+                                    top: 0px;
+                                    transition: 0.4s ease;
+                                }
+                                .chosenPlant_bottom{
+                                    width: 78%;
+                                    position: absolute;
+                                    bottom: 0px;
+                                }
                             }
-                            .chosenPlant_bottom{
-                                width: 78%;
-                                position: absolute;
-                                bottom: 0px;
-                            }
-                        }
+                        
+                        
                     }
                 }
             }

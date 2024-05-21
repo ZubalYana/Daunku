@@ -720,6 +720,7 @@
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner {
   display: flex;
   margin: 7px 30px 0 0;
+  width: 100px;
 }
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner .chosenPlant_amount {
   color: #566270;
@@ -736,7 +737,7 @@
 .cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin {
   cursor: pointer;
   width: 30px;
-  height: 25px;
+  height: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
