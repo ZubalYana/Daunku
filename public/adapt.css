@@ -13,6 +13,7 @@
   .wrap .mainPage .mainPage_background {
     width: 200%;
     height: auto;
+    background-position: center;
   }
   .wrap .mainPage .mainPage_header {
     align-items: center;
