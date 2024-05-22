@@ -90,70 +90,83 @@ $('#orders').click(()=>{
         `
     )
     //orders
-function getOrders(){
-    axios.get('http://localhost:3000/orders')
-    .then(res=>{
-        
-        for(let el of res.data){
-            let orderList = ''
-            for(let list of el.list){
-                orderList += list.title + ' | '
+    function getOrders() {
+        axios.get('http://localhost:3000/orders')
+        .then(res => {
+            $('.ordersContainer').empty(); // Clear previous orders
+            for (let el of res.data) {
+                // Aggregate plant quantities
+                let plantQuantities = {};
+                for (let list of el.list) {
+                    if (plantQuantities[list.title]) {
+                        plantQuantities[list.title] += list.amount;
+                    } else {
+                        plantQuantities[list.title] = list.amount;
+                    }
+                }
+    
+                // Format the order list
+                let orderList = '';
+                for (let [title, amount] of Object.entries(plantQuantities)) {
+                    orderList += `${title} (${amount}), `;
+                }
+                orderList = orderList.slice(0, -2); // Remove the last comma and space
+    
+                $('.ordersContainer').append(
+                    `<div class='order'>
+                        <p class="list">${orderList}</p>
+                        <div class="order_contacts">${el.name}: ${el.phone}</div>
+                        <div class="order_message">${el.message}</div>
+                        <button class="editBtn" id="edit${el._id}">Change status</button>
+                        <div class="order_delete">
+                            <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                            <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                        </div>
+                    </div>`
+                )
             }
-            $('.ordersContainer').append(
-                `<div class='order'>
-                    <p class="list">${orderList}</p>
-                    <div class="order_contacts">${el.name}: ${el.phone}</div>
-                    <div class="order_message">${el.message}</div>
-                    <button class="editBtn" id="edit${el._id}">Change status</button>
-                    <div class="order_delete">
-                    <img class="order_delete_top" src="./imgs/bin top.png" alt="">
-                    <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-                </div>
-                </div>`
-            )
-        }
-
-        $('.transhcan').click((e)=>{
-            let id = e.target.id;
-            console.log(id)
-            axios.delete(`http://localhost:3000/orders/${id}`)
-            .then(res => {
-                location.reload()
-            })
-        })
-        $('.order_delete').hover(
-            function () {
-                $(this).find('.order_delete_top').css('top', '-6px');
-                $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
-            },
-            function () {
-                $(this).find('.order_delete_top').css('top', '0px');
-                $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
-            }
-        ); 
-        $('.editBtn').click(e => {
-            let ID = e.target.id;
-            if (ID.substring(0, 4) == 'edit') {
-                ID = ID.substring(4);
-                console.log(ID);
-                axios.get(`http://localhost:3000/getOrders/${ID}`)
-                    .then(res => {
-                        console.log(res.data)
-                        // location.reload();
-                        axios.get(`http://localhost:3000/edit-orderStatus/${ID}`)
+    
+            // Attach event handlers for delete and edit buttons
+            $('.transhcan').click((e) => {
+                let id = e.target.id;
+                console.log(id);
+                axios.delete(`http://localhost:3000/orders/${id}`)
+                .then(res => {
+                    location.reload();
+                });
+            });
+    
+            $('.order_delete').hover(
+                function () {
+                    $(this).find('.order_delete_top').css('top', '-6px');
+                    $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
+                },
+                function () {
+                    $(this).find('.order_delete_top').css('top', '0px');
+                    $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
+                }
+            );
+    
+            $('.editBtn').click(e => {
+                let ID = e.target.id;
+                if (ID.substring(0, 4) == 'edit') {
+                    ID = ID.substring(4);
+                    console.log(ID);
+                    axios.get(`http://localhost:3000/getOrders/${ID}`)
                         .then(res => {
-
-                        })
-                    })
-                    // axios.put(`http://localhost:3000/edit-orderStatus/${ID}`)
-                    //     .then(res => {
-                    //         location.reload();
-                    //     })
-            }
+                            console.log(res.data);
+                            // location.reload();
+                            axios.get(`http://localhost:3000/edit-orderStatus/${ID}`)
+                            .then(res => {
+    
+                            });
+                        });
+                }
+            });
         });
-    })
-}
-getOrders();
+    }
+    getOrders();
+    
 })
 
 //existing plants displaying
