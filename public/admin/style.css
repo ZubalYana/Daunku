@@ -171,7 +171,6 @@
   width: 100%;
   height: 100vh;
   padding: 40px 120px 40px 120px;
-  overflow: hidden;
 }
 .wrap .header {
   width: 100%;
@@ -393,8 +392,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 470px;
+  height: 480px;
   overflow-y: auto;
+  margin-bottom: 50px;
 }
 .wrap .content .ordersWrapper .ordersContainer .order {
   width: 98%;

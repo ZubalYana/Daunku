@@ -84,8 +84,10 @@ $('#orders').click(()=>{
     $('#orders').css('font-weight', '600')
     $('.content').append(
         `<div class="ordersWrapper">
-        <h2>Orders:</h2>
+        <h2>New orders:</h2>
         <div class="ordersContainer"></div>
+        <h2>Finished orders:</h2>
+        <div class="finishedOrdersContainer"></div>
         </div>
         `
     )
@@ -93,7 +95,7 @@ $('#orders').click(()=>{
     function getOrders() {
         axios.get('http://localhost:3000/orders')
         .then(res => {
-            $('.ordersContainer').empty(); // Clear previous orders
+            $('.ordersContainer').empty();
             for (let el of res.data) {
                 // Aggregate plant quantities
                 let plantQuantities = {};
@@ -110,7 +112,7 @@ $('#orders').click(()=>{
                 for (let [title, amount] of Object.entries(plantQuantities)) {
                     orderList += `${title} (${amount}), `;
                 }
-                orderList = orderList.slice(0, -2); // Remove the last comma and space
+                orderList = orderList.slice(0, -2);
     
                 $('.ordersContainer').append(
                     `<div class='order'>
