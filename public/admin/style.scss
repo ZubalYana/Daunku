@@ -455,6 +455,81 @@
                     }
                 }
             }
+            .finishedOrdersContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: 480px;
+                overflow-y: auto;
+                margin-bottom: 50px;
+                .order{
+                    width: 98%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px;
+                    border: #283444 2px solid;
+                    border-radius: 20px;
+                    margin-bottom: 20px;
+                    align-items: center;
+                    p{
+                        width: 280px;
+                        height: 100%;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .order_contacts{
+                        font-weight: 700;
+                        font-size: 16px;
+                        width: 200px;
+                    }
+                    .order_message{
+                        width: 400px;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                    .editBtn{
+                        width: 170px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: #283444 1px solid;
+                        color: #283444;
+                        background-color: #fff;
+                        font-size: 16px;
+                        font-weight: 600;
+                        border-radius: 6px;
+                        outline: none;
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                    }
+                    .editBtn:hover{
+                        background-color: #283444;
+                        color: #fff;
+                    }
+                    .order_delete{
+                        cursor: pointer;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        .order_delete_top{
+                            width: 90%;
+                            position: absolute;
+                            top: 0px;
+                            transition: 0.4s ease;
+                        }
+                        .order_delete_bottom{
+                            width: 78%;
+                            position: absolute;
+                            bottom: 0px;
+                        }
+                    }
+                }
+            }
         }
 
     }
