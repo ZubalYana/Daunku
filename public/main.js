@@ -295,16 +295,3 @@ axios.get('http://localhost:3000/getContacts')
 .catch((err) => {
     console.error(err);
 });
-
-
-
-
-//plants ordering
-// $('#buyBtn').click(()=>{
-//     let data = {
-//         userName: $('#userName').val(),
-//         userPhone: $('#userPhone').val(),
-//         userOrder: cartlist,
-//         userName: $('#userName').val(),
-//     }
-// })

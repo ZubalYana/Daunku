@@ -20,8 +20,6 @@ const Contacts = mongoose.model('Contacts', { address: String, phone: String, em
 const Orders = mongoose.model('Orders', { list: Array, name: String, phone: String, status: Boolean, message: String})
 
 
-
-
 app.post('/add-plants', async (req, res) => {
     console.log(req.body)
     try {
@@ -91,7 +89,6 @@ app.get('/', (req, res)=>{
 app.get('/admin', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public'))
 })
-
 app.post('/new-order', async (req, res) => {
     try {
         let { list, name, phone, message } = req.body;
@@ -115,7 +112,6 @@ app.get('/orders', async (req, res) => {
         res.status(500).json({ message: err });
     }
 })
-
 app.delete('/orders/:id', async ( req, res )=>{
     try {
         const id = req.params.id;
@@ -141,15 +137,27 @@ app.get('/getOrders/:id', async ( req, res )=>{
 
 app.put('/edit-orderStatus/:id', async (req, res) => {
     try {
-        const status = req.params.status;
-        console.log(status)
-        // const order = await Orders.findByIdAndUpdate(id, req.body, { new: true });
-        // res.status(201).json(order);
+        const id = req.params.id;
+        const order = await Orders.findById(id);
+
+        if (order) {
+            // Toggle the status
+            order.status = !order.status;
+
+            // Save the updated order
+            await order.save();
+
+            res.status(200).json(order);
+        } else {
+            res.status(404).json({ message: "Order not found" });
+        }
+    } catch (err) {
+        res.status(500).json({ message: err.message });
     }
-    catch (err) {
-        res.status(500).json({ message: err })
-    }
-})
+});
+
+
+
 app.listen(PORT, ()=>{
     console.log(`Server work on PORT: ${PORT}`)
 })

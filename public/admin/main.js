@@ -113,19 +113,63 @@ $('#orders').click(()=>{
                     orderList += `${title} (${amount}), `;
                 }
                 orderList = orderList.slice(0, -2);
+
+                if(el.status == false){
+                    $('.ordersContainer').append(
+                        `<div class='order'>
+                            <p class="list">${orderList}</p>
+                            <div class="order_contacts">${el.name}: ${el.phone}</div>
+                            <div class="order_message">${el.message}</div>
+                            <button class="editBtn" id="edit${el._id}">Change status</button>
+                            <div class="order_delete">
+                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                            </div>
+                        </div>`
+                    )
+                }else{
+                    $('.finishedOrdersContainer').append(
+                        `<div class='order'>
+                            <p class="list">${orderList}</p>
+                            <div class="order_contacts">${el.name}: ${el.phone}</div>
+                            <div class="order_message">${el.message}</div>
+                            <button class="editBtn" id="edit${el._id}">Change status</button>
+                            <div class="order_delete">
+                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                            </div>
+                        </div>`
+                    )
+                }
+
+                $('.editBtn').click(e => {
+                    let ID = e.target.id;
+                    if (ID.substring(0, 4) == 'edit') {
+                        ID = ID.substring(4);
+                        console.log(ID);
+                
+                        // Get the current status of the order
+                        axios.get(`http://localhost:3000/getOrders/${ID}`)
+                            .then(res => {
+                                const currentStatus = res.data.status;
+                
+                                // Toggle the status
+                                const updatedStatus = !currentStatus;
+                
+                                // Update the order status on the server
+                                axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: updatedStatus })
+                                    .then(res => {
+                                        location.reload();
+                                    })
+                            })
+                            .catch(err => {
+                                console.error(err);
+                            });
+                    }
+                });
+                
     
-                $('.ordersContainer').append(
-                    `<div class='order'>
-                        <p class="list">${orderList}</p>
-                        <div class="order_contacts">${el.name}: ${el.phone}</div>
-                        <div class="order_message">${el.message}</div>
-                        <button class="editBtn" id="edit${el._id}">Change status</button>
-                        <div class="order_delete">
-                            <img class="order_delete_top" src="./imgs/bin top.png" alt="">
-                            <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-                        </div>
-                    </div>`
-                )
+
             }
     
             // Attach event handlers for delete and edit buttons
