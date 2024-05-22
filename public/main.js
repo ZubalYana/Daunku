@@ -110,6 +110,20 @@ function renderCart() {
         }
     });
 
+    // Plant deleting from the cartList
+$('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
+    e.stopPropagation();
+    let ID = e.target.id;
+    if (ID.substring(0, 14) === 'deleteFromCart') {
+        let plantID = ID.substring(14);
+        let index = cartlist.findIndex(plant => plant._id === plantID);
+        if (index !== -1) {
+            cartlist.splice(index, 1);
+            renderCart();
+        }
+    }
+});
+
     // Bin hover effect
     $('.chosenPlant_bin').hover(
         function () {
@@ -154,19 +168,7 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
     $(this).find('.minus').css('background-color', '#081323');
 });
 
-// Plant deleting from the cartList
-$('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
-    e.stopPropagation();
-    let ID = e.target.id;
-    if (ID.substring(0, 14) === 'deleteFromCart') {
-        let plantID = ID.substring(14);
-        let index = cartlist.findIndex(plant => plant._id === plantID);
-        if (index !== -1) {
-            cartlist.splice(index, 1);
-            renderCart();
-        }
-    }
-});
+
 
 
 //cookies animation
