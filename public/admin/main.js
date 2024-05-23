@@ -116,7 +116,7 @@ $('#orders').click(()=>{
                     // Define the status options
                     let statusOptions = `
                         <select class="statusDropdown" data-id="${el._id}">
-                            <option value="false" ${el.status === false ? 'selected' : ''}>Pending</option>
+                            <option value="false" ${el.status === false ? 'selected' : ''}>In progress</option>
                             <option value="true" ${el.status === true ? 'selected' : ''}>Completed</option>
                         </select>
                     `;

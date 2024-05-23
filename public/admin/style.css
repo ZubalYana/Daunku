@@ -423,25 +423,14 @@
   font-size: 16px;
   font-weight: 300;
 }
-.wrap .content .ordersWrapper .ordersContainer .order .editBtn {
-  width: 170px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #283444 1px solid;
-  color: #283444;
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 6px;
+.wrap .content .ordersWrapper .ordersContainer .order .statusDropdown {
+  border: none;
   outline: none;
   cursor: pointer;
-  transition: 0.5s ease;
-}
-.wrap .content .ordersWrapper .ordersContainer .order .editBtn:hover {
-  background-color: #283444;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #566270;
+  width: 112px;
 }
 .wrap .content .ordersWrapper .ordersContainer .order .order_delete {
   cursor: pointer;
@@ -498,25 +487,14 @@
   font-size: 16px;
   font-weight: 300;
 }
-.wrap .content .ordersWrapper .finishedOrdersContainer .order .editBtn {
-  width: 170px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #283444 1px solid;
-  color: #283444;
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 6px;
+.wrap .content .ordersWrapper .finishedOrdersContainer .order .statusDropdown {
+  border: none;
   outline: none;
   cursor: pointer;
-  transition: 0.5s ease;
-}
-.wrap .content .ordersWrapper .finishedOrdersContainer .order .editBtn:hover {
-  background-color: #283444;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #566270;
+  width: 112px;
 }
 .wrap .content .ordersWrapper .finishedOrdersContainer .order .order_delete {
   cursor: pointer;
