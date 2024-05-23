@@ -18,6 +18,7 @@ mongoose.connect(`mongodb+srv://root:py6czQnOyXhFPkng@cluster0.ybpep9u.mongodb.n
 const Plants = mongoose.model('Plants', {title: String, price: Number, image: String, rating: Number})
 const Contacts = mongoose.model('Contacts', { address: String, phone: String, email: String });
 const Orders = mongoose.model('Orders', { list: Array, name: String, phone: String, status: Boolean, message: String})
+const Mail = mongoose.model('Mail', { email: String });
 
 
 app.post('/add-plants', async (req, res) => {
@@ -148,7 +149,52 @@ app.put('/edit-orderStatus/:id', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-
+app.post('/send-message', async (req, res) => {
+    const { message } = req.body;
+    const mail = await Mail.find();
+    console.log(mail);
+    let emails = '';
+    for (let el of mail) {
+        emails += el.email;
+    }
+    console.log(emails);
+    try {
+        var mailOptions = {
+            from: 'youremail@gmail.com',
+            to: 'getad29078@dxice.com',
+            subject: 'Sending Email using Node.js',
+            text: message
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+});
+app.post('/send-mail', async (req, res) => {
+    try {
+        const { email } = req.body;
+        const mail = new Mail({ email });
+        await mail.save();
+        console.log('Add new mail');
+        res.status(201).json(mail);
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
+app.get('/emails', async (req, res) => {
+    try {
+        const mail = await Mail.find();
+        res.json(mail);
+    } catch (err) {
+        res.status(500).json({ message: err });
+    }
+})
 
 
 
