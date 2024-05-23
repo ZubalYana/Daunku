@@ -91,127 +91,93 @@ $('#orders').click(()=>{
         </div>
         `
     )
-    //orders
     function getOrders() {
         axios.get('http://localhost:3000/orders')
-        .then(res => {
-            $('.ordersContainer').empty();
-            for (let el of res.data) {
-                // Aggregate plant quantities
-                let plantQuantities = {};
-                for (let list of el.list) {
-                    if (plantQuantities[list.title]) {
-                        plantQuantities[list.title] += list.amount;
+            .then(res => {
+                $('.ordersContainer').empty();
+                for (let el of res.data) {
+                    // Aggregate plant quantities
+                    let plantQuantities = {};
+                    for (let list of el.list) {
+                        if (plantQuantities[list.title]) {
+                            plantQuantities[list.title] += list.amount;
+                        } else {
+                            plantQuantities[list.title] = list.amount;
+                        }
+                    }
+    
+                    // Format the order list
+                    let orderList = '';
+                    for (let [title, amount] of Object.entries(plantQuantities)) {
+                        orderList += `${title} (${amount}), `;
+                    }
+                    orderList = orderList.slice(0, -2);
+    
+                    // Define the status options
+                    let statusOptions = `
+                        <select class="statusDropdown" data-id="${el._id}">
+                            <option value="false" ${el.status === false ? 'selected' : ''}>Pending</option>
+                            <option value="true" ${el.status === true ? 'selected' : ''}>Completed</option>
+                        </select>
+                    `;
+    
+                    // Append the order to the appropriate container
+                    let orderHTML = `
+                        <div class='order'>
+                            <p class="list">${orderList}</p>
+                            <div class="order_contacts">${el.name}: ${el.phone}</div>
+                            <div class="order_message">${el.message}</div>
+                            ${statusOptions}
+                            <div class="order_delete">
+                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                            </div>
+                        </div>
+                    `;
+                    
+                    if (el.status === false) {
+                        $('.ordersContainer').append(orderHTML);
                     } else {
-                        plantQuantities[list.title] = list.amount;
+                        $('.finishedOrdersContainer').append(orderHTML);
                     }
                 }
     
-                // Format the order list
-                let orderList = '';
-                for (let [title, amount] of Object.entries(plantQuantities)) {
-                    orderList += `${title} (${amount}), `;
-                }
-                orderList = orderList.slice(0, -2);
-
-                if(el.status == false){
-                    $('.ordersContainer').append(
-                        `<div class='order'>
-                            <p class="list">${orderList}</p>
-                            <div class="order_contacts">${el.name}: ${el.phone}</div>
-                            <div class="order_message">${el.message}</div>
-                            <button class="editBtn" id="edit${el._id}">Change status</button>
-                            <div class="order_delete">
-                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
-                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-                            </div>
-                        </div>`
-                    )
-                }else{
-                    $('.finishedOrdersContainer').append(
-                        `<div class='order'>
-                            <p class="list">${orderList}</p>
-                            <div class="order_contacts">${el.name}: ${el.phone}</div>
-                            <div class="order_message">${el.message}</div>
-                            <button class="editBtn" id="edit${el._id}">Change status</button>
-                            <div class="order_delete">
-                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
-                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-                            </div>
-                        </div>`
-                    )
-                }
-
-                $('.editBtn').click(e => {
-                    let ID = e.target.id;
-                    if (ID.substring(0, 4) == 'edit') {
-                        ID = ID.substring(4);
-                        console.log(ID);
-                
-                        // Get the current status of the order
-                        axios.get(`http://localhost:3000/getOrders/${ID}`)
-                            .then(res => {
-                                const currentStatus = res.data.status;
-                
-                                // Toggle the status
-                                const updatedStatus = !currentStatus;
-                
-                                // Update the order status on the server
-                                axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: updatedStatus })
-                                    .then(res => {
-                                        location.reload();
-                                    })
-                            })
-                            .catch(err => {
-                                console.error(err);
-                            });
-                    }
-                });
-                
-    
-
-            }
-    
-            // Attach event handlers for delete and edit buttons
-            $('.transhcan').click((e) => {
-                let id = e.target.id;
-                console.log(id);
-                axios.delete(`http://localhost:3000/orders/${id}`)
-                .then(res => {
-                    location.reload();
-                });
-            });
-    
-            $('.order_delete').hover(
-                function () {
-                    $(this).find('.order_delete_top').css('top', '-6px');
-                    $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
-                },
-                function () {
-                    $(this).find('.order_delete_top').css('top', '0px');
-                    $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
-                }
-            );
-    
-            $('.editBtn').click(e => {
-                let ID = e.target.id;
-                if (ID.substring(0, 4) == 'edit') {
-                    ID = ID.substring(4);
-                    console.log(ID);
-                    axios.get(`http://localhost:3000/getOrders/${ID}`)
+                // Attach event handlers for delete buttons and dropdowns
+                $('.transhcan').click((e) => {
+                    let id = e.target.id;
+                    console.log(id);
+                    axios.delete(`http://localhost:3000/orders/${id}`)
                         .then(res => {
-                            console.log(res.data);
-                            // location.reload();
-                            axios.get(`http://localhost:3000/edit-orderStatus/${ID}`)
-                            .then(res => {
-    
-                            });
+                            location.reload();
                         });
-                }
+                });
+    
+                $('.order_delete').hover(
+                    function () {
+                        $(this).find('.order_delete_top').css('top', '-6px');
+                        $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
+                    },
+                    function () {
+                        $(this).find('.order_delete_top').css('top', '0px');
+                        $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
+                    }
+                );
+    
+                $('.statusDropdown').change(e => {
+                    let ID = $(e.target).data('id');
+                    let newStatus = $(e.target).val() === 'true';
+                    axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: newStatus })
+                        .then(res => {
+                            location.reload();
+                        })
+                        .catch(err => {
+                            console.error(err);
+                        });
+                });
             });
-        });
     }
     getOrders();
+    
     
 })
 

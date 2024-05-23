@@ -138,15 +138,11 @@ app.get('/getOrders/:id', async ( req, res )=>{
 app.put('/edit-orderStatus/:id', async (req, res) => {
     try {
         const id = req.params.id;
-        const order = await Orders.findById(id);
+        const updatedStatus = req.body.status;
 
+        const order = await Orders.findByIdAndUpdate(id, { status: updatedStatus }, { new: true });
+        
         if (order) {
-            // Toggle the status
-            order.status = !order.status;
-
-            // Save the updated order
-            await order.save();
-
             res.status(200).json(order);
         } else {
             res.status(404).json({ message: "Order not found" });
@@ -155,6 +151,7 @@ app.put('/edit-orderStatus/:id', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
+
 
 
 
