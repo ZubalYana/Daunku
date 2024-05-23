@@ -134,14 +134,11 @@ app.get('/getOrders/:id', async ( req, res )=>{
         res.status(500).json({ message: err })
     }
 })
-
 app.put('/edit-orderStatus/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const updatedStatus = req.body.status;
-
         const order = await Orders.findByIdAndUpdate(id, { status: updatedStatus }, { new: true });
-        
         if (order) {
             res.status(200).json(order);
         } else {
