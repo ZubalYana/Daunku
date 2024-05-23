@@ -2,7 +2,6 @@
 let db = [];
 let cartlist = [];
 let totalAmount = 0;
-
 axios.get('http://localhost:3000/plants')
 .then((res) => {
     console.log(res.data)
@@ -58,7 +57,6 @@ axios.get('http://localhost:3000/plants')
         renderCart();
     });
 });
-
 function renderCart() {
     $('.mainPage_cartCounter').html(cartlist.length);
     $('.chosenPlantsContainer').empty();
@@ -136,7 +134,6 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
         }
     );
 }
-
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
 });
@@ -167,9 +164,6 @@ $('.chosenPlantsContainer').on('mouseenter', '.chosenPlant_delete', function() {
     $(this).css('background-color', '#fff');
     $(this).find('.minus').css('background-color', '#081323');
 });
-
-
-
 
 //cookies animation
 $('.cookiesJar_con').hover(
@@ -294,4 +288,17 @@ axios.get('http://localhost:3000/getContacts')
 })
 .catch((err) => {
     console.error(err);
+});
+
+
+//emails sending
+$('#subscribe').click(() => {
+    let data = {
+        email: $('#email').val()
+    };
+    axios.post('http://localhost:3000/send-mail', data)
+        .then(res => {
+            alert('Користувача збережено');
+            $('#email').val('');
+        })
 });

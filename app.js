@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const TelegramBot = require('node-telegram-bot-api');
 const TOKEN = '7001481150:AAFzGDhvR5Ks1jbS_bhe3WwORZl4_Vrheoo';
 const bot = new TelegramBot(TOKEN, { polling: false });
+const nodemailer = require('nodemailer');
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json())
 
@@ -149,33 +150,15 @@ app.put('/edit-orderStatus/:id', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-app.post('/send-message', async (req, res) => {
-    const { message } = req.body;
-    const mail = await Mail.find();
-    console.log(mail);
-    let emails = '';
-    for (let el of mail) {
-        emails += el.email;
-    }
-    console.log(emails);
-    try {
-        var mailOptions = {
-            from: 'youremail@gmail.com',
-            to: 'getad29078@dxice.com',
-            subject: 'Sending Email using Node.js',
-            text: message
-        };
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-    } catch (err) {
-        res.status(500).json({ message: err });
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'youremail@gmail.com',
+        pass: 'yourpassword'
     }
 });
+
+// Endpoint to save new emails
 app.post('/send-mail', async (req, res) => {
     try {
         const { email } = req.body;
@@ -186,7 +169,9 @@ app.post('/send-mail', async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: err });
     }
-})
+});
+
+// Endpoint to get all emails
 app.get('/emails', async (req, res) => {
     try {
         const mail = await Mail.find();
@@ -194,9 +179,51 @@ app.get('/emails', async (req, res) => {
     } catch (err) {
         res.status(500).json({ message: err });
     }
-})
+});
 
+// Endpoint to send message to all subscribers
+app.post('/send-message', async (req, res) => {
+    const { message } = req.body;
+    try {
+        const mail = await Mail.find();
+        const emailList = mail.map(el => el.email);
+        console.log(emailList);
 
+        // Batch sending emails
+        let batchIndex = 0;
+        const batchSize = 10;
+
+        const sendBatchEmails = setInterval(() => {
+            const batch = emailList.slice(batchIndex, batchIndex + batchSize);
+            if (batch.length === 0) {
+                clearInterval(sendBatchEmails);
+                console.log('All emails sent');
+                res.status(200).json({ message: 'All emails sent' });
+                return;
+            }
+
+            batch.forEach(email => {
+                const mailOptions = {
+                    from: 'youremail@gmail.com',
+                    to: email,
+                    subject: 'Sending Email using Node.js',
+                    text: message
+                };
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
+            });
+
+            batchIndex += batchSize;
+        }, 1000);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
 
 app.listen(PORT, ()=>{
     console.log(`Server work on PORT: ${PORT}`)
