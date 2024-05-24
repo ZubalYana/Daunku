@@ -526,4 +526,17 @@
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 18px;
+}
+.wrap .content .newsWrapper input {
+  width: 600px;
+  height: 200px;
+}
+.wrap .content .newsWrapper button {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 28px;
 }/*# sourceMappingURL=style.css.map */

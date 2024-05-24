@@ -519,6 +519,19 @@
                 font-weight: 600;
                 margin-bottom: 18px;
             }
+            input{
+                width: 600px;
+                height: 200px;
+            }
+            button{
+                width: 200px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                font-size: 28px;
+            }
         }
 
     }

@@ -74,6 +74,8 @@ $('#newslatter').click(()=>{
         `
         <div class="newsWrapper">
         <h2>Send news to your customers!</h2>
+        <input type="text" id="message">
+        <button id="sendMessage">Send</button>
         </div>
         `
     )
