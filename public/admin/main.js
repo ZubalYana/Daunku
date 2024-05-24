@@ -72,7 +72,9 @@ $('#newslatter').click(()=>{
     $('#orders').css('font-weight', '400')
     $('.content').append(
         `
-        <div>newslatter here</div>
+        <div class="newsWrapper">
+        <h2>Send news to your customers!</h2>
+        </div>
         `
     )
 })

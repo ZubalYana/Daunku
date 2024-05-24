@@ -516,4 +516,14 @@
   width: 78%;
   position: absolute;
   bottom: 0px;
+}
+.wrap .content .newsWrapper {
+  color: #566270;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .content .newsWrapper h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 18px;
 }/*# sourceMappingURL=style.css.map */
