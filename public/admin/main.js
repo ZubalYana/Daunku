@@ -109,91 +109,119 @@ $('#orders').click(()=>{
         </div>
         `
     )
-    function getOrders() {
-        axios.get('http://localhost:3000/orders')
-            .then(res => {
-                $('.ordersContainer').empty();
-                for (let el of res.data) {
-                    // Aggregate plant quantities
-                    let plantQuantities = {};
-                    for (let list of el.list) {
-                        if (plantQuantities[list.title]) {
-                            plantQuantities[list.title] += list.amount;
-                        } else {
-                            plantQuantities[list.title] = list.amount;
-                        }
-                    }
-    
-                    // Format the order list
-                    let orderList = '';
-                    for (let [title, amount] of Object.entries(plantQuantities)) {
-                        orderList += `${title} (${amount}), `;
-                    }
-                    orderList = orderList.slice(0, -2);
-    
-                    // Define the status options
-                    let statusOptions = `
-                        <select class="statusDropdown" data-id="${el._id}">
-                            <option value="false" ${el.status === false ? 'selected' : ''}>In progress</option>
-                            <option value="true" ${el.status === true ? 'selected' : ''}>Completed</option>
-                        </select>
-                    `;
-    
-                    // Append the order to the appropriate container
-                    let orderHTML = `
-                        <div class='order'>
-                            <p class="list">${orderList}</p>
-                            <div class="order_contacts">${el.name}: ${el.phone}</div>
-                            <div class="order_message">${el.message}</div>
-                            ${statusOptions}
-                            <div class="order_delete">
-                                <img class="order_delete_top" src="./imgs/bin top.png" alt="">
-                                <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
-                            </div>
-                        </div>
-                    `;
-                    
-                    if (el.status === false) {
-                        $('.ordersContainer').append(orderHTML);
+// Function to load the orders page
+function loadOrdersPage() {
+    $('.content').empty();
+    $('#plants').css('font-weight', '400')
+    $('#contacts').css('font-weight', '400')
+    $('#newslatter').css('font-weight', '400')
+    $('#orders').css('font-weight', '600')
+    $('.content').append(
+        `<div class="ordersWrapper">
+        <h2>New orders:</h2>
+        <div class="ordersContainer"></div>
+        <h2>Finished orders:</h2>
+        <div class="finishedOrdersContainer"></div>
+        </div>`
+    );
+
+    getOrders();
+}
+
+// Function to get orders
+function getOrders() {
+    axios.get('http://localhost:3000/orders')
+        .then(res => {
+            $('.ordersContainer').empty();
+            $('.finishedOrdersContainer').empty();
+
+            for (let el of res.data) {
+                // Aggregate plant quantities
+                let plantQuantities = {};
+                for (let list of el.list) {
+                    if (plantQuantities[list.title]) {
+                        plantQuantities[list.title] += list.amount;
                     } else {
-                        $('.finishedOrdersContainer').append(orderHTML);
+                        plantQuantities[list.title] = list.amount;
                     }
                 }
-    
-                // Attach event handlers for delete buttons and dropdowns
-                $('.transhcan').click((e) => {
-                    let id = e.target.id;
-                    console.log(id);
-                    axios.delete(`http://localhost:3000/orders/${id}`)
-                        .then(res => {
-                            location.reload();
-                        });
-                });
-    
-                $('.order_delete').hover(
-                    function () {
-                        $(this).find('.order_delete_top').css('top', '-6px');
-                        $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
-                    },
-                    function () {
-                        $(this).find('.order_delete_top').css('top', '0px');
-                        $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
-                    }
-                );
-    
-                $('.statusDropdown').change(e => {
-                    let ID = $(e.target).data('id');
-                    let newStatus = $(e.target).val() === 'true';
-                    axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: newStatus })
-                        .then(res => {
-                            getOrders()
-                        })
-                        .catch(err => {
-                            console.error(err);
-                        });
-                });
+
+                // Format the order list
+                let orderList = '';
+                for (let [title, amount] of Object.entries(plantQuantities)) {
+                    orderList += `${title} (${amount}), `;
+                }
+                orderList = orderList.slice(0, -2);
+
+                // Define the status options
+                let statusOptions = `
+                    <select class="statusDropdown" data-id="${el._id}">
+                        <option value="false" ${el.status === false ? 'selected' : ''}>In progress</option>
+                        <option value="true" ${el.status === true ? 'selected' : ''}>Completed</option>
+                    </select>
+                `;
+
+                // Append the order to the appropriate container
+                let orderHTML = `
+                    <div class='order'>
+                        <p class="list">${orderList}</p>
+                        <div class="order_contacts">${el.name}: ${el.phone}</div>
+                        <div class="order_message">${el.message}</div>
+                        ${statusOptions}
+                        <div class="order_delete">
+                            <img class="order_delete_top" src="./imgs/bin top.png" alt="">
+                            <img class="order_delete_bottom transhcan" id="${el._id}" src="./imgs/bin bottom.png" alt="">
+                        </div>
+                    </div>
+                `;
+
+                if (el.status === false) {
+                    $('.ordersContainer').append(orderHTML);
+                } else {
+                    $('.finishedOrdersContainer').append(orderHTML);
+                }
+            }
+
+            // Attach event handlers for delete buttons and dropdowns
+            $('.transhcan').click((e) => {
+                let id = e.target.id;
+                console.log(id);
+                axios.delete(`http://localhost:3000/orders/${id}`)
+                    .then(res => {
+                        getOrders(); // Reload the orders section
+                    });
             });
-    }
+
+            $('.order_delete').hover(
+                function () {
+                    $(this).find('.order_delete_top').css('top', '-6px');
+                    $(this).find('.order_delete_top').css('transform', 'rotate(-15deg)');
+                },
+                function () {
+                    $(this).find('.order_delete_top').css('top', '0px');
+                    $(this).find('.order_delete_top').css('transform', 'rotate(0deg)');
+                }
+            );
+
+            $('.statusDropdown').change(e => {
+                let ID = $(e.target).data('id');
+                let newStatus = $(e.target).val() === 'true';
+                axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: newStatus })
+                    .then(res => {
+                        getOrders(); // Reload the orders section
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            });
+        });
+}
+
+// Click handler for the orders button
+$('#orders').click(() => {
+    loadOrdersPage();
+});
+
     getOrders();
     
     
