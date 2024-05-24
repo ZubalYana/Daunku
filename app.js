@@ -153,15 +153,14 @@ app.put('/edit-orderStatus/:id', async (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'youremail@gmail.com',
-        pass: 'yourpassword'
+        user: 'yanazubal2345@gmail.com',
+        pass: 'ioil iqsl jwbr skqn'
     }
 });
-
-// Endpoint to save new emails
 app.post('/send-mail', async (req, res) => {
     try {
         const { email } = req.body;
+        console.log(email);
         const mail = new Mail({ email });
         await mail.save();
         console.log(`Add new mail: ${email}`);
@@ -170,8 +169,6 @@ app.post('/send-mail', async (req, res) => {
         res.status(500).json({ message: err });
     }
 });
-
-// Endpoint to get all emails
 app.get('/emails', async (req, res) => {
     try {
         const mail = await Mail.find();
@@ -180,8 +177,6 @@ app.get('/emails', async (req, res) => {
         res.status(500).json({ message: err });
     }
 });
-
-// Endpoint to send message to all subscribers
 app.post('/send-message', async (req, res) => {
     const { message } = req.body;
     try {
