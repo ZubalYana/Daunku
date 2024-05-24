@@ -164,7 +164,7 @@ app.post('/send-mail', async (req, res) => {
         const { email } = req.body;
         const mail = new Mail({ email });
         await mail.save();
-        console.log('Add new mail');
+        console.log(`Add new mail: ${email}`);
         res.status(201).json(mail);
     } catch (err) {
         res.status(500).json({ message: err });

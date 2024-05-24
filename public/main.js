@@ -298,7 +298,7 @@ $('#subscribe').click(() => {
     };
     axios.post('http://localhost:3000/send-mail', data)
         .then(res => {
-            alert('Користувача збережено');
+            alert('Email saved');
             $('#email').val('');
         })
 });
