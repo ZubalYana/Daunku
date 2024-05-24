@@ -168,7 +168,7 @@ $('#orders').click(()=>{
                     let newStatus = $(e.target).val() === 'true';
                     axios.put(`http://localhost:3000/edit-orderStatus/${ID}`, { status: newStatus })
                         .then(res => {
-                            location.reload();
+                            getOrders()
                         })
                         .catch(err => {
                             console.error(err);
