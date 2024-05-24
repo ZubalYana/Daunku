@@ -79,6 +79,20 @@ $('#newslatter').click(()=>{
         </div>
         `
     )
+    //emails sending
+$('#sendMessage').click(()=>{
+    const data = {
+        message: $('#message').val()
+    }
+    console.log(data)
+    axios.post('http://localhost:3000/send-message', data)
+    .then((res)=>{
+        console.log(res.data)
+        console.log(`Message sended to the server`)
+        $('#sendMessage').val('')
+    })
+})
+
 })
 $('#orders').click(()=>{
     $('.content').empty();
@@ -346,4 +360,3 @@ $('.addNewPlant_btn').click(()=>{
     axios.post('http://localhost:3000/add-plants', data)
     location.reload();
 })
-
