@@ -270,6 +270,8 @@ function changeTheme(theme){
         $('.mainPage_searchInput').css('color', '#fff')
         $('.mainPage_searchInput').css('border', '1px #fff solid')
         $('.mainPage_searchInput::placeholder').css('color', '#fff')
+        $('.mainPage_searchBtn_icon').attr('src', './imgs/search.png')
+        $('#cart').attr('src', './imgs/cart.png')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -283,6 +285,9 @@ function changeTheme(theme){
         $('.mainPage_searchInput').css('color', '#1E1E1E')
         $('.mainPage_searchInput').css('border', '1px #1E1E1E solid')
         $('.mainPage_searchInput::placeholder').css('color', '#1E1E1E')
+        $('.mainPage_searchBtn_icon').attr('src', './imgs/search dark.png')
+        $('.mainPage_searchBtn_icon').css('width', '24px')
+        $('#cart').attr('src', './imgs/cart dark.png')
 
     }
 }
