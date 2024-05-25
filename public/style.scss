@@ -38,13 +38,15 @@
         position: relative;
         color: #fff;
         padding-top: 40px;
+        z-index: 2;
+
         .mainPage_background{
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 1;
             background-size: cover;
             background-position: center;
         }
@@ -53,6 +55,8 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            position: relative;
+            z-index: 2;
             .mainPage_logo{
                 width: 165px;
                 display: flex;
@@ -131,6 +135,9 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            position: relative;
+            z-index: 2;
+
             .mainPage_title{
                 font-size: 48px;
                 font-weight: 700;
@@ -148,6 +155,7 @@
             position: relative;
             display: flex;
             align-items: center;
+            z-index: 2;
             .mainPage_searchInput{
                 width: 350px;
                 height: 55px;
@@ -189,6 +197,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            z-index: 2;
         }
 
     }

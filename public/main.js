@@ -263,12 +263,14 @@ function changeTheme(theme){
         $('.mainPage_theme').css('background-color', '#fff')
         $('.mainPage_theme_circle').css('background-color', '#283444')
         $('.mainPage_theme_circle').css('border', '2px #fff solid')
+        $('.wrap').css('background-color', '#fff')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
         $('.mainPage_theme').css('background-color', '#081323')
         $('.mainPage_theme_circle').css('background-color', '#fff')
         $('.mainPage_theme_circle').css('border', '2px #081323 solid')
+        $('.wrap').css('background-color', '#121212 ')
 
 
     }
