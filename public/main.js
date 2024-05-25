@@ -264,14 +264,25 @@ function changeTheme(theme){
         $('.mainPage_theme_circle').css('background-color', '#283444')
         $('.mainPage_theme_circle').css('border', '2px #fff solid')
         $('.wrap').css('background-color', '#fff')
+        $('.mainPage_blur').css('background', 'linear-gradient(to bottom, #ffffff00, #FFFFFF)')
+        $('.mainPage').css('color', '#fff')
+        $('a').css('color', '#fff')
+        $('.mainPage_searchInput').css('color', '#fff')
+        $('.mainPage_searchInput').css('border', '1px #fff solid')
+        $('.mainPage_searchInput::placeholder').css('color', '#fff')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
-        $('.mainPage_theme').css('background-color', '#081323')
+        $('.mainPage_theme').css('background-color', '#1E1E1E')
         $('.mainPage_theme_circle').css('background-color', '#fff')
         $('.mainPage_theme_circle').css('border', '2px #081323 solid')
-        $('.wrap').css('background-color', '#121212 ')
-
+        $('.wrap').css('background-color', '#1E1E1E')
+        $('.mainPage_blur').css('background', 'linear-gradient(to bottom, #ffffff00, #1E1E1E)')
+        $('.mainPage').css('color', '#1E1E1E')
+        $('a').css('color', '#1E1E1E')
+        $('.mainPage_searchInput').css('color', '#1E1E1E')
+        $('.mainPage_searchInput').css('border', '1px #1E1E1E solid')
+        $('.mainPage_searchInput::placeholder').css('color', '#1E1E1E')
 
     }
 }
