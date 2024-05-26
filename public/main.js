@@ -296,7 +296,7 @@ function changeTheme(theme){
         $('.plants_abilityTitile').css('color', '#fff')
         $('.plantsContainer_title').css('color', '#fff')
         $('.plant_imgCon').css('background-color', '#46658f')
-        $('.plant_textCon').css('background-color', '#c5bfbf')
+        $('.plant_textCon').css('background-color', '#b3bdd0')
 
     }
 }
