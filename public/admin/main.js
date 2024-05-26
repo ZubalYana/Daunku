@@ -388,7 +388,11 @@ function changeTheme(theme){
         $('.plant_delete_bottom').attr('src', './imgs/bin bottom.png')
         $('.order').css('border', '#283444 2px solid')
         $('h2').css('color', '#566270')
-
+        $('.order').css('color', '#566270')
+        $('select').css('background-color', '#fff')
+        $('select').css('color', '#566270')
+        $('.order_delete_top').attr('src', './imgs/bin top.png')
+        $('.order_delete_bottom').attr('src', './imgs/bin bottom.png')
 
     }else{
         $('.theme').css('justify-content', 'flex-end')
@@ -423,7 +427,11 @@ function changeTheme(theme){
         $('.plant_delete_bottom').attr('src', './imgs/bin bottom dark theme.png')
         $('.order').css('border', '#fff 2px solid')
         $('h2').css('color', '#fff')
-
+        $('.order').css('color', '#fff')
+        $('select').css('background-color', '#1E1E1E')
+        $('select').css('color', '#fff')
+        $('.order_delete_top').attr('src', './imgs/bin top dark theme.png')
+        $('.order_delete_bottom').attr('src', './imgs/bin bottom dark theme.png')
     }
 }
 changeTheme(theme);
