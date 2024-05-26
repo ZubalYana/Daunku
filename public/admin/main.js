@@ -109,6 +109,7 @@ $('#orders').click(()=>{
         </div>
         `
     )
+    changeTheme(theme)
 // Function to load the orders page
 function loadOrdersPage() {
     $('.content').empty();
@@ -214,6 +215,7 @@ function getOrders() {
                         console.error(err);
                     });
             });
+            changeTheme(theme)
         });
 }
 
@@ -384,6 +386,8 @@ function changeTheme(theme){
         $('.plant_edit_pen').attr('src', './imgs/pen.png')
         $('.plant_delete_top').attr('src', './imgs/bin top.png')
         $('.plant_delete_bottom').attr('src', './imgs/bin bottom.png')
+        $('.order').css('border', '#283444 2px solid')
+        $('h2').css('color', '#566270')
 
 
     }else{
@@ -417,6 +421,9 @@ function changeTheme(theme){
         $('.plant_edit_pen').attr('src', './imgs/pen dark theme.png')
         $('.plant_delete_top').attr('src', './imgs/bin top dark theme.png')
         $('.plant_delete_bottom').attr('src', './imgs/bin bottom dark theme.png')
+        $('.order').css('border', '#fff 2px solid')
+        $('h2').css('color', '#fff')
+
     }
 }
 changeTheme(theme);
