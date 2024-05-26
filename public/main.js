@@ -36,7 +36,7 @@ axios.get('http://localhost:3000/plants')
         }
     }
     console.log(db)
-
+    changeTheme(theme)
     $('.plant_addBtn').click((e) => {
         $('.addingMessage').css('display', 'flex')
         setTimeout(() => {
