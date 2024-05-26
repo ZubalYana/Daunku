@@ -49,6 +49,7 @@ $('#contacts').click(()=>{
         </div>
         `
     )
+    changeTheme(theme)
     $('#changeContacts').click(()=>{
         const data = {
             address: $('#address').val(),
@@ -393,7 +394,22 @@ function changeTheme(theme){
         $('select').css('color', '#566270')
         $('.order_delete_top').attr('src', './imgs/bin top.png')
         $('.order_delete_bottom').attr('src', './imgs/bin bottom.png')
-
+        $('#changeContacts').css('background-color', '#fff')
+        $('#changeContacts').css('color', '#566270')
+        $('#changeContacts').hover(
+            () => {
+                $('#changeContacts').css({
+                    'background-color': '#566270',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('#changeContacts').css({
+                    'background-color': '#fff',
+                    'color': '#566270',
+                });
+            }
+        );
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -432,6 +448,22 @@ function changeTheme(theme){
         $('select').css('color', '#fff')
         $('.order_delete_top').attr('src', './imgs/bin top dark theme.png')
         $('.order_delete_bottom').attr('src', './imgs/bin bottom dark theme.png')
+        $('#changeContacts').css('background-color', '#1E1E1E')
+        $('#changeContacts').css('color', '#fff')
+        $('#changeContacts').hover(
+            () => {
+                $('#changeContacts').css({
+                    'background-color': '#fff',
+                    'color': '#1E1E1E',
+                });
+            },
+            () => {
+                $('#changeContacts').css({
+                    'background-color': '#1E1E1E',
+                    'color': '#fff',
+                });
+            }
+        );
     }
 }
 changeTheme(theme);
