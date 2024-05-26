@@ -252,6 +252,7 @@ function getPlants(){
             </div>
                 `
             )
+            changeTheme(theme)
         }
     
         //actions animations
