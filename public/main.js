@@ -276,6 +276,9 @@ function changeTheme(theme){
         $('.plantsContainer_title').css('color', '#081323')
         $('.plant_imgCon').css('background-color', '#C1D0E4')
         $('.plant_textCon').css('background-color', '#fff')
+        $('.addingMessage').css('background-color', '#fff')
+        $('.addingMessage').css('color', '#081323')
+        $('.addingMessage').css('border', '2px #081323 solid')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -297,6 +300,9 @@ function changeTheme(theme){
         $('.plantsContainer_title').css('color', '#fff')
         $('.plant_imgCon').css('background-color', '#46658f')
         $('.plant_textCon').css('background-color', '#b3bdd0')
+        $('.addingMessage').css('background-color', '#1E1E1E')
+        $('.addingMessage').css('color', '#fff')
+        $('.addingMessage').css('border', '2px #fff solid')
 
     }
 }
