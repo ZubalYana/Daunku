@@ -279,6 +279,8 @@ function changeTheme(theme){
         $('.addingMessage').css('background-color', '#fff')
         $('.addingMessage').css('color', '#081323')
         $('.addingMessage').css('border', '2px #081323 solid')
+        $('.interior_title').css('color', '#081323')
+        $('.interior_subtitle').css('color', '#4F4F4F')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -303,6 +305,8 @@ function changeTheme(theme){
         $('.addingMessage').css('background-color', '#1E1E1E')
         $('.addingMessage').css('color', '#fff')
         $('.addingMessage').css('border', '2px #fff solid')
+        $('.interior_title').css('color', '#fff')
+        $('.interior_subtitle').css('color', '#eee')
 
     }
 }
