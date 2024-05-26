@@ -376,6 +376,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.statistics').css('color', '#566270')
+        $('.plant').css('border', '#566270 2px solid')
+        $('.plant').css('color', '#566270')
+
 
     }else{
         $('.theme').css('justify-content', 'flex-end')
@@ -401,6 +405,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.statistics').css('color', '#fff')
+        $('.plant').css('border', '#fff 2px solid')
+        $('.plant').css('color', '#fff')
+
     }
 }
 changeTheme(theme);
