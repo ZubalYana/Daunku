@@ -281,6 +281,11 @@ function changeTheme(theme){
         $('.addingMessage').css('border', '2px #081323 solid')
         $('.interior_title').css('color', '#081323')
         $('.interior_subtitle').css('color', '#4F4F4F')
+        $('.care_title').css('color', '#081323')
+        $('.care_subtitle').css('color', '#4F4F4F')
+        $('.care_tipTitle').css('color', '#081323')
+        $('.care_tipDescription').css('color', '#4F4F4F')
+
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -307,7 +312,10 @@ function changeTheme(theme){
         $('.addingMessage').css('border', '2px #fff solid')
         $('.interior_title').css('color', '#fff')
         $('.interior_subtitle').css('color', '#eee')
-
+        $('.care_title').css('color', '#fff')
+        $('.care_subtitle').css('color', '#eee')
+        $('.care_tipTitle').css('color', '#fff')
+        $('.care_tipDescription').css('color', '#eee')
     }
 }
 changeTheme(theme);
