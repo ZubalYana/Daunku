@@ -360,6 +360,22 @@ function changeTheme(theme){
         $('.wrap').css('background-color', '#fff')
         $('.navEl').css('color', '#566270')
         $('.logo').css('color', '#566270')
+        $('.addNewPlantsBtn').css('background-color', '#fff')
+        $('.addNewPlantsBtn').css('color', '#566270')
+        $('.addNewPlantsBtn').hover(
+            () => {
+                $('.addNewPlantsBtn').css({
+                    'background-color': '#566270',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('.addNewPlantsBtn').css({
+                    'background-color': '#fff',
+                    'color': '#566270',
+                });
+            }
+        );
 
     }else{
         $('.theme').css('justify-content', 'flex-end')
@@ -369,7 +385,22 @@ function changeTheme(theme){
         $('.wrap').css('background-color', '#1E1E1E')
         $('.navEl').css('color', '#fff')
         $('.logo').css('color', '#fff')
-
+        $('.addNewPlantsBtn').css('background-color', '#566270')
+        $('.addNewPlantsBtn').css('color', '#fff')
+        $('.addNewPlantsBtn').hover(
+            () => {
+                $('.addNewPlantsBtn').css({
+                    'background-color': '#fff',
+                    'color': '#566270',
+                });
+            },
+            () => {
+                $('.addNewPlantsBtn').css({
+                    'background-color': '#566270',
+                    'color': '#fff',
+                });
+            }
+        );
     }
 }
 changeTheme(theme);
