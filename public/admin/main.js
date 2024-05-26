@@ -410,6 +410,8 @@ function changeTheme(theme){
                 });
             }
         );
+        $('input').css('background-color', '#fff')
+
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -464,6 +466,8 @@ function changeTheme(theme){
                 });
             }
         );
+        $('input').css('background-color', '#1E1E1E')
+
     }
 }
 changeTheme(theme);
