@@ -381,6 +381,9 @@ function changeTheme(theme){
         $('.statistics').css('color', '#566270')
         $('.plant').css('border', '#566270 2px solid')
         $('.plant').css('color', '#566270')
+        $('.plant_edit_pen').attr('src', './imgs/pen.png')
+        $('.plant_delete_top').attr('src', './imgs/bin top.png')
+        $('.plant_delete_bottom').attr('src', './imgs/bin bottom.png')
 
 
     }else{
@@ -411,7 +414,9 @@ function changeTheme(theme){
         $('.statistics').css('color', '#fff')
         $('.plant').css('border', '#fff 2px solid')
         $('.plant').css('color', '#fff')
-
+        $('.plant_edit_pen').attr('src', './imgs/pen dark theme.png')
+        $('.plant_delete_top').attr('src', './imgs/bin top dark theme.png')
+        $('.plant_delete_bottom').attr('src', './imgs/bin bottom dark theme.png')
     }
 }
 changeTheme(theme);
