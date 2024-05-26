@@ -286,6 +286,7 @@ function changeTheme(theme){
         $('.care_tipTitle').css('color', '#081323')
         $('.care_tipDescription').css('color', '#4F4F4F')
 
+        $('.futer').css('background', 'linear-gradient( to right bottom, #566270, #283444 )')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -316,6 +317,8 @@ function changeTheme(theme){
         $('.care_subtitle').css('color', '#eee')
         $('.care_tipTitle').css('color', '#fff')
         $('.care_tipDescription').css('color', '#eee')
+        $('.futer').css('background', 'linear-gradient( to right bottom, #1E1E1E, #283444 )')
+
     }
 }
 changeTheme(theme);
