@@ -354,17 +354,16 @@ $('.theme').click(function(){
 function changeTheme(theme){
     if(theme == 'light'){
         $('.theme').css('justify-content', 'flex-start')
-        $('.theme').css('background-color', '#566270')
+        $('.theme').css('background-color', '#1E1E1E')
         $('.theme_circle').css('background-color', '#fff')
-        $('.theme_circle').css('border', '2px #566270 solid')
-
+        $('.theme_circle').css('border', '2px #081323 solid')
+        $('.wrap').css('background-color', '#fff')
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
-        $('.theme_circle').css('background-color', '#566270')
+        $('.theme_circle').css('background-color', '#283444')
         $('.theme_circle').css('border', '2px #fff solid')
-
-
+        $('.wrap').css('background-color', '#1E1E1E')
     }
 }
 changeTheme(theme);
