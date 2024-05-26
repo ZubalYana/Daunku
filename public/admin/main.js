@@ -360,6 +360,7 @@ function changeTheme(theme){
         $('.wrap').css('background-color', '#fff')
         $('.navEl').css('color', '#566270')
         $('.logo').css('color', '#566270')
+        $('.addNewPlantsBtn').css('border', '2px #566270 solid')
         $('.addNewPlantsBtn').css('background-color', '#fff')
         $('.addNewPlantsBtn').css('color', '#566270')
         $('.addNewPlantsBtn').hover(
@@ -389,18 +390,19 @@ function changeTheme(theme){
         $('.wrap').css('background-color', '#1E1E1E')
         $('.navEl').css('color', '#fff')
         $('.logo').css('color', '#fff')
-        $('.addNewPlantsBtn').css('background-color', '#566270')
+        $('.addNewPlantsBtn').css('border', '2px #fff solid')
+        $('.addNewPlantsBtn').css('background-color', '#1E1E1E')
         $('.addNewPlantsBtn').css('color', '#fff')
         $('.addNewPlantsBtn').hover(
             () => {
                 $('.addNewPlantsBtn').css({
                     'background-color': '#fff',
-                    'color': '#566270',
+                    'color': '#1E1E1E',
                 });
             },
             () => {
                 $('.addNewPlantsBtn').css({
-                    'background-color': '#566270',
+                    'background-color': '#1E1E1E',
                     'color': '#fff',
                 });
             }
