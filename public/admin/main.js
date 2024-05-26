@@ -80,6 +80,7 @@ $('#newslatter').click(()=>{
         </div>
         `
     )
+    changeTheme(theme)
     //emails sending
 $('#sendMessage').click(()=>{
     const data = {
@@ -411,6 +412,24 @@ function changeTheme(theme){
             }
         );
         $('input').css('background-color', '#fff')
+        $('#sendMessage').css('background-color', '#fff')
+        $('#sendMessage').css('color', '#566270')
+        $('#sendMessage').hover(
+            () => {
+                $('#sendMessage').css({
+                    'background-color': '#566270',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('#sendMessage').css({
+                    'background-color': '#fff',
+                    'color': '#566270',
+                });
+            }
+        );
+        $('textarea').css('background-color', '#fff')
+        $('textarea').css('color', '#566270')
 
     }else{
         $('.theme').css('justify-content', 'flex-end')
@@ -466,7 +485,25 @@ function changeTheme(theme){
                 });
             }
         );
+        $('#sendMessage').css('background-color', '#1E1E1E')
+        $('#sendMessage').css('color', '#fff')
+        $('#sendMessage').hover(
+            () => {
+                $('#sendMessage').css({
+                    'background-color': '#fff',
+                    'color': '#1E1E1E',
+                });
+            },
+            () => {
+                $('#sendMessage').css({
+                    'background-color': '#1E1E1E',
+                    'color': '#fff',
+                });
+            }
+        );
         $('input').css('background-color', '#1E1E1E')
+        $('textarea').css('background-color', '#1E1E1E')
+        $('textarea').css('color', '#fff')
 
     }
 }

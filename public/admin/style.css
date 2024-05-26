@@ -537,20 +537,20 @@
   font-weight: 400;
 }
 .wrap .content .newsWrapper button {
-  width: 200px;
+  width: 180px;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  font-size: 28px;
+  font-size: 21px;
+  font-weight: 600;
   border-radius: 20px;
-  background-color: #fff;
+  border: #566270 2px solid;
   color: #566270;
-  font-weight: 700;
-  outline: none;
-  transition: 0.5s ease;
+  background-color: #fff;
   cursor: pointer;
+  margin-top: 20px;
+  transition: 0.5s ease;
 }
 .wrap .content .newsWrapper button:hover {
   background-color: #566270;
