@@ -272,6 +272,10 @@ function changeTheme(theme){
         $('.mainPage_searchInput::placeholder').css('color', '#fff')
         $('.mainPage_searchBtn_icon').attr('src', './imgs/search.png')
         $('#cart').attr('src', './imgs/cart.png')
+        $('.plants_abilityTitile').css('color', '#081323')
+        $('.plantsContainer_title').css('color', '#081323')
+        $('.plant_imgCon').css('background-color', '#C1D0E4')
+        $('.plant_textCon').css('background-color', '#fff')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -288,6 +292,11 @@ function changeTheme(theme){
         $('.mainPage_searchBtn_icon').attr('src', './imgs/search dark.png')
         $('.mainPage_searchBtn_icon').css('width', '24px')
         $('#cart').attr('src', './imgs/cart dark.png')
+        $('.plants').css('color', '#1E1E1E')
+        $('.plants_abilityTitile').css('color', '#fff')
+        $('.plantsContainer_title').css('color', '#fff')
+        $('.plant_imgCon').css('background-color', '#46658f')
+        $('.plant_textCon').css('background-color', '#c5bfbf')
 
     }
 }
