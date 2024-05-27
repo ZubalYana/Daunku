@@ -97,6 +97,7 @@ function renderCart() {
             plant.amount = Math.max(1, plant.amount - 1);  // Ensure amount does not go below 1
             renderCart();
         }
+        changeTheme(theme)
     });
 
     $('.chosenPlantsContainer').on('click', '.increasePlant_amount', function() {
@@ -106,6 +107,7 @@ function renderCart() {
             plant.amount++;
             renderCart();
         }
+        changeTheme(theme)
     });
 
     // Plant deleting from the cartList
@@ -120,6 +122,7 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
             renderCart();
         }
     }
+    changeTheme(theme)
 });
 
     // Bin hover effect
@@ -136,6 +139,7 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
 }
 $('.mainPage_cart').click(() => {
     $('.cartPopupContainer').css('display', 'flex');
+    changeTheme(theme)
 });
 $('#cartPopup_xmark').click(() => {
     $('.cartPopupContainer').css('display', 'none');
@@ -290,7 +294,13 @@ function changeTheme(theme){
         $('.cartPopup').css('background-color', '#fff')
         $('.xmark').css('color', '#000')
         $('h1').css('color', '#081323')
-
+        $('.chosenPlant').css('border', '1px #283444 solid')
+        $('.chosenPlant_name').css('color', '#081323')
+        $('.chosenPlant_price').css('color', '#081323')
+        $('.chosenPlant_amount').css('color', '#566270')
+        $('.plantAmountchanger').css('color', '#566270')
+        $('.chosenPlant_top').attr('src', './imgs/bin top.png')
+        $('.chosenPlant_bottom').attr('src', './imgs/bin bottom.png')
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
         $('.mainPage_theme').css('background-color', '#1E1E1E')
@@ -325,7 +335,13 @@ function changeTheme(theme){
         $('.cartPopup').css('background-color', '#1E1E1E')
         $('.xmark').css('color', '#fff')
         $('h1').css('color', '#fff')
-
+        $('.chosenPlant').css('border', '1px #fff solid')
+        $('.chosenPlant_name').css('color', '#fff')
+        $('.chosenPlant_price').css('color', '#fff')
+        $('.chosenPlant_amount').css('color', '#ccc')
+        $('.plantAmountchanger').css('color', '#ccc')
+        $('.chosenPlant_top').attr('src', './imgs/bin top dark theme.png')
+        $('.chosenPlant_bottom').attr('src', './imgs/bin bottom dark theme.png')
     }
 }
 changeTheme(theme);
