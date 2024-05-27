@@ -287,6 +287,9 @@ function changeTheme(theme){
         $('.care_tipDescription').css('color', '#4F4F4F')
         $('.futer').css('background', 'linear-gradient( to right bottom, #566270, #283444 )')
         $('.ordersWrapper').css('color', '#566270')
+        $('.cartPopup').css('background-color', '#fff')
+        $('.xmark').css('color', '#000')
+        $('h1').css('color', '#081323')
 
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
@@ -319,6 +322,9 @@ function changeTheme(theme){
         $('.care_tipDescription').css('color', '#eee')
         $('.futer').css('background', 'linear-gradient( to right bottom, #1E1E1E, #283444 )')
         $('.ordersWrapper').css('color', '#fff')
+        $('.cartPopup').css('background-color', '#1E1E1E')
+        $('.xmark').css('color', '#fff')
+        $('h1').css('color', '#fff')
 
     }
 }
