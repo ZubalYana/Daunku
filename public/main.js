@@ -301,6 +301,29 @@ function changeTheme(theme){
         $('.plantAmountchanger').css('color', '#566270')
         $('.chosenPlant_top').attr('src', './imgs/bin top.png')
         $('.chosenPlant_bottom').attr('src', './imgs/bin bottom.png')
+        $('#chosenPlantCount').css('color', '#081323')
+        $('#totalAmount').css('color', '#081323')
+        $('h2').css('color', '#283444')
+        $('.paymentMethod').css('background-color', 'none')
+        $('.paymentMethod').css('padding', 'none')
+
+        $('#buyBtn').css('background-color', '#fff')
+        $('#buyBtn').css('border', '1px #081323 solid')
+        $('#buyBtn').css('color', '#081323')
+        $('#buyBtn').hover(
+            () => {
+                $('#buyBtn').css({
+                    'background-color': '#081323',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('#buyBtn').css({
+                    'background-color': '#fff',
+                    'color': '#081323',
+                });
+            }
+        );
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
         $('.mainPage_theme').css('background-color', '#1E1E1E')
@@ -342,6 +365,33 @@ function changeTheme(theme){
         $('.plantAmountchanger').css('color', '#ccc')
         $('.chosenPlant_top').attr('src', './imgs/bin top dark theme.png')
         $('.chosenPlant_bottom').attr('src', './imgs/bin bottom dark theme.png')
+        $('#chosenPlantCount').css('color', '#fff')
+        $('#totalAmount').css('color', '#fff')
+        $('h2').css('color', '#fff')
+        $('.paymentMethod').css('background-color', '#fff')
+        $('.paymentMethod').css('padding', '0 10px')
+
+        $('#buyBtn').css('background-color', '#1E1E1E')
+        $('#buyBtn').css('border', '1px #fff solid')
+        $('#buyBtn').css('color', '#fff')
+        $('#buyBtn').hover(
+            () => {
+                $('#buyBtn').css({
+
+                    'background-color': '#fff',
+                    'color': '#1E1E1E',
+                    'border': '1px #1E1E1E solid',
+                });
+            },
+            () => {
+                $('#buyBtn').css({
+                    'background-color': '#1E1E1E',
+                    'color': '#fff',
+                    'border': '1px #fff solid',
+
+                });
+            }
+        );
     }
 }
 changeTheme(theme);
