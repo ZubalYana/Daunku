@@ -157,6 +157,7 @@ $('#buyBtn').click(() => {
     axios.post('/new-order', data)
         .then(res => {
             console.log(`Order data was sended`);
+            $('.cartPopup_ordering').css('display', 'none')
         })
 })
 
