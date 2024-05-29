@@ -315,7 +315,6 @@ function changeTheme(theme){
         $('h2').css('color', '#283444')
         $('.paymentMethod').css('background-color', 'none')
         $('.paymentMethod').css('padding', 'none')
-
         $('#buyBtn').css('background-color', '#fff')
         $('#buyBtn').css('border', '1px #081323 solid')
         $('#buyBtn').css('color', '#081323')
@@ -333,6 +332,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.cartPopup_input').css('background-color', '#fff')
+        $('.cartPopup_input').css('border', '1px #081323 solid')
+
+        
     }else{
         $('.mainPage_theme').css('justify-content', 'flex-end')
         $('.mainPage_theme').css('background-color', '#1E1E1E')
@@ -379,7 +382,6 @@ function changeTheme(theme){
         $('h2').css('color', '#fff')
         $('.paymentMethod').css('background-color', '#fff')
         $('.paymentMethod').css('padding', '0 10px')
-
         $('#buyBtn').css('background-color', '#1E1E1E')
         $('#buyBtn').css('border', '1px #fff solid')
         $('#buyBtn').css('color', '#fff')
@@ -401,6 +403,8 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.cartPopup_input').css('background-color', '#1E1E1E')
+        $('.cartPopup_input').css('border', '1px #fff solid')
     }
 }
 changeTheme(theme);
