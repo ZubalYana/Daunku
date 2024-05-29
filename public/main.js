@@ -334,6 +334,9 @@ function changeTheme(theme){
         );
         $('.cartPopup_input').css('background-color', '#fff')
         $('.cartPopup_input').css('border', '1px #081323 solid')
+        $('.cartPopup_orderFeedback').css('color', '#081323')
+        $('.cartPopup_input').css('color', '#081323')
+
 
         
     }else{
@@ -405,6 +408,9 @@ function changeTheme(theme){
         );
         $('.cartPopup_input').css('background-color', '#1E1E1E')
         $('.cartPopup_input').css('border', '1px #fff solid')
+        $('.cartPopup_orderFeedback').css('color', '#fff')
+        $('.cartPopup_input').css('color', '#fff')
+
     }
 }
 changeTheme(theme);
