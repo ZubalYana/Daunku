@@ -337,6 +337,23 @@
   position: absolute;
   bottom: 0px;
 }
+.wrap .content .plantsWrapper .plantAddedMessage {
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px #081323 solid;
+  font-size: 16px;
+  font-weight: 600;
+  color: #081323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  left: 30px;
+  bottom: 30px;
+}
 .wrap .content .contactsWrapper {
   color: #566270;
   display: flex;

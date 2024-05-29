@@ -7,6 +7,8 @@ $('.content').append(
     <div class="statistics"></div>
     </div>
     <div class="plantslist"></div>
+    <div class="plantAddedMessage">Plant was added to the catalog successfully!</div>
+
     </div>
     `
 )
@@ -24,6 +26,7 @@ $('#plants').click(()=>{
         <div class="statistics"></div>
         </div>
         <div class="plantslist"></div>
+        <div class="plantAddedMessage">Plant was added to the catalog successfully!</div>
         </div>
         `
     )
