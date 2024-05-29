@@ -159,7 +159,10 @@ $('#buyBtn').click(() => {
             console.log(`Order data was sended`);
             $('.cartPopup_ordering').css('display', 'none')
             $('.cartPopup_orderFeedback').css('display', 'flex')
+            $('#cartPopupFeedback_xmark').click(()=>{
+                $('.cartPopupContainer').css('display', 'none')
 
+            })
         })
 })
 
