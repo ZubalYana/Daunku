@@ -158,6 +158,8 @@ $('#buyBtn').click(() => {
         .then(res => {
             console.log(`Order data was sended`);
             $('.cartPopup_ordering').css('display', 'none')
+            $('.cartPopup_orderFeedback').css('display', 'flex')
+
         })
 })
 
