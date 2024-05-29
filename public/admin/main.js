@@ -430,7 +430,28 @@ function changeTheme(theme){
         );
         $('textarea').css('background-color', '#fff')
         $('textarea').css('color', '#566270')
+        $('.addNewPlantPopup').css('background-color', '#fff')
+        $('#addNewPlantXmark').css('color', '#000')
+        $('h3').css('color', '#566270')
+        $('input').css('border', '1px #081323 solid')
+        $('.addNewPlant_btn').css('border', '1px #081323 solid')
 
+        $('.addNewPlant_btn').css('background-color', '#fff')
+        $('.addNewPlant_btn').css('color', '#081323')
+        $('.addNewPlant_btn').hover(
+            () => {
+                $('.addNewPlant_btn').css({
+                    'background-color': '#081323',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('.addNewPlant_btn').css({
+                    'background-color': '#fff',
+                    'color': '#081323',
+                });
+            }
+        );
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -504,7 +525,28 @@ function changeTheme(theme){
         $('input').css('background-color', '#1E1E1E')
         $('textarea').css('background-color', '#1E1E1E')
         $('textarea').css('color', '#fff')
+        $('.addNewPlantPopup').css('background-color', '#1E1E1E')
+        $('#addNewPlantXmark').css('color', '#fff')
+        $('h3').css('color', '#fff')
+        $('input').css('border', '1px #fff solid')
+        $('.addNewPlant_btn').css('background-color', '#1E1E1E')
+        $('.addNewPlant_btn').css('color', '#fff')
+        $('.addNewPlant_btn').css('border', '1px #fff solid')
 
+        $('.addNewPlant_btn').hover(
+            () => {
+                $('.addNewPlant_btn').css({
+                    'background-color': '#fff',
+                    'color': '#1E1E1E',
+                });
+            },
+            () => {
+                $('.addNewPlant_btn').css({
+                    'background-color': '#1E1E1E',
+                    'color': '#fff',
+                });
+            }
+        );
     }
 }
 changeTheme(theme);
