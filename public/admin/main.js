@@ -438,7 +438,6 @@ function changeTheme(theme){
         $('h3').css('color', '#566270')
         $('input').css('border', '1px #081323 solid')
         $('.addNewPlant_btn').css('border', '1px #081323 solid')
-
         $('.addNewPlant_btn').css('background-color', '#fff')
         $('.addNewPlant_btn').css('color', '#081323')
         $('.addNewPlant_btn').hover(
@@ -455,6 +454,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.plantAddedMessage').css('background-color', '#fff')
+        $('.plantAddedMessage').css('color', '#081323')
+        $('.plantAddedMessage').css('border', '1px #081323 solid')
+
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -535,7 +538,6 @@ function changeTheme(theme){
         $('.addNewPlant_btn').css('background-color', '#1E1E1E')
         $('.addNewPlant_btn').css('color', '#fff')
         $('.addNewPlant_btn').css('border', '1px #fff solid')
-
         $('.addNewPlant_btn').hover(
             () => {
                 $('.addNewPlant_btn').css({
@@ -550,6 +552,9 @@ function changeTheme(theme){
                 });
             }
         );
+        $('.plantAddedMessage').css('background-color', '#1E1E1E')
+        $('.plantAddedMessage').css('color', '#fff')
+        $('.plantAddedMessage').css('border', '1px #fff solid')
     }
 }
 changeTheme(theme);
