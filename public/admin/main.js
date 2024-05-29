@@ -576,5 +576,15 @@ $('.addNewPlant_btn').click(()=>{
         rating: $('#plant_rating').val()
     }
     axios.post('http://localhost:3000/add-plants', data)
-    location.reload();
+    .then(()=>{
+
+        $('.plantAddedMessage').css('display', 'flex')
+        setTimeout(() => {
+            $('.plantAddedMessage').css('display', 'none')
+        }, 2000);
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+    })
+
 })
