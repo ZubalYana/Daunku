@@ -661,168 +661,173 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
-        .cartPopup_parts{
+        .cartPopup_ordering{
             display: flex;
-            width: 100%;
-            height: 450px;
-            margin-top: 10px;
-            justify-content: space-between;
-            .cartPopup_infoPart{
-                width: 50%;
-
-                .chosenPlantsContainer{
-                    width: 90%;
-                    height: 480px;
-                    overflow-y: auto;
+            flex-direction: column;
+            .cartPopup_parts{
+                display: flex;
+                width: 100%;
+                height: 450px;
+                margin-top: 10px;
+                justify-content: space-between;
+                .cartPopup_infoPart{
+                    width: 50%;
     
-                    .chosenPlant{
-                        width: 95%;
-                        height: 80px;
-                        border-radius: 20px;
-                        border: #283444 1px solid;
-                        display: flex;
-                        padding: 10px 20px 10px 10px;
-                        margin-bottom: 12px;
-                        align-items: center;
-                        user-select: none;
-
-                            .chosenPlant_img{
-                                height: 50px;
-                            }
-                            .chosenPlant_imgContainer{
-                                width: 60px;
-                            }
-                            .chosenPlant_namePriceCon{
-                                width: 180px;
-                                margin-left: 7px;
-                                .chosenPlant_name{
-                                    color: #081323;
-                                    font-size: 20px;
-                                    font-weight: 400;
-                                }
-                                .chosenPlant_price{
-                                    color: #081323;
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    margin-top: 5px;
-                                }
-                        }
-                        .chosenPlant_amountContaner{
+                    .chosenPlantsContainer{
+                        width: 90%;
+                        height: 480px;
+                        overflow-y: auto;
+        
+                        .chosenPlant{
+                            width: 95%;
+                            height: 80px;
+                            border-radius: 20px;
+                            border: #283444 1px solid;
                             display: flex;
-                            margin: 7px 30px 0 0;
-                            width: 100px;
-                            .chosenPlant_amount{
-                                color: #566270;
-                                font-size: 20px;
-                                font-weight: 700;
-                                margin: 0 12px;
+                            padding: 10px 20px 10px 10px;
+                            margin-bottom: 12px;
+                            align-items: center;
+                            user-select: none;
+    
+                                .chosenPlant_img{
+                                    height: 50px;
+                                }
+                                .chosenPlant_imgContainer{
+                                    width: 60px;
+                                }
+                                .chosenPlant_namePriceCon{
+                                    width: 180px;
+                                    margin-left: 7px;
+                                    .chosenPlant_name{
+                                        color: #081323;
+                                        font-size: 20px;
+                                        font-weight: 400;
+                                    }
+                                    .chosenPlant_price{
+                                        color: #081323;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        margin-top: 5px;
+                                    }
                             }
-                            .plantAmountchanger{
-                                font-size: 20px;
-                                font-weight: 600;
-                                color: #566270;
-                                cursor: pointer;
-                            }
-                        }
-                            .chosenPlant_bin{
-                                cursor: pointer;
-                                width: 30px;
-                                height: 22px;
+                            .chosenPlant_amountContaner{
                                 display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: space-between;
-                                position: relative;
-                                .chosenPlant_top{
-                                    width: 90%;
-                                    position: absolute;
-                                    top: 0px;
-                                    transition: 0.4s ease;
+                                margin: 7px 30px 0 0;
+                                width: 100px;
+                                .chosenPlant_amount{
+                                    color: #566270;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    margin: 0 12px;
                                 }
-                                .chosenPlant_bottom{
-                                    width: 78%;
-                                    position: absolute;
-                                    bottom: 0px;
+                                .plantAmountchanger{
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    color: #566270;
+                                    cursor: pointer;
                                 }
                             }
-                        
-                        
+                                .chosenPlant_bin{
+                                    cursor: pointer;
+                                    width: 30px;
+                                    height: 22px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    position: relative;
+                                    .chosenPlant_top{
+                                        width: 90%;
+                                        position: absolute;
+                                        top: 0px;
+                                        transition: 0.4s ease;
+                                    }
+                                    .chosenPlant_bottom{
+                                        width: 78%;
+                                        position: absolute;
+                                        bottom: 0px;
+                                    }
+                                }
+                            
+                            
+                        }
                     }
                 }
-            }
-            .cartPopup_paymentContainer{
-                width: 50%;
-                h3{
-                    color: #081323;
-                    margin-bottom: 5px;
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                h2{
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: #283444;
-                    margin-top: 15px;
-                }
-                .paymentMethods{
-                    width: 40%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 10px 0 15px 0;
-                    .paymentMethod{
-                        width: 60px;
-                        cursor: pointer;
+                .cartPopup_paymentContainer{
+                    width: 50%;
+                    h3{
+                        color: #081323;
+                        margin-bottom: 5px;
+                        font-size: 20px;
+                        font-weight: 600;
                     }
-                }
-                .inputsContainer{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 15px 0 15px 0;
+                    h2{
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #283444;
+                        margin-top: 15px;
+                    }
+                    .paymentMethods{
+                        width: 40%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 10px 0 15px 0;
+                        .paymentMethod{
+                            width: 60px;
+                            cursor: pointer;
+                        }
+                    }
+                    .inputsContainer{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 15px 0 15px 0;
+                        input{
+                            width: 48%;
+                            height: 40px;
+                            border-radius: 10px;
+                            border: 1px #081323 solid;
+                            padding: 7px;
+                        }
+                    }
                     input{
-                        width: 48%;
+                        width: 100%;
                         height: 40px;
                         border-radius: 10px;
                         border: 1px #081323 solid;
                         padding: 7px;
                     }
-                }
-                input{
-                    width: 100%;
-                    height: 40px;
-                    border-radius: 10px;
-                    border: 1px #081323 solid;
-                    padding: 7px;
-                }
-                textarea{
-                    width: 100%;
-                    height: 80px;
-                    border-radius: 10px;
-                    border: 1px #081323 solid;
-                    padding: 7px;
-                    resize: none;
-                }
-                #buyBtn{
-                    width: 200px;
-                    height: 50px;
-                    border-radius: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #081323;
-                    font-size: 24px;
-                    font-weight: 500;
-                    cursor: pointer;
-                    border: 1px #081323 solid;
-                    margin-top: 20px;
-                    transition: 0.5s ease;
-                }
-                #buyBtn:hover{
-                    background-color: #081323;
-                    color: #fff;
+                    textarea{
+                        width: 100%;
+                        height: 80px;
+                        border-radius: 10px;
+                        border: 1px #081323 solid;
+                        padding: 7px;
+                        resize: none;
+                    }
+                    #buyBtn{
+                        width: 200px;
+                        height: 50px;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #081323;
+                        font-size: 24px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        border: 1px #081323 solid;
+                        margin-top: 20px;
+                        transition: 0.5s ease;
+                    }
+                    #buyBtn:hover{
+                        background-color: #081323;
+                        color: #fff;
+                    }
                 }
             }
         }
+
         .cartPopup_orderFeedback{
             width: 100%;
             height: 100%;

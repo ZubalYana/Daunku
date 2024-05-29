@@ -163,6 +163,8 @@ $('#buyBtn').click(() => {
                 $('.cartPopupContainer').css('display', 'none')
                 cartlist = [];
                 renderCart()
+                $('.cartPopup_ordering').css('display', 'flex')
+                $('.cartPopup_orderFeedback').css('display', 'none')
             })
         })
 })

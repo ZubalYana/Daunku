@@ -677,22 +677,26 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts {
+.cartPopupContainer .cartPopup .cartPopup_ordering {
+  display: flex;
+  flex-direction: column;
+}
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts {
   display: flex;
   width: 100%;
   height: 450px;
   margin-top: 10px;
   justify-content: space-between;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart {
   width: 50%;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer {
   width: 90%;
   height: 480px;
   overflow-y: auto;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant {
   width: 95%;
   height: 80px;
   border-radius: 20px;
@@ -705,45 +709,45 @@
      -moz-user-select: none;
           user-select: none;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_img {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_img {
   height: 50px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_imgContainer {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_imgContainer {
   width: 60px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon {
   width: 180px;
   margin-left: 7px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_name {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_name {
   color: #081323;
   font-size: 20px;
   font-weight: 400;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_price {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_namePriceCon .chosenPlant_price {
   color: #081323;
   font-size: 18px;
   font-weight: 600;
   margin-top: 5px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner {
   display: flex;
   margin: 7px 30px 0 0;
   width: 100px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner .chosenPlant_amount {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner .chosenPlant_amount {
   color: #566270;
   font-size: 20px;
   font-weight: 700;
   margin: 0 12px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner .plantAmountchanger {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_amountContaner .plantAmountchanger {
   font-size: 20px;
   font-weight: 600;
   color: #566270;
   cursor: pointer;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin {
   cursor: pointer;
   width: 30px;
   height: 22px;
@@ -753,63 +757,63 @@
   justify-content: space-between;
   position: relative;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin .chosenPlant_top {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin .chosenPlant_top {
   width: 90%;
   position: absolute;
   top: 0px;
   transition: 0.4s ease;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin .chosenPlant_bottom {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_infoPart .chosenPlantsContainer .chosenPlant .chosenPlant_bin .chosenPlant_bottom {
   width: 78%;
   position: absolute;
   bottom: 0px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer {
   width: 50%;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer h3 {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer h3 {
   color: #081323;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: 600;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer h2 {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer h2 {
   font-size: 16px;
   font-weight: 400;
   color: #283444;
   margin-top: 15px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .paymentMethods {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer .paymentMethods {
   width: 40%;
   display: flex;
   justify-content: space-between;
   margin: 10px 0 15px 0;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .paymentMethods .paymentMethod {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer .paymentMethods .paymentMethod {
   width: 60px;
   cursor: pointer;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .inputsContainer {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer .inputsContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 15px 0 15px 0;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer .inputsContainer input {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer .inputsContainer input {
   width: 48%;
   height: 40px;
   border-radius: 10px;
   border: 1px #081323 solid;
   padding: 7px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer input {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer input {
   width: 100%;
   height: 40px;
   border-radius: 10px;
   border: 1px #081323 solid;
   padding: 7px;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer textarea {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer textarea {
   width: 100%;
   height: 80px;
   border-radius: 10px;
@@ -817,7 +821,7 @@
   padding: 7px;
   resize: none;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer #buyBtn {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer #buyBtn {
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -832,7 +836,7 @@
   margin-top: 20px;
   transition: 0.5s ease;
 }
-.cartPopupContainer .cartPopup .cartPopup_parts .cartPopup_paymentContainer #buyBtn:hover {
+.cartPopupContainer .cartPopup .cartPopup_ordering .cartPopup_parts .cartPopup_paymentContainer #buyBtn:hover {
   background-color: #081323;
   color: #fff;
 }
