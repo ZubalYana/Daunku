@@ -161,7 +161,8 @@ $('#buyBtn').click(() => {
             $('.cartPopup_orderFeedback').css('display', 'flex')
             $('#cartPopupFeedback_xmark').click(()=>{
                 $('.cartPopupContainer').css('display', 'none')
-
+                cartlist = [];
+                renderCart()
             })
         })
 })
