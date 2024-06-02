@@ -77,47 +77,53 @@
   .wrap .interior {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: -100px;
   }
   .wrap .interior .interior_title {
-    font-size: 35px;
+    color: #081323;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
   }
   .wrap .interior .interior_subtitle {
-    font-size: 12px;
+    color: #4F4F4F;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
   }
   .wrap .interior .interior_Con {
-    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
   }
-  .wrap .interior .interior_Con .interior_leftPart .room1Con {
-    width: 200px;
-    height: 138px;
+  .wrap .interior .interior_Con .interior_leftPart, .wrap .interior .interior_Con .interior_rightPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
   }
-  .wrap .interior .interior_Con .interior_leftPart .room1Con #room1 {
-    border-radius: 6px;
+  .wrap .interior .interior_Con .interior_leftPart .room1Con, .wrap .interior .interior_Con .interior_leftPart .room2Con, .wrap .interior .interior_Con .interior_leftPart .room3Con, .wrap .interior .interior_Con .interior_rightPart .room1Con, .wrap .interior .interior_Con .interior_rightPart .room2Con, .wrap .interior .interior_Con .interior_rightPart .room3Con {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
   }
-  .wrap .interior .interior_Con .interior_leftPart .room1Con .room1_cover {
-    font-size: 20px;
-    border-radius: 6px;
+  .wrap .interior .interior_Con .interior_leftPart .room1Con img, .wrap .interior .interior_Con .interior_leftPart .room2Con img, .wrap .interior .interior_Con .interior_leftPart .room3Con img, .wrap .interior .interior_Con .interior_rightPart .room1Con img, .wrap .interior .interior_Con .interior_rightPart .room2Con img, .wrap .interior .interior_Con .interior_rightPart .room3Con img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
   }
-  .wrap .interior .interior_Con .interior_leftPart .room2Con {
-    width: 200px;
-    height: 138px;
-  }
-  .wrap .interior .interior_Con .interior_leftPart .room2Con #room2 {
-    border-radius: 6px;
-  }
-  .wrap .interior .interior_Con .interior_leftPart .room2Con .room2_cover {
-    font-size: 20px;
-    border-radius: 6px;
-  }
-  .wrap .interior .interior_Con .interior_rightPart .room3Con {
-    width: 80%;
-  }
-  .wrap .interior .interior_Con .interior_rightPart .room3Con #room3 {
-    border-radius: 6px;
-  }
-  .wrap .interior .interior_Con .interior_rightPart .room3Con .room3_cover {
-    font-size: 20px;
-    border-radius: 6px;
+  .wrap .interior .interior_Con .interior_leftPart .room1Con .room1_cover, .wrap .interior .interior_Con .interior_leftPart .room1Con .room2_cover, .wrap .interior .interior_Con .interior_leftPart .room1Con .room3_cover, .wrap .interior .interior_Con .interior_leftPart .room2Con .room1_cover, .wrap .interior .interior_Con .interior_leftPart .room2Con .room2_cover, .wrap .interior .interior_Con .interior_leftPart .room2Con .room3_cover, .wrap .interior .interior_Con .interior_leftPart .room3Con .room1_cover, .wrap .interior .interior_Con .interior_leftPart .room3Con .room2_cover, .wrap .interior .interior_Con .interior_leftPart .room3Con .room3_cover, .wrap .interior .interior_Con .interior_rightPart .room1Con .room1_cover, .wrap .interior .interior_Con .interior_rightPart .room1Con .room2_cover, .wrap .interior .interior_Con .interior_rightPart .room1Con .room3_cover, .wrap .interior .interior_Con .interior_rightPart .room2Con .room1_cover, .wrap .interior .interior_Con .interior_rightPart .room2Con .room2_cover, .wrap .interior .interior_Con .interior_rightPart .room2Con .room3_cover, .wrap .interior .interior_Con .interior_rightPart .room3Con .room1_cover, .wrap .interior .interior_Con .interior_rightPart .room3Con .room2_cover, .wrap .interior .interior_Con .interior_rightPart .room3Con .room3_cover {
+    font-size: 24px;
+    border-radius: 20px;
   }
 }/*# sourceMappingURL=adapt.css.map */

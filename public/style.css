@@ -419,6 +419,7 @@
      -moz-user-select: none;
           user-select: none;
   transition: 0.5s ease;
+  border-radius: 50px;
 }
 .wrap .interior .interior_Con .interior_leftPart .room1Con:hover .room1_cover {
   opacity: 1;
@@ -455,6 +456,7 @@
      -moz-user-select: none;
           user-select: none;
   transition: 0.5s ease;
+  border-radius: 50px;
 }
 .wrap .interior .interior_Con .interior_leftPart .room2Con:hover .room2_cover {
   opacity: 1;
@@ -497,6 +499,7 @@
      -moz-user-select: none;
           user-select: none;
   transition: 0.5s ease;
+  border-radius: 50px;
 }
 .wrap .interior .interior_Con .interior_rightPart .room3Con:hover .room3_cover {
   opacity: 1;

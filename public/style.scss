@@ -404,6 +404,8 @@
                         cursor: pointer;
                         user-select: none;
                         transition: 0.5s ease;
+                        border-radius: 50px;
+
                     }
                 }
                 .room1Con:hover .room1_cover {
@@ -419,6 +421,7 @@
                         height: 100%;
                         border-radius: 50px;
                         display: flex;
+
                     }
                     .room2_cover {
                         width: 100%;
@@ -438,6 +441,10 @@
                         cursor: pointer;
                         user-select: none;
                         transition: 0.5s ease;
+                        border-radius: 50px;
+
+
+
                     }
                 }
                 .room2Con:hover .room2_cover {
@@ -478,6 +485,8 @@
                         cursor: pointer;
                         user-select: none;
                         transition: 0.5s ease;
+                        border-radius: 50px;
+
                     }
                 }
                 .room3Con:hover .room3_cover {
