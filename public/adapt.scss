@@ -75,6 +75,9 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    align-content: flex-end;
                     .plant{
                         margin-bottom: 230px;
                     }
