@@ -1,7 +1,6 @@
 @media screen and (max-device-width: 430px) {
   .wrap .page {
     padding: 20px;
-    display: none;
   }
   .wrap .mainPage {
     width: 100%;
@@ -185,5 +184,29 @@
     height: auto;
     border-radius: 20px;
     margin-top: 50px;
+  }
+  .wrap .futer {
+    margin-top: 50px;
+    min-height: 590px;
+  }
+  .wrap .futer .futer_content {
+    flex-direction: column;
+  }
+  .wrap .futer .futer_content .futer_newslatter .futer_newslatter_title {
+    font-size: 36px;
+  }
+  .wrap .futer .futer_content .futer_newslatter .futer_newslatter_inputContainer {
+    margin-top: 10px;
+  }
+  .wrap .futer .futer_content .futer_nav {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .wrap .futer .futer_content .futer_nav .futer_navEl {
+    margin-bottom: 30px;
+  }
+  .wrap .futer .futer_hr {
+    margin: 20px 0 20px 0;
   }
 }/*# sourceMappingURL=adapt.css.map */
