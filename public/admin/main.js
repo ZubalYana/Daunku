@@ -457,7 +457,25 @@ function changeTheme(theme){
         $('.plantAddedMessage').css('background-color', '#fff')
         $('.plantAddedMessage').css('color', '#081323')
         $('.plantAddedMessage').css('border', '1px #081323 solid')
-
+        $('.editPlantPopup').css('background-color', '#fff')
+        $('.editPlantPopup').css('color', '#081323')
+        $('.editPlant_btn').css('border', '1px #081323 solid')
+        $('.editPlant_btn').css('background-color', '#fff')
+        $('.editPlant_btn').css('color', '#081323')
+        $('.editPlant_btn').hover(
+            () => {
+                $('.editPlant_btn').css({
+                    'background-color': '#081323',
+                    'color': '#fff',
+                });
+            },
+            () => {
+                $('.editPlant_btn').css({
+                    'background-color': '#fff',
+                    'color': '#081323',
+                });
+            }
+        );
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -555,6 +573,25 @@ function changeTheme(theme){
         $('.plantAddedMessage').css('background-color', '#1E1E1E')
         $('.plantAddedMessage').css('color', '#fff')
         $('.plantAddedMessage').css('border', '1px #fff solid')
+        $('.editPlantPopup').css('background-color', '#1E1E1E')
+        $('.editPlantPopup').css('color', '#fff')
+        $('.editPlant_btn').css('background-color', '#1E1E1E')
+        $('.editPlant_btn').css('color', '#fff')
+        $('.editPlant_btn').css('border', '1px #fff solid')
+        $('.editPlant_btn').hover(
+            () => {
+                $('.editPlant_btn').css({
+                    'background-color': '#fff',
+                    'color': '#1E1E1E',
+                });
+            },
+            () => {
+                $('.editPlant_btn').css({
+                    'background-color': '#1E1E1E',
+                    'color': '#fff',
+                });
+            }
+        );
     }
 }
 changeTheme(theme);
