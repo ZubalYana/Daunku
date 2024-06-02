@@ -223,6 +223,9 @@
   border-radius: 50%;
   border: 2px #566270 solid;
 }
+.wrap .header .mainPage_burger {
+  display: none;
+}
 .wrap .content {
   margin-top: 40px;
 }
