@@ -110,4 +110,10 @@
     bottom: 10px;
     right: 10px;
   }
+  .wrap .content .contactsWrapper .contacts_leftPart {
+    width: 100%;
+  }
+  .wrap .content .contactsWrapper .contacts_leftPart input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=adapt.css.map */
