@@ -62,4 +62,52 @@
   .wrap .content .plantsWrapper .plantslist .plant .plant_actions {
     width: 60px;
   }
+  .wrap .content .ordersWrapper .ordersContainer .order {
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+  .wrap .content .ordersWrapper .ordersContainer .order p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .wrap .content .ordersWrapper .ordersContainer .order .order_contacts {
+    margin-bottom: 10px;
+  }
+  .wrap .content .ordersWrapper .ordersContainer .order .order_message {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+  .wrap .content .ordersWrapper .ordersContainer .order .statusDropdown {
+    margin-bottom: 15px;
+  }
+  .wrap .content .ordersWrapper .ordersContainer .order .order_delete {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order {
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order .order_contacts {
+    margin-bottom: 10px;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order .order_message {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order .statusDropdown {
+    margin-bottom: 15px;
+  }
+  .wrap .content .ordersWrapper .finishedOrdersContainer .order .order_delete {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 }/*# sourceMappingURL=adapt.css.map */

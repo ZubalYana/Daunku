@@ -426,6 +426,7 @@
   border-radius: 20px;
   margin-bottom: 20px;
   align-items: center;
+  position: relative;
 }
 .wrap .content .ordersWrapper .ordersContainer .order p {
   width: 280px;
@@ -490,6 +491,7 @@
   border-radius: 20px;
   margin-bottom: 20px;
   align-items: center;
+  position: relative;
 }
 .wrap .content .ordersWrapper .finishedOrdersContainer .order p {
   width: 280px;
