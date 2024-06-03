@@ -625,3 +625,12 @@ $('.addNewPlant_btn').click(()=>{
     })
 
 })
+
+
+//burger functionality
+$('#headerBurger').click(()=>{
+    $('.burger_con').css('display', 'flex')
+})
+$('#burgerXmark').click(()=>{
+    $('.burger_con').css('display', 'none')
+})
