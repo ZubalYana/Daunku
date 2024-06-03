@@ -48,4 +48,18 @@
   .wrap .content .plantsWrapper .newPlantsAndStatisticsCon .statistics .statisticsEl {
     font-size: 14px;
   }
+  .wrap .content .plantsWrapper .plantslist {
+    width: 100%;
+    margin-left: 0;
+  }
+  .wrap .content .plantsWrapper .plantslist .plant {
+    padding: 6px 10px 6px 10px;
+  }
+  .wrap .content .plantsWrapper .plantslist .plant .plantName {
+    width: 90px;
+    font-size: 14px;
+  }
+  .wrap .content .plantsWrapper .plantslist .plant .plant_actions {
+    width: 60px;
+  }
 }/*# sourceMappingURL=adapt.css.map */

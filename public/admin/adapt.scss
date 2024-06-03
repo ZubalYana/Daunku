@@ -47,6 +47,21 @@
                         }
                     }
                 }
+                .plantslist{
+                    width: 100%;
+                    margin-left: 0;
+                    .plant{
+                        padding: 6px 10px 6px 10px;
+                        .plantName{
+                            width: 90px;
+                            font-size: 14px;
+                        }
+                        .plant_actions{
+                            width: 60px;
+                        }
+                    }
+
+                }
             }
         }
 
