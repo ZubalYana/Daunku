@@ -476,6 +476,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('#burger').css('background-color', '#fff')
+        $('#burger').css('color', '#566270')
+        $('.burgerRow').css('background-color', '#566270')
+        
     }else{
         $('.theme').css('justify-content', 'flex-end')
         $('.theme').css('background-color', '#fff')
@@ -592,6 +596,10 @@ function changeTheme(theme){
                 });
             }
         );
+        $('#burger').css('background-color', '#1E1E1E')
+        $('#burger').css('color', '#fff')
+        $('.burgerRow').css('background-color', '#fff')
+
     }
 }
 changeTheme(theme);
