@@ -134,11 +134,13 @@
   }
   .burger_con .burger {
     width: 80%;
-    height: 400px;
+    height: 280px;
     background-color: #fff;
     color: #566270;
-    padding: 10px;
+    padding: 35px;
     border-radius: 10px;
+    display: flex;
+    position: relative;
   }
   .burger_con .burger .theme {
     width: 60px;
@@ -148,6 +150,9 @@
     display: flex;
     justify-content: flex-start;
     cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 35px;
   }
   .burger_con .burger .theme .theme_circle {
     width: 30px;
@@ -155,5 +160,13 @@
     background-color: #fff;
     border-radius: 50%;
     border: 2px #566270 solid;
+  }
+  .burger_con .burger .burgerMenu {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=adapt.css.map */
