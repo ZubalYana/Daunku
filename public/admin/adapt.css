@@ -116,4 +116,7 @@
   .wrap .content .contactsWrapper .contacts_leftPart input {
     width: 100%;
   }
+  .wrap .content .newsWrapper textarea {
+    width: 100%;
+  }
 }/*# sourceMappingURL=adapt.css.map */
