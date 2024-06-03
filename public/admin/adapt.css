@@ -22,4 +22,30 @@
     border-radius: 6px;
     background-color: #566270;
   }
+  .wrap .content .plantsWrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrap .content .plantsWrapper .newPlantsAndStatisticsCon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .wrap .content .plantsWrapper .newPlantsAndStatisticsCon .addNewPlantsBtn {
+    width: 150px;
+    height: 150px;
+    font-size: 70px;
+  }
+  .wrap .content .plantsWrapper .newPlantsAndStatisticsCon .statistics {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  .wrap .content .plantsWrapper .newPlantsAndStatisticsCon .statistics h3 {
+    font-size: 18px;
+  }
+  .wrap .content .plantsWrapper .newPlantsAndStatisticsCon .statistics .statisticsEl {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=adapt.css.map */
