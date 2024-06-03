@@ -142,6 +142,13 @@
     display: flex;
     position: relative;
   }
+  .burger_con .burger #burgerXmark {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    cursor: pointer;
+    font-size: 30px;
+  }
   .burger_con .burger .theme {
     width: 60px;
     height: 30px;
@@ -152,7 +159,7 @@
     cursor: pointer;
     position: absolute;
     top: 35px;
-    right: 35px;
+    right: 80px;
   }
   .burger_con .burger .theme .theme_circle {
     width: 30px;

@@ -154,6 +154,13 @@
             border-radius: 10px;
             display: flex;
             position: relative;
+            #burgerXmark{
+                position: absolute;
+                top: 35px;
+                right: 35px;
+                cursor: pointer;
+                font-size: 30px;
+            }
             .theme{
                 width: 60px;
                 height: 30px;
@@ -164,7 +171,7 @@
                 cursor: pointer;
                 position: absolute;
                 top: 35px;
-                right: 35px;
+                right: 80px;
                 .theme_circle{
                     width: 30px;
                     height: 30px;
