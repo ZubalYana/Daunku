@@ -119,4 +119,41 @@
   .wrap .content .newsWrapper textarea {
     width: 100%;
   }
+  .burger_con {
+    display: flex;
+    position: fixed;
+    background-color: rgba(40, 52, 68, 0.5215686275);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .burger_con .burger {
+    width: 80%;
+    height: 400px;
+    background-color: #fff;
+    color: #566270;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .burger_con .burger .theme {
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #566270;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  .burger_con .burger .theme .theme_circle {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px #566270 solid;
+  }
 }/*# sourceMappingURL=adapt.css.map */
