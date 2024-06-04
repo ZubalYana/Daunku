@@ -49,9 +49,7 @@ $('#contacts').click(()=>{
             <button id="changeContacts">Change contacts</button>
         </div>
         <div class="contacts_rightPart">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-    <dotlottie-player src="https://lottie.host/772affa4-ba45-426d-9404-15dfad3a7d1a/9EElKGrvX4.json" background="transparent" speed="1" style="width: 520px; height: 520px;" loop autoplay></dotlottie-player>
         </div>
         </div>
         `
