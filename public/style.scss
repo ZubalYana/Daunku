@@ -71,6 +71,24 @@
                 background-color: #fff;
             }
         }
+        .plant1Message{
+            width: 140px;
+            height: 40px;
+            background-color: #ffffffa6;
+            border: 2px #fff solid;
+            position: absolute;
+            top: 265px;
+            left: 155px;
+            z-index: 50;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+
+        }
         .mainPage_header{
             width: 100%;
             display: flex;
