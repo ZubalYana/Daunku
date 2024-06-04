@@ -1,3 +1,6 @@
+//hide the messages
+$('.plantMessage').hide(0)
+
 // plants functionality
 let db = [];
 let cartlist = [];
@@ -445,3 +448,14 @@ $('#subscribe').click(() => {
             $('#email').val('');
         })
 });
+
+//plants touch effect
+$('#plant1Touch').click(()=>{
+    $('#plant1Message').toggle(300)
+})
+$('#plant2Touch').click(()=>{
+    $('#plant2Message').toggle(300)
+})
+$('#plant3Touch').click(()=>{
+    $('#plant3Message').toggle(300)
+})
