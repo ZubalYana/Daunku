@@ -65,8 +65,6 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5450980392);
   position: absolute;
-  top: 300px;
-  left: 130px;
   z-index: 50;
   cursor: pointer;
   border: 2px #fff solid;
@@ -80,14 +78,10 @@
   border-radius: 50%;
   background-color: #fff;
 }
-.wrap .mainPage .plant1Message {
-  width: 140px;
-  height: 40px;
+.wrap .mainPage .plantMessage {
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px #fff solid;
   position: absolute;
-  top: 265px;
-  left: 155px;
   z-index: 50;
   border-radius: 10px;
   display: flex;
@@ -96,6 +90,26 @@
   font-size: 20px;
   font-weight: 500;
   color: #fff;
+}
+.wrap .mainPage #plant1Touch {
+  top: 300px;
+  left: 130px;
+}
+.wrap .mainPage #plant1Message {
+  width: 140px;
+  height: 40px;
+  top: 265px;
+  left: 155px;
+}
+.wrap .mainPage #plant2Touch {
+  top: 380px;
+  left: 160px;
+}
+.wrap .mainPage #plant2Message {
+  width: 90px;
+  height: 40px;
+  top: 345px;
+  left: 185px;
 }
 .wrap .mainPage .mainPage_header {
   width: 100%;

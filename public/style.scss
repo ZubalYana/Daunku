@@ -56,8 +56,6 @@
             border-radius: 50%;
             background-color: #ffffff8b;
             position: absolute;
-            top: 300px;
-            left: 130px;
             z-index: 50;
             cursor: pointer;
             border: 2px #fff solid;
@@ -71,14 +69,10 @@
                 background-color: #fff;
             }
         }
-        .plant1Message{
-            width: 140px;
-            height: 40px;
+        .plantMessage{
             background-color: rgba(255, 255, 255, 0.2);
             border: 2px #fff solid;
             position: absolute;
-            top: 265px;
-            left: 155px;
             z-index: 50;
             border-radius: 10px;
             display: flex;
@@ -88,6 +82,26 @@
             font-weight: 500;
             color: #fff;
 
+        }
+        #plant1Touch{
+            top: 300px;
+            left: 130px;
+        }
+        #plant1Message{
+            width: 140px;
+            height: 40px;
+            top: 265px;
+            left: 155px;
+        }
+        #plant2Touch{
+            top: 380px;
+            left: 160px;
+        }
+        #plant2Message{
+            width: 90px;
+            height: 40px;
+            top: 345px;
+            left: 185px;
         }
         .mainPage_header{
             width: 100%;
