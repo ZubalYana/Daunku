@@ -175,4 +175,10 @@
     font-size: 24px;
     font-weight: 600;
   }
+  .editPlantPopup_container {
+    padding: 30px;
+  }
+  .editPlantPopup_container .editPlantPopup {
+    width: 100%;
+  }
 }/*# sourceMappingURL=adapt.css.map */
