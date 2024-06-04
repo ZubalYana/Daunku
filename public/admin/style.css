@@ -402,6 +402,11 @@
   background-color: #566270;
   color: #fff;
 }
+.wrap .content .contactsWrapper .contacts_rightPart {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
 .wrap .content .ordersWrapper {
   color: #566270;
   display: flex;
