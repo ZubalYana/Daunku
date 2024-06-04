@@ -111,6 +111,16 @@
   top: 345px;
   left: 185px;
 }
+.wrap .mainPage #plant3Touch {
+  top: 400px;
+  right: 180px;
+}
+.wrap .mainPage #plant3Message {
+  width: 140px;
+  height: 40px;
+  top: 365px;
+  right: 205px;
+}
 .wrap .mainPage .mainPage_header {
   width: 100%;
   display: flex;
