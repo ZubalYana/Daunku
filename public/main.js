@@ -55,6 +55,8 @@ axios.get('http://localhost:3000/plants')
             let plantToAdd = db.find(plant => plant._id === plantID);
             plantToAdd.amount = 1;
             cartlist.push(plantToAdd);
+            saveCartToCookie();
+            displayCart();
         }
 
         renderCart();
@@ -101,6 +103,8 @@ function renderCart() {
             renderCart();
         }
         changeTheme(theme)
+        saveCartToCookie();
+        displayCart()
     });
 
     $('.chosenPlantsContainer').on('click', '.increasePlant_amount', function() {
@@ -111,6 +115,8 @@ function renderCart() {
             renderCart();
         }
         changeTheme(theme)
+        saveCartToCookie();
+        displayCart()
     });
 
     // Plant deleting from the cartList
@@ -126,6 +132,8 @@ $('.chosenPlantsContainer').on('click', '.chosenPlant_bottom', function(e) {
         }
     }
     changeTheme(theme)
+    saveCartToCookie();
+    displayCart()
 });
 
     // Bin hover effect
@@ -219,13 +227,33 @@ $('.cookiesJar_con').hover(
 //cookies functionality 
 $(document).ready(function() {
     checkPopupCookie();
+    loadCartFromCookie();
 });
+
+// Function to save the cart list to a cookie
+function saveCartToCookie() {
+    const cartlistString = JSON.stringify(cartlist);
+    setCookie('cartlist', cartlistString, 365);
+}
+
+// Function to load the cart list from a cookie
+function loadCartFromCookie() {
+    const cartlistString = getCookie('cartlist');
+    if (cartlistString) {
+        cartlist = JSON.parse(cartlistString);
+        displayCart();
+    }
+}
+
+// Function to set a cookie
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+// Function to get a cookie
 function getCookie(cname) {
     const name = cname + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -241,6 +269,8 @@ function getCookie(cname) {
     }
     return "";
 }
+
+// Function to check and handle the popup cookie
 function checkPopupCookie() {
     const popupClosed = getCookie("popupClosed");
     if (popupClosed === "true") {
@@ -256,11 +286,21 @@ function checkPopupCookie() {
         });
     }
 }
+
+// Function to close the popup and set the cookie
 function closePopup() {
     console.log("Closing popup and setting cookie.");
     $(".cookiesPopupContainer").css('display', 'none');
     setCookie("popupClosed", "true", 365);
 }
+
+// Function to display the cart (you need to implement this based on your UI)
+function displayCart() {
+    // Your code to display the cart items on the page
+    console.log("Cart list:", cartlist);
+    renderCart()
+}
+
 
 //theme changing
 let theme = localStorage.getItem('theme') || 'light';
@@ -435,7 +475,6 @@ axios.get('http://localhost:3000/getContacts')
 .catch((err) => {
     console.error(err);
 });
-
 
 //emails sending
 $('#subscribe').click(() => {
