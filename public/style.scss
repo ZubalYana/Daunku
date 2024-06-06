@@ -144,6 +144,12 @@
                     text-decoration: none;
                     color: #fff;
                 }
+                #home {
+                    background: linear-gradient(to right, #2AF598, #009EFD);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                }
             }
             .mainPage_cartThemeCon{
                 width: 130px;

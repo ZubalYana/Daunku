@@ -154,6 +154,12 @@
   text-decoration: none;
   color: #fff;
 }
+.wrap .mainPage .mainPage_header .mainPage_nav #home {
+  background: linear-gradient(to right, #2AF598, #009EFD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
 .wrap .mainPage .mainPage_header .mainPage_cartThemeCon {
   width: 130px;
   display: flex;
