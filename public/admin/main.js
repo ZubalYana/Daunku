@@ -81,7 +81,7 @@ $('#newslatter').click(()=>{
         <h2>Send news to your customers!</h2>
         <textarea type="text" id="message"></textarea>
         <button id="sendMessage">Send</button>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" width="400px" height="400px"></canvas>
     </div>
 `);
 $(document).ready(function() {

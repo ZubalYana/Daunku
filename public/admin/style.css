@@ -587,4 +587,9 @@
   background-color: #566270;
   color: #fff;
   border: 2px #566270 solid;
+}
+.wrap .content .newsWrapper #myChart {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
