@@ -15,6 +15,9 @@
     background-size: cover;
     background-position: center;
   }
+  .wrap .mainPage .touchEl {
+    display: none;
+  }
   .wrap .mainPage .mainPage_header {
     align-items: center;
   }
