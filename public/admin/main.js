@@ -84,6 +84,7 @@ $('#newslatter').click(()=>{
     $('.content').append(
         `
         <div class="newsWrapper">
+        <div class="News_message">The news were sended</div>
         <h2>Send news to your customers!</h2>
         <textarea type="text" id="message"></textarea>
         <button id="sendMessage">Send</button>
@@ -102,7 +103,12 @@ $('#sendMessage').click(()=>{
     .then((res)=>{
         console.log(res.data)
         console.log(`Message sended to the server`)
-        $('#sendMessage').val('')
+        $('#message').val('')
+        $('.News_message').css('display', 'flex')
+        setTimeout(() => {
+            $('.News_message').css('display', 'none')
+        }, 4000);
+        $('#email').val('');
     })
 })
 

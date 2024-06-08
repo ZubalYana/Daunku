@@ -552,6 +552,23 @@
             color: #566270;
             display: flex;
             flex-direction: column;
+            .News_message{
+                width: 340px;
+                height: 70px;
+                background-color: #fff;
+                border: 2px #081323 solid;
+                position: fixed;
+                left: 30px;
+                bottom: 30px;
+                color: #081323;
+                font-size: 24px;
+                font-weight: 600;
+                border-radius: 20px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s ease;
+            }
             h2{
                 font-size: 32px;
                 font-weight: 600;
