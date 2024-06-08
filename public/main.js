@@ -294,9 +294,8 @@ function closePopup() {
     setCookie("popupClosed", "true", 365);
 }
 
-// Function to display the cart (you need to implement this based on your UI)
+// Function to display the cart
 function displayCart() {
-    // Your code to display the cart items on the page
     console.log("Cart list:", cartlist);
     renderCart()
 }
@@ -483,7 +482,10 @@ $('#subscribe').click(() => {
     };
     axios.post('http://localhost:3000/send-mail', data)
         .then(res => {
-            alert('Email saved');
+            $('.message').css('display', 'flex')
+            setTimeout(() => {
+                $('.message').css('display', 'none')
+            }, 4000);
             $('#email').val('');
         })
 });
