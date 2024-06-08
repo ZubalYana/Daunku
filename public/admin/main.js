@@ -41,6 +41,7 @@ $('#contacts').click(()=>{
     $('#orders').css('font-weight', '400')
     $('.content').append(
         `<div class="contactsWrapper">
+        <div class="message">Contacts were changed</div>
         <div class="contacts_leftPart">
         <h2>Contacts:</h2>
             <input type="text" class="contacts_input" id="address" placeholder="Address">
@@ -67,6 +68,10 @@ $('#contacts').click(()=>{
             $('#address').val('')
             $('#phone').val('')
             $('#email').val('')
+            $('.message').css('display', 'flex')
+            setTimeout(() => {
+                $('.message').css('display', 'none')
+            }, 4000);
         })
     })
 })
