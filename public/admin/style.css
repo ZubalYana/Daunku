@@ -44,7 +44,7 @@
   z-index: 9999;
 }
 .addNewPlantPopup_container .addNewPlantPopup {
-  width: 850px;
+  width: 550px;
   height: 410px;
   background-color: #fff;
   border-radius: 50px;
@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 .addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart {
-  width: 50%;
+  width: 100%;
 }
 .addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart h3 {
   font-size: 24px;
@@ -98,9 +98,6 @@
 .addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_leftPart .addNewPlantPopup_inputsContainer .addNewPlant_btn:hover {
   background-color: #081323;
   color: #fff;
-}
-.addNewPlantPopup_container .addNewPlantPopup .addNewPlantPopup_rightPart {
-  width: 50%;
 }
 
 .editPlantPopup_container {
